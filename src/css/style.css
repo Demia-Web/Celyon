@@ -1,0 +1,61 @@
+body,
+html {
+  overflow-x: hidden;
+}
+
+/* Font */
+h1 {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 4.583vw; /* 66px */
+  line-height: 4.861vw; /* 70px */
+}
+
+h2 {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.778vw; /* 40px */
+  line-height: 3.056vw; /* 44px */
+}
+
+h3 {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.222vw; /* 32px */
+  line-height: 2.5vw; /* 36px */
+}
+
+h4 {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.667vw; /* 24px */
+  line-height: 1.944vw; /* 28px */
+}
+
+h5 {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.389vw; /* 20px */
+  line-height: 1.667vw; /* 24px */
+}
+
+p {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.111vw; /* 16ppx */
+  line-height: 1.389vw; /* 20px */
+}
+
+p.small {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.833vw; /* 16ppx */
+  line-height: 1.111vw; /* 20px */
+}
