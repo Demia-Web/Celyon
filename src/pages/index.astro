@@ -1,5 +1,345 @@
 ---
+// Includes
 import Layout from "../layout/Layout.astro";
+
+// Component
+import Button from "../component/Button.astro";
+import SwiperProdotti from "../component/SwiperProdotti.astro";
+import Form from "../component/Form.astro";
 ---
 
-<Layout title="title" description="description" />
+<Layout title="title" description="description">
+  <section class="h-screen px-body pt-[16.25vw] pb-[2.5vw] flex flex-col justify-between">
+    <div class="flex flex-row justify-between h-full">
+      <div class="flex flex-col justify-between h-full">
+        <h1 class="text-nero">
+          Progettazione e produzione<br />
+          di impianti di <span class="text-blu">lubrificazione</span><br />
+          e <span class="text-blu">oleodinamica</span> per l’industria.
+        </h1>
+        <div class="flex flex-col gap-[1.667vw] w-[22.639vw]">
+          <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.</p>
+          <Button content="Scopri le nostre soluzioni" type="btn-blu" link="" />
+        </div>
+      </div>
+      <div class="flex flex-col justify-end h-full">
+        <!-- <div class="cerchio esterno">
+          <div class="cerchio medio">
+            <div class="cerchio interno"></div>
+          </div>
+        </div> -->
+        <img src="/img/assets/palle.svg" alt="" class="palla-rotante w-[42.345vw]" />
+      </div>
+    </div>
+    <div class="w-full flex justify-center">
+      <p class="text-nero scroll-title">Scroll</p>
+    </div>
+  </section>
+
+  <section class="px-body py-body">
+    <div class="bg-grigio-100 p-[2.5vw] flex flex-col gap-[4.962vw] scroll-animation">
+      <div class="flex flex-row justify-between">
+        <h2 class="text-nero">
+          Bertacchi e Filippi<br />
+          diventa Celyon
+        </h2>
+        <p class="text-nero w-[20.833vw]">In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il fatto che Bertacchi e Filippi adesso è Celyon, si rimanderà alla pagina “azienda”, dove verrà approfondito il tutto.</p>
+        <div class="flex items-end">
+          <Button content="Scopri l'azienda" type="btn-blu" link="" />
+        </div>
+      </div>
+      <img src="/img/page/home/img-scopri.png" alt="" class="w-full h-[47.917vw]" />
+    </div>
+  </section>
+
+  <section class="px-body">
+    <div class="flex flex-col gap-[5.556vw] justify-end">
+      <div class="w-full bg-blu px-[2.222vw] py-[0.833vw]">
+        <h5 class="text-bianco">I nostri prodotti</h5>
+      </div>
+      <div class="flex flex-row justify-between items-end">
+        <h2 class="text-nero">
+          Soluzioni di pulizia e filtraggio<br />
+          efficienti e certificate e <br />
+          <span class="text-blu">impianti personalizzati.</span>
+        </h2>
+        <div>
+          <p class="text-nero w-[20.833vw]">In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.</p>
+        </div>
+        <div class="flex items-end">
+          <div class="flex flex-row justify-end gap-[0.278vw] mt-[3.056vw]">
+            <div class="swiper-prodotti-prev cursor-pointer rotate-180">
+              <img src="/img/assets/arrow-blu.svg" alt="Prev" class="" />
+            </div>
+            <div class="swiper-prodotti-next cursor-pointer">
+              <img src="/img/assets/arrow-blu.svg" alt="Next" class="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <SwiperProdotti />
+  </section>
+
+  <section class="px-body py-body flex flex-col gap-[3.056vw] items-center">
+    <h4 class="text-nero">I nostri partner</h4>
+    <div class="flex flex-row gap-[6.944vw]">
+      <img src="/img/loghi/hydac.svg" alt="" />
+      <img src="/img/loghi/hydac.svg" alt="" />
+      <img src="/img/loghi/hydac.svg" alt="" />
+      <img src="/img/loghi/hydac.svg" alt="" />
+    </div>
+  </section>
+
+  <section class="h-screen flex items-center justify-center relative" id="img-full-home">
+    <div class="flex flex-col gap-[2.222vw] w-[57.708vw] items-center z-50 relative">
+      <p class="text-white text-[2.778vw] leading-[3.056vw] text-center">In questo paragrafo una breve descrizione emozionale sul vantaggio di affidarsi a Celyon. Vorrei che fosse espresso in cosa Celyon può fare la differenza, come può dare risposta alle esigenze del cliente.</p>
+      <Button content="Contattaci" type="btn-white" link="" />
+    </div>
+    <div class="bg-transparent border border-bianco rounded-[1000px] w-[59.792vw] h-[59.792vw] absolute left-0" id="cerchio-sx"></div>
+    <div class="bg-transparent border border-bianco rounded-[1000px] w-[59.792vw] h-[59.792vw] absolute right-0" id="cerchio-dx"></div>
+  </section>
+
+  <section class="px-body py-body flex flex-col gap-[6.944vw] bg-blu">
+    <div class="flex flex-row justify-between">
+      <div class="flex flex-col gap-[2.222vw] w-[31.25vw]">
+        <h2 class="text-white">I nostri servizi per il tuo impianto di lubrificazione e oleodinamica.</h2>
+        <p class="text-white">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+      </div>
+      <div class="grid grid-cols-4 gap-x-[0.972vw] gap-y-[1.25vw] griglia-colorata">
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <!-- 01 -->
+      <div class="flex flex-row justify-between py-[2.222vw] px-[1.667vw] border-y border-bianco boxed-animation items-center">
+        <div class="flex flex-row gap-[1.667vw]">
+          <h3 class="text-grigio-200 number">01</h3>
+          <h3 class="text-grigio-50 title">Ricambi e Componentistica</h3>
+        </div>
+        <div class="overflow-hidden relative">
+          <img src="/img/assets/arrow-45deg-white.svg" alt="" class="arrow-white w-[1.829vw]" />
+          <img src="/img/assets/arrow-45deg-blu.svg" alt="" class="arrow-blu w-[1.829vw]" />
+        </div>
+      </div>
+      <!-- 02 -->
+      <div class="flex flex-row justify-between py-[2.222vw] px-[1.667vw] border-b border-bianco boxed-animation items-center">
+        <div class="flex flex-row gap-[1.667vw]">
+          <h3 class="text-grigio-200 number">02</h3>
+          <h3 class="text-grigio-50 title">Automatizzazione Industriale</h3>
+        </div>
+        <div class="overflow-hidden relative">
+          <img src="/img/assets/arrow-45deg-white.svg" alt="" class="arrow-white w-[1.829vw]" />
+          <img src="/img/assets/arrow-45deg-blu.svg" alt="" class="arrow-blu w-[1.829vw]" />
+        </div>
+      </div>
+      <!-- 03 -->
+      <div class="flex flex-row justify-between py-[2.222vw] px-[1.667vw] border-b border-bianco boxed-animation items-center">
+        <div class="flex flex-row gap-[1.667vw]">
+          <h3 class="text-grigio-200 number">03</h3>
+          <h3 class="text-grigio-50 title">Pulizia e Filtraggio</h3>
+        </div>
+        <div class="overflow-hidden relative">
+          <img src="/img/assets/arrow-45deg-white.svg" alt="" class="arrow-white w-[1.829vw]" />
+          <img src="/img/assets/arrow-45deg-blu.svg" alt="" class="arrow-blu w-[1.829vw]" />
+        </div>
+      </div>
+      <!-- 04 -->
+      <div class="flex flex-row justify-between py-[2.222vw] px-[1.667vw] border-b border-bianco boxed-animation items-center">
+        <div class="flex flex-row gap-[1.667vw]">
+          <h3 class="text-grigio-200 number">04</h3>
+          <h3 class="text-grigio-50 title">Engineering</h3>
+        </div>
+        <div class="overflow-hidden relative">
+          <img src="/img/assets/arrow-45deg-white.svg" alt="" class="arrow-white w-[1.829vw]" />
+          <img src="/img/assets/arrow-45deg-blu.svg" alt="" class="arrow-blu w-[1.829vw]" />
+        </div>
+      </div>
+      <!-- 05 -->
+      <div class="flex flex-row justify-between py-[2.222vw] px-[1.667vw] border-b border-bianco boxed-animation items-center">
+        <div class="flex flex-row gap-[1.667vw]">
+          <h3 class="text-grigio-200 number">05</h3>
+          <h3 class="text-grigio-50 title">Manutenzione e Assistenza</h3>
+        </div>
+        <div class="overflow-hidden relative">
+          <img src="/img/assets/arrow-45deg-white.svg" alt="" class="arrow-white w-[1.829vw]" />
+          <img src="/img/assets/arrow-45deg-blu.svg" alt="" class="arrow-blu w-[1.829vw]" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-body py-body bg-grigio-100 flex flex-col gap-[6.944vw]">
+    <div class="flex flex-row justify-between items-end">
+      <h2 class="text-nero">
+        Alcune delle nostre <br />
+        <span class="text-blu">realizzazioni</span>
+      </h2>
+      <p class="text-nero w-[20.833vw]">Una breve descrizione che introduca ai progetti realizzati, interventi frutto della collaborazione con partner affidabili.</p>
+      <div class="flex items-end">
+        <Button content="Vedi tutti i progetti" type="btn-blu" link="" />
+      </div>
+    </div>
+    <div class="flex flex-row justify-between gap-[1.111vw]">
+      <div class="lg:w-1/3">
+        <a href="" class="cursor-pointer hover-target flex flex-col gap-[1.111vw]">
+          <img src="/img/page/progetti/progetto-1.jpeg" alt="" class="lg:h-[41.667vw] h-[500px] w-full object-cover" />
+          <div class="flex flex-col gap-[1.111vw]">
+            <div class="pb-[0.556vw] border-b border-nero">
+              <p class="text-grigio-200">Data del progetto</p>
+            </div>
+            <h5 class="${textClass} !hover-target mt-[12px]">Nome del progetto</h5>
+          </div>
+        </a>
+      </div>
+      <div class="lg:w-1/3">
+        <a href="" class="cursor-pointer hover-target flex flex-col gap-[1.111vw]">
+          <img src="/img/page/progetti/progetto-1.jpeg" alt="" class="lg:h-[41.667vw] h-[500px] w-full object-cover" />
+          <div class="flex flex-col gap-[1.111vw]">
+            <div class="pb-[0.556vw] border-b border-nero">
+              <p class="text-grigio-200">Data del progetto</p>
+            </div>
+            <h5 class="${textClass} !hover-target mt-[12px]">Nome del progetto</h5>
+          </div>
+        </a>
+      </div>
+      <div class="lg:w-1/3">
+        <a href="" class="cursor-pointer hover-target flex flex-col gap-[1.111vw]">
+          <img src="/img/page/progetti/progetto-1.jpeg" alt="" class="lg:h-[41.667vw] h-[500px] w-full object-cover" />
+          <div class="flex flex-col gap-[1.111vw]">
+            <div class="pb-[0.556vw] border-b border-nero">
+              <p class="text-grigio-200">Data del progetto</p>
+            </div>
+            <h5 class="${textClass} !hover-target mt-[12px]">Nome del progetto</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Form />
+
+  <script>
+    // Animazione palle colorate
+
+    const divs = document.querySelectorAll(".griglia-colorata > div");
+
+    setInterval(() => {
+      divs.forEach((div) => div.classList.remove("bg-bianco"));
+
+      const randomIndex = Math.floor(Math.random() * divs.length);
+      const randomDiv = divs[randomIndex];
+
+      randomDiv.classList.add("bg-bianco");
+      const randomIndex2 = Math.floor(Math.random() * divs.length);
+      const randomDiv2 = divs[randomIndex2];
+
+      randomDiv2.classList.add("bg-bianco");
+    }, 1000);
+  </script>
+
+  <script>
+    // Animazione scale-in
+
+    import gsap from "gsap";
+    import ScrollTrigger from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      ".scroll-animation",
+      { scale: 0.7 }, // Initial width
+      {
+        scale: 1, // Final width on scroll
+        scrollTrigger: {
+          markers: false,
+          trigger: ".scroll-animation",
+          start: "top center",
+          end: "top top",
+          scrub: true // Smooth transition as you scroll
+        }
+      }
+    );
+
+    // Animazione palle
+    gsap.fromTo(
+      "#cerchio-sx",
+      { left: "-50%" },
+      {
+        left: "0",
+        scrollTrigger: {
+          markers: false,
+          trigger: "#img-full-home",
+          start: "top center",
+          end: "bottom bottom",
+          scrub: true
+        }
+      }
+    );
+
+    gsap.fromTo(
+      "#cerchio-dx",
+      { right: "-50%" },
+      {
+        right: "0",
+        scrollTrigger: {
+          markers: false,
+          trigger: "#img-full-home",
+          start: "top center",
+          end: "bottom bottom",
+          scrub: true
+        }
+      }
+    );
+
+    gsap.fromTo(
+      "#cerchio-button",
+      { right: "-50%" },
+      {
+        right: "0",
+        scrollTrigger: {
+          markers: false,
+          trigger: "#img-full-home",
+          start: "top center",
+          end: "bottom bottom",
+          scrub: true
+        }
+      }
+    );
+  </script>
+
+  <!-- Swiper -->
+  <script>
+    import Swiper from "swiper";
+    import { Navigation } from "swiper/modules";
+    import "swiper/css";
+    import "swiper/css/navigation";
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const tipologie_lenti = new Swiper(".swiper-prodotti", {
+        modules: [Navigation],
+        spaceBetween: 16,
+        slidesPerView: 1.4,
+        navigation: {
+          nextEl: ".swiper-prodotti-next",
+          prevEl: ".swiper-prodotti-prev"
+        }
+      });
+    });
+  </script>
+</Layout>

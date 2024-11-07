@@ -59,3 +59,342 @@ p.small {
   font-size: 0.833vw; /* 16ppx */
   line-height: 1.111vw; /* 20px */
 }
+
+/* Background */
+
+#img-full-home {
+  background-image: url("/img/page/home/img-full.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Misure */
+.px-body {
+  padding-right: 2.5vw; /* 36px */
+  padding-left: 2.5vw; /* 36px */
+}
+
+.py-body {
+  padding-top: 10.417vw; /* 150px */
+  padding-bottom: 10.417vw; /* 150px */
+}
+
+.pt-body {
+  padding-top: 10.417vw; /* 150px */
+}
+
+.pb-body {
+  padding-bottom: 10.417vw; /* 150px */
+}
+
+/* Animazioni */
+
+.scroll-title {
+  animation: 3s ease-in-out arrow-move-down infinite;
+  animation-delay: 3s;
+}
+
+@keyframes arrow-move-down {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  49% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* Bottoni */
+.btn-gen {
+  width: fit-content;
+  padding: 1.528vw 1.667vw; /* 22px 24px */
+  border-radius: 69.444vw; /* 1000px */
+  line-height: 0.389vw;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 500;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-blu {
+  color: #ffffff;
+  background-color: #0029cc;
+}
+
+.btn-blu:hover {
+  background-color: #808080; /* Gray color on hover */
+}
+
+.btn-white {
+  color: #282828;
+  background-color: #ffffff;
+}
+
+.btn-white:hover {
+  color: #ffffff;
+  background-color: #0029cc; /* Gray color on hover */
+}
+
+.btn-title {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.btn-title span {
+  display: block;
+  transition: transform 0.25s ease-in-out;
+}
+
+.btn-title .text {
+  transform: translateY(0);
+}
+
+.btn-title .hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(100%);
+}
+
+.btn-gen:hover .btn-title .text {
+  transform: translateY(-100%);
+}
+
+.btn-gen:hover .btn-title .hover-text {
+  transform: translateY(0);
+}
+
+/* Homepage  */
+
+.palla-rotante {
+  animation: rotate 20s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.griglia-colorata div {
+  width: 5.746vw;
+  height: 5.746vw;
+  border: 1px solid #fff;
+  border-radius: 1000px;
+  transition: all 0.5s ease-in-out;
+}
+
+.cerchio {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.esterno {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #0029cc;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: muovi-cerchio-interno 10s linear infinite;
+}
+
+.medio {
+  width: 100px;
+  height: 100px;
+  background-color: #0029cc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  /* animation: muovi-cerchio-medio 60s linear infinite; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.interno {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  animation: muovi-cerchio-interno 3s linear infinite;
+}
+
+@keyframes muovi-cerchio-medio {
+  0% {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
+
+@keyframes muovi-cerchio-interno {
+  0% {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
+
+.boxed-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.boxed-animation:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  transition: all 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 1;
+}
+
+.boxed-animation:hover:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.boxed-animation:hover .title,
+.boxed-animation:hover .number,
+.boxed-animation:hover .arrow-blu {
+  z-index: 2;
+}
+
+.boxed-animation:hover .title {
+  color: #0029cc !important;
+  transition: all 500ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.boxed-animation .arrow-white {
+  transform: translateY(0);
+}
+
+.boxed-animation .arrow-blu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+
+.boxed-animation:hover .arrow-white {
+  transform: translateY(-100%);
+}
+
+.boxed-animation:hover .arrow-blu {
+  transform: translateY(0);
+}
+
+/* Form  */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  font-size: clamp(0.7292vw, 1.0417vw, 1.0417vw); /* 20px max, 14px min */
+  border-bottom: 1px solid #1d1d1b;
+  outline: none;
+  font-weight: 400;
+  line-height: clamp(1.25vw, 1.6667vw, 1.6667vw); /* 32px max, 24px min */
+  padding-bottom: clamp(0.4167vw, 0.625vw, 0.625vw); /* 12px max, 8px min */
+  background: transparent;
+  color: #1d1d1b;
+}
+
+/* Stile per input dentro un div con classe .form-dark */
+.form-dark input[type="text"],
+.form-dark input[type="email"],
+.form-dark input[type="number"],
+.form-dark input[type="tel"],
+.form-dark input[type="password"] {
+  border-bottom: 1px solid #1d1d1b;
+  color: #1d1d1b;
+}
+
+label {
+  font-family: new-science, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  font-size: 1.111vw; /* 16px max, 12px min */
+  color: #8e8e8e;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  font-family: new-science, sans-serif;
+  top: -10px;
+  left: 0px;
+  font-size: 1.111vw; /* 12px max, 10px min */
+  color: #1d1d1b;
+  opacity: 0.5;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+/* Header */
+
+#menu {
+  padding: 0.278vw 0.278vw 0.278vw 1.944vw; /* 4px 4px 4px 28px */
+  border-radius: 100000px;
+}
+
+#menu a {
+  color: #282828;
+}
+
+#menu .menu-item.contatti {
+  background-color: #fff;
+  height: 100%;
+  padding: 1.528vw 1.667vw; /* 22px 24px */
+  border-radius: 100000px;
+}
+
+.animazione-contatti-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.animazione-contatti {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

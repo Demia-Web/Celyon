@@ -1,0 +1,99 @@
+---
+import Button from "./Button.astro";
+---
+
+<section class="px-body py-body flex flex-col gap-[6.944vw]">
+  <div class="w-full bg-blu px-[2.222vw] py-[0.833vw]">
+    <h5 class="text-bianco">Mettiti in contatto con Celyon</h5>
+  </div>
+  <div class="flex flex-row justify-between">
+    <div class="flex flex-col gap-[1.389vw] w-[43.75vw]">
+      <h2 class="text-nero">
+        Realizziamo insieme<br />
+        la <span class="text-blu">soluzione perfetta</span>.
+      </h2>
+      <p class="text-nero">
+        Hai bisogno di un prodotto o una consulenza? <br />
+        Siamo qui per aiutarti a scegliere la soluzione più adatta alle tue esigenze.
+      </p>
+    </div>
+    <div class="circle-container flex flex-col gap-[1vw] relative w-[10.417vw]">
+      <div class="circle absolute h-[10.417vw] w-[10.417vw] bg-blu rounded-full"></div>
+      <div class="circle absolute h-[8vw] w-[8vw] bg-[red] rounded-full"></div>
+      <div class="circle absolute h-[6vw] w-[6vw] bg-[green] rounded-full"></div>
+      <div class="circle absolute h-[4vw] w-[4vw] bg-[yellow] rounded-full"></div>
+    </div>
+  </div>
+  <form action="invioEffettuato" method="POST" id="form">
+    <div class="flex flex-col lg:gap-[2.222vw]">
+      <div class="flex flex-col lg:flex-row lg:gap-[10.417vw]">
+        <div class="lg:w-1/2 relative">
+          <input type="text" name="name" placeholder=" " required />
+          <label for="name" class="text-grigio-200">Nome</label>
+        </div>
+        <div class="lg:w-1/2 relative">
+          <input type="text" name="surname" placeholder=" " required />
+          <label for="surname" class="text-grigio-200">Cognome</label>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:gap-[10.417vw]">
+        <div class="lg:w-1/2 relative">
+          <input type="email" name="email" placeholder=" " required />
+          <label for="email" class="text-grigio-200">Email</label>
+        </div>
+        <div class="lg:w-1/2 relative">
+          <input type="number" name="phoneNumber" placeholder=" " required />
+          <label for="phoneNumber" class="text-grigio-200">Telefono</label>
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:gap-[10.417vw]">
+        <div class="w-full relative">
+          <input type="text" name="message" placeholder=" " required />
+          <label for="message" class="text-grigio-200">Messaggio</label>
+        </div>
+      </div>
+      <div class="flex flex-row items-center lg:gap-[0.833vw] gap-[16px]">
+        <input type="checkbox" name="privacy" id="privacy" required />
+        <p class="text-grigio-200 !opacity-100 !top-0 !translate-x-0 lg:text-[0.83vw] text-[16px]">
+          Acconsento al trattamento dei dati personali come specificato nella
+          <a href="https://www.iubenda.com/privacy-policy/35285413" class="font-[600] z-[20] text-blu">Privacy Policy</a>
+        </p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-start">
+        <button class="btn-gen btn-blu">
+          <p class="btn-title">
+            <span class="text">Invia richiesta</span>
+            <span class="hover-text">Invia richiesta</span>
+          </p>
+        </button>
+      </div>
+    </div>
+  </form>
+</section>
+<script>
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const circles = document.querySelectorAll(".circle");
+
+  // Animate each circle with increasing offset to the left
+  circles.forEach((circle, index) => {
+    gsap.fromTo(
+      circle,
+      { x: 0 }, // Initial position
+      {
+        x: `-${(index + 1) * 10}vw`, // Move each circle progressively further to the left
+        scrollTrigger: {
+          trigger: ".circle-container",
+          start: "top center",
+          end: "bottom center",
+          scrub: true // Smooth, scroll-linked animation
+        },
+        ease: "power2.out"
+      }
+    );
+  });
+</script>

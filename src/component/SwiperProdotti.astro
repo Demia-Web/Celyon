@@ -1,0 +1,59 @@
+---
+// JSON data directly in the component
+const products = [
+  {
+    id: "01",
+    title: "Impianti di oleodinamica e Elettroidraulica",
+    description: "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+    image: "/img/page/home/swiper/oleodinamica.png"
+  },
+  {
+    id: "02",
+    title: "Impianti di oleodinamica e Elettroidraulica",
+    description: "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+    image: "/img/page/home/swiper/oleodinamica.png"
+  },
+  {
+    id: "03",
+    title: "Impianti di oleodinamica e Elettroidraulica",
+    description: "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+    image: "/img/page/home/swiper/oleodinamica.png"
+  },
+  {
+    id: "04",
+    title: "Impianti di oleodinamica e Elettroidraulica",
+    description: "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+    image: "/img/page/home/swiper/oleodinamica.png"
+  },
+  {
+    id: "05",
+    title: "Impianti di oleodinamica e Elettroidraulica",
+    description: "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+    image: "/img/page/home/swiper/oleodinamica.png"
+  }
+];
+---
+
+<!-- Swiper Component -->
+<div class="swiper swiper-prodotti mt-[6.944vw]">
+  <div class="swiper-wrapper">
+    {
+      products.map((product) => (
+        <div class="swiper-slide">
+          <div class="p-[1.667vw] bg-grigio-100 flex flex-row gap-[3.056vw] justify-between h-[40.278vw]">
+            <img src={product.image} alt={product.title} class="h-full w-[29.167vw]" />
+            <div class="flex flex-col justify-between py-[3.056vw]">
+              <div class="pb-[2.222vw] border-b border-nero">
+                <div class="flex flex-col gap-[0.694vw]">
+                  <h3 class="text-blu">{product.id}</h3>
+                  <h3 class="text-nero">{product.title}</h3>
+                </div>
+              </div>
+              <p class="text-nero">{product.description}</p>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
