@@ -1,10 +1,11 @@
 ---
-const { content, type, link } = Astro.props;
+const { content, type, link, img } = Astro.props;
 ---
 
-<a href={link} class={`btn-gen ${type}`}>
+<a href={link} class={`btn-gen ${type} flex flex-row gap-[0.556vw]`}>
   <p class="btn-title">
     <span class="text">{content}</span>
     <span class="hover-text">{content}</span>
   </p>
+  {img && <img src={img} alt="" />}
 </a>

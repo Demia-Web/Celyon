@@ -1,0 +1,172 @@
+---
+import Layout from "../layout/Layout.astro";
+import Button from "../component/Button.astro";
+import Form from "../component/Form.astro";
+---
+
+<Layout title="title" description="description">
+  <section class="hero flex flex-col justify-between">
+    <div class="flex flex-row justify-between gap-[6.944vw] items-center">
+      <div class="flex flex-col gap-[5.556vw]">
+        <div class="flex flex-col gap-[1.667vw]">
+          <h1 class="test-nero">
+            Unità di Disaerazione<br />
+            e Filtraggio<br />
+            DWA Separator
+          </h1>
+          <p class="text-grigio-200">Breve frase che indica il vantaggio di avere questo prodotto.</p>
+        </div>
+        <div class="flex flex-row gap-[0.556vw]">
+          <Button content="Richiedi informazioni" type="btn-blu" link="" />
+          <Button content="Scarica scheda tecnica" type="btn-transparent" link="/" img="/img/assets/download.svg" />
+        </div>
+      </div>
+      <img src="/img/page/oleodinamica/impiantiOleodinamica.png" alt="" class="w-[38.889vw] h-[40.278vw] object-cover" />
+    </div>
+    <div class="w-full flex justify-center">
+      <p class="text-nero scroll-title">Scroll</p>
+    </div>
+  </section>
+
+  <section class="px-body py-body bg-blu flex flex-col gap-body">
+    <div class="flex flex-row items-end justify-between">
+      <h3 class="text-bianco w-[43.472vw]">In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.</h3>
+      <p class="text-bianco w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.</p>
+    </div>
+    <div class="marquee-container w-full bg-bianco py-[2.5vw] overflow-hidden whitespace-nowrap">
+      <div class="marquee-content inline-flex gap-[6.944vw]">
+        <h4 class="text-grigio-100">Industriale</h4>
+        <h4 class="text-grigio-100">Industriale</h4>
+        <h4 class="text-grigio-100">Industriale</h4>
+        <h4 class="text-grigio-100">Industriale</h4>
+        <h4 class="text-grigio-100">Industriale</h4>
+        <h4 class="text-grigio-100">Industriale</h4>
+        <h4 class="text-grigio-100">Industriale</h4>
+        <h4 class="text-grigio-100">Industriale</h4>
+        <h4 class="text-bianco">Industriale</h4>
+      </div>
+    </div>
+    <div class="w-full h-[48.611vw]">
+      <img src="/img/page/oleodinamica/img-full-oleodinamica.jpeg" alt="" class="w-full h-full object-cover" />
+    </div>
+  </section>
+
+  <section class="px-body py-body flex flex-col gap-body">
+    <div class="flex flex-row justify-between">
+      <div class="flex flex-col gap-[2.222vw] w-[34.722vw]">
+        <h2 class="text-nero">
+          Impianto di oleodinamica<br />
+          ed Elettroidraulica <span class="text-blu">su misura</span>.
+        </h2>
+        <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+      </div>
+      <div class="w-[22.5vw] flex flex-col gap-[1.226vw] relative" id="animation-oleodinamica">
+        <div class="h-[5.893vw] w-[5.893vw] bg-blu rounded-full absolute top-0" id="palla-1"></div>
+        <div class="h-[5.893vw] w-[5.893vw] bg-blu rounded-full absolute bottom-0" id="palla-2"></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 gap-[1.111vw]">
+      <!-- 01 -->
+      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+        <div class="flex flex-col gap-[0.556vw]">
+          <p class="text-blu text-[2.222vw] leading-[2.5vw]">01</p>
+          <h4 class="text-nero">Riduzione capacità nominale</h4>
+        </div>
+        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.</p>
+      </div>
+      <!-- 02 -->
+      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+        <div class="flex flex-col gap-[0.556vw]">
+          <p class="text-blu text-[2.222vw] leading-[2.5vw]">02</p>
+          <h4 class="text-nero">Risparmio energetico</h4>
+        </div>
+        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione.</p>
+      </div>
+      <!-- 03 -->
+      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+        <div class="flex flex-col gap-[0.556vw]">
+          <p class="text-blu text-[2.222vw] leading-[2.5vw]">03</p>
+          <h4 class="text-nero">Riduzione presenza di acqua</h4>
+        </div>
+        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
+      </div>
+      <!-- 04 -->
+      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+        <div class="flex flex-col gap-[0.556vw]">
+          <p class="text-blu text-[2.222vw] leading-[2.5vw]">04</p>
+          <h4 class="text-nero">Preservazione componenti</h4>
+        </div>
+        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.</p>
+      </div>
+      <!-- 05 -->
+      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+        <div class="flex flex-col gap-[0.556vw]">
+          <p class="text-blu text-[2.222vw] leading-[2.5vw]">05</p>
+          <h4 class="text-nero">Riduzione consumo elementi filtranti</h4>
+        </div>
+        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione.</p>
+      </div>
+      <!-- 06 -->
+      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+        <div class="flex flex-col gap-[0.556vw]">
+          <p class="text-blu text-[2.222vw] leading-[2.5vw]">06</p>
+          <h4 class="text-nero">Aumento durata vita carico d'olio</h4>
+        </div>
+        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
+      </div>
+    </div>
+    <div class="bg-blu py-[3.056vw] px-[2.222vw] flex flex-col gap-body">
+      <div class="flex flex-row justify-between items-end">
+        <h2 class="text-bianco">Alcuni numeri</h2>
+        <p class="text-bianco w-[20.833vw]">Breve descrizione su cosa può far risparmiare il prodotto.</p>
+        <div class="flex items-end gap-[0.556vw]">
+          <Button content="Richiedi un preventivo" type="btn-white" link="" />
+        </div>
+      </div>
+      <div class="flex flex-row justify-between">
+        <div class="flex flex-col gap-[0.556vw] w-full">
+          <h1 id="counter-1" class="text-grigio-200">130</h1>
+          <h4 class="text-grigio-50">Contatore 1</h4>
+        </div>
+        <div class="flex flex-col gap-[0.556vw] w-full">
+          <h1 id="counter-2" class="text-grigio-200">8h</h1>
+          <h4 class="text-grigio-50">Contatore 2</h4>
+        </div>
+        <div class="flex flex-col gap-[0.556vw] w-full">
+          <h1 id="counter-3" class="text-grigio-200">+2000</h1>
+          <h4 class="text-grigio-50">Contatore 3</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="h-screen px-body pt-[18.889vw] flex flex-col gap-[1.667vw]" id="img-full-azienda">
+    <p class="text-bianco text-[2.778vw] leading-[3.056vw] w-[57.708vw]">
+      In questo paragrafo una breve<br />
+      descrizione sul prodotto.
+    </p>
+    <Button content="Scarica scheda tecnica" type="btn-white" link="/" img="/img/assets/download.svg" />
+  </section>
+
+  <Form />
+
+  <script>
+    import gsap from "gsap";
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const marqueeContent = document.querySelector(".marquee-content");
+
+      // Duplicate content for a seamless loop
+      const marqueeClone = marqueeContent.cloneNode(true);
+      marqueeContent.parentElement.appendChild(marqueeClone);
+
+      // GSAP animation for infinite marquee
+      gsap.to(".marquee-content", {
+        xPercent: -100, // Move to the left by 100% of the container width
+        ease: "none", // Linear motion for continuous scrolling
+        duration: 20, // Adjust duration for speed
+        repeat: -1 // Infinite loop
+      });
+    });
+  </script>
+</Layout>

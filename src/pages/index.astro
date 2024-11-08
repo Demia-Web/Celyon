@@ -9,7 +9,7 @@ import Form from "../component/Form.astro";
 ---
 
 <Layout title="title" description="description">
-  <section class="h-screen px-body pt-[16.25vw] pb-[2.5vw] flex flex-col justify-between">
+  <section class="hero flex flex-col justify-between">
     <div class="flex flex-row justify-between h-full">
       <div class="flex flex-col justify-between h-full">
         <h1 class="text-nero">
@@ -23,11 +23,6 @@ import Form from "../component/Form.astro";
         </div>
       </div>
       <div class="flex flex-col justify-end h-full">
-        <!-- <div class="cerchio esterno">
-          <div class="cerchio medio">
-            <div class="cerchio interno"></div>
-          </div>
-        </div> -->
         <img src="/img/assets/palle.svg" alt="" class="palla-rotante w-[42.345vw]" />
       </div>
     </div>
@@ -321,17 +316,16 @@ import Form from "../component/Form.astro";
         }
       }
     );
-  </script>
 
-  <!-- Swiper -->
-  <script>
+    // src/scripts/swiperHome.js
     import Swiper from "swiper";
     import { Navigation } from "swiper/modules";
     import "swiper/css";
     import "swiper/css/navigation";
 
     document.addEventListener("DOMContentLoaded", function () {
-      const tipologie_lenti = new Swiper(".swiper-prodotti", {
+      console.log("Swiper caricato");
+      new Swiper(".swiper-prodotti", {
         modules: [Navigation],
         spaceBetween: 16,
         slidesPerView: 1.4,

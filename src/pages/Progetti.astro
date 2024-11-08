@@ -1,0 +1,60 @@
+---
+// Includes
+import Layout from "../layout/Layout.astro";
+import Button from "../component/Button.astro";
+
+// Fetch projects from Strapi API directly in the component
+const url = "http://localhost:1337/api/celyon-progettis?populate=*";
+const response = await fetch(url, {
+  headers: {
+    Authorization: `Bearer c943baf6e643a3e28ed40d3c8ce00805edec091865667e3fda427e58fb9e8cfd957c0ab84a3bd2a60c9e6daa91d8e9e8d5f8e341db899d435e971b2f6b6129a5e5fd3cd51d7c06ef5f25cf7ec7a00468f3c693710b7b26ee9a20f123b0fde9ae8905a310cc1ecfe3710f0c61e322a9eb381abae43c96a64b3c1a553c17118f38`
+  }
+});
+
+const data = await response.json();
+const projects = data.data;
+---
+
+<Layout title="I nostri ultimi progetti" description="Descrizione della pagina">
+  <!-- Page Header -->
+  <section class="px-body pt-[16.25vw] flex flex-row justify-between items-end gap-[1.667vw]">
+    <h1 class="text-nero">
+      I nostri ultimi<br />
+      <span class="text-blu">progetti</span>
+    </h1>
+    <h4 class="text-nero w-[31.25vw]">In questo paragrafo dovrà essere inserita una descrizione introduttiva in merito ai progetti realizzati, alle collaborazioni svolte.</h4>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="px-body py-body grid grid-cols-2 gap-y-[5.556vw] gap-x-[9.028vw]" id="griglia-progetti">
+    {
+      projects.map((project) => (
+        <div class="card-progetto">
+          <a href={`/Progetti/${project.id}`} class="cursor-pointer hover-target flex flex-col gap-[1.111vw]">
+            <img src={`http://localhost:1337${project.immagine_progetto.url}`} alt={project.titolo_progetto} class="lg:h-[41.667vw] h-[500px] w-full object-cover" />
+            <div class="flex flex-col gap-[1.111vw]">
+              <div class="pb-[0.556vw] border-b border-nero">
+                <p class="text-grigio-200">{project.data_progetto}</p>
+              </div>
+              <h5 class="textClass !hover-target mt-[12px]">{project.titolo_progetto}</h5>
+            </div>
+          </a>
+        </div>
+      ))
+    }
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="px-body pb-body">
+    <div class="bg-grigio-100 py-[5.556vw] px-[2.222vw] flex flex-row justify-between items-end">
+      <h2 class="text-nero">
+        Vuoi unirti a Celyon?<br />
+        Vuoi collaborare con noi?
+      </h2>
+      <p class="text-nero w-[20.833vw]">Breve paragrafo sul fatto che Celyon è sempre disposta a collaborare.</p>
+      <div class="flex items-end">
+        <Button content="Mettiti in contatto" type="btn-blu" link="/Contatti" />
+      </div>
+    </div>
+  </section>
+</Layout>

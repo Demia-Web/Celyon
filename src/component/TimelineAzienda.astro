@@ -1,0 +1,89 @@
+<section class="px-body py-body">
+  <div class="bg-grigio-100 p-[2.5vw] flex flex-col gap-[4.962vw]">
+    <div class="flex flex-row justify-between items-end">
+      <h2 class="text-nero">
+        Ripercorri la<br />
+        nostra <span class="text-blu">storia</span>
+      </h2>
+      <p class="text-nero w-[20.833vw]">Breve descrizione su come è evoluta l’azienda, su quali sono stati gli obiettivi raggiunti.</p>
+      <div class="flex items-end gap-[0.556vw]">
+        <img src="/img/assets/arrow-blu.svg" alt="" class="cursor-pointer rotate-180" id="prev-year" />
+        <img src="/img/assets/arrow-blu.svg" alt="" class="cursor-pointer" id="next-year" />
+      </div>
+    </div>
+    <div class="w-full h-[47.917vw] relative overflow-hidden">
+      <img src="/img/page/azienda/storia/storia-1.png" alt="" class="w-full h-full timeline-image" />
+      <div class="flex flex-row justify-between items-center absolute bottom-[3.472vw] w-full px-[3.056vw]">
+        <h1 class="text-white timeline-year">1997</h1>
+        <p class="text-white text-[1.667vw] leading-[1.944vw] timeline-caption">Questa la didascalia della data. Sarebbe otttimo non andare oltre le due righe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Animazione scale-in
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Timeline data
+  const timelineData = [
+    {
+      year: "1997",
+      image: "/img/page/azienda/storia/storia-1.png",
+      caption: "Questa la didascalia della data. Sarebbe otttimo non andare oltre le due righe."
+    },
+    {
+      year: "2005",
+      image: "/img/page/azienda/storia/storia-2.png",
+      caption: "Secondo grande obiettivo raggiunto dall'azienda."
+    },
+    {
+      year: "2015",
+      image: "/img/page/azienda/storia/storia-3.png",
+      caption: "Espansione internazionale e innovazioni."
+    },
+    {
+      year: "2021",
+      image: "/img/page/azienda/storia/storia-4.png",
+      caption: "Ultimi sviluppi e obiettivi futuri."
+    }
+  ];
+
+  // Initial state
+  let currentIndex = 0;
+
+  // Function to update content
+  function updateTimelineContent(index) {
+    const { year, image, caption } = timelineData[index];
+
+    // Explicitly cast elements to their specific types
+    const timelineYear = document.querySelector(".timeline-year") as HTMLElement;
+    const timelineImage = document.querySelector(".timeline-image") as HTMLImageElement;
+    const timelineCaption = document.querySelector(".timeline-caption") as HTMLElement;
+
+    // GSAP animation for slide effect
+    gsap.fromTo([timelineYear, timelineCaption, timelineImage], { y: "100%", opacity: 0 }, { y: "0%", opacity: 1, duration: 1, ease: "power2.out" });
+
+    // Update content
+    timelineYear.textContent = year;
+    timelineImage.src = image; // src is now recognized as a property of HTMLImageElement
+    timelineCaption.textContent = caption;
+  }
+
+  // Initial content
+  updateTimelineContent(currentIndex);
+
+  // Event listeners for navigation
+  document.getElementById("next-year")?.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % timelineData.length;
+    updateTimelineContent(currentIndex);
+  });
+
+  document.getElementById("prev-year")?.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + timelineData.length) % timelineData.length;
+    updateTimelineContent(currentIndex);
+  });
+</script>

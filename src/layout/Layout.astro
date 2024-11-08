@@ -9,12 +9,15 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
 <html lang="it">
   <head>
     <BaseHead title={title} description={description} />
+    <ViewTransitions />
   </head>
   <body>
     <Header />

@@ -1,0 +1,263 @@
+---
+import Layout from "../layout/Layout.astro";
+import Button from "../component/Button.astro";
+import TimelineAzienda from "../component/TimelineAzienda.astro";
+---
+
+<Layout title="title" description="description">
+  <section class="hero overflow-hidden !px-0 flex flex-col justify-between relative">
+    <div class="flex flex-col gap-[1.667vw] items-center">
+      <h1 class="text-nero text-center">
+        Oltre <span class="text-blu">30 anni di esperienza</span><br />
+        negli Impianti di<br />
+        Lubrificazione e Oleodinamica
+      </h1>
+      <Button content="Scopri la nostra storia" type="btn-blu" link="" />
+    </div>
+    <div class="flex justify-center absolute w-full -bottom-[26.5vw] scroll-animation">
+      <img src="/img/page/azienda/about_animation.svg" alt="" class="" />
+    </div>
+    <div class="w-full flex justify-center">
+      <p class="text-nero scroll-title">Scroll</p>
+    </div>
+  </section>
+
+  <section class="px-body py-body bg-blu flex flex-col gap-body">
+    <div class="flex flex-row justify-between h-[38.889vw]">
+      <div class="flex flex-col gap-[28.889vw] w-[38.889vw]">
+        <h3 class="text-white">In questo paragrafo dovrà essere inserita una descrizione introduttiva che ci invita a conoscere Celyon come azienda. Andremo a evidenziare qual è la mission aziendale, gli obiettivi aziendali e le opportunità all’interno di questo settore industriale.</h3>
+        <p class="text-white w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.</p>
+      </div>
+      <div class="scroll-container h-full relative overflow-hidden">
+        <img src="/img/page/azienda/scroll-image.jpeg" alt="" class="w-[38.889vw] h-[33.333vw] object-cover" />
+      </div>
+    </div>
+    <div class="flex flex-col gap-[6.944vw]">
+      <div class="flex flex-col gap-[5.556vw]">
+        <div class="w-full bg-bianco px-[2.222vw] py-[0.833vw] mt-[10.417vw]">
+          <h5 class="text-nero">I nostri prodotti</h5>
+        </div>
+        <div class="flex flex-row gap-body justify-start items-end">
+          <h2 class="text-bianco">
+            Che cosa ci permette di<br />
+            <span class="text-grigio-200">crescere continuamente</span>
+          </h2>
+          <p class="text-bianco w-[23.611vw]">Una breve descrizione che introduca alla filosofia aziendale, ai focus su cui Celyon riesce a fare la differenza. Che cosa caratterizza questa azienda.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-[1.111vw] griglia-animazioni">
+        <!-- 01 -->
+        <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-bianco h-[22.222vw] relative">
+          <div class="flex flex-col gap-[0.556vw]">
+            <p class="text-blu text-[2.222vw] leading-[2.5vw]">01</p>
+            <h4 class="text-nero">Nessuna delocalizzazione</h4>
+          </div>
+          <p class="text-nero w-[22.639vw]">I nostri impianti sono studiati, progettati e assemblati qui da noi con manodopera e materiali locali e di qualità. Questo ci consente di mantenere sempre alto il livello di controllo.</p>
+          <img src="/img/page/azienda/delocalizzazione.svg" alt="" class="w-[12.014vw] h-[12.014vw] absolute right-[1.667vw] bottom-[1.667vw] rotate" />
+        </div>
+        <!-- 02 -->
+        <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-bianco h-[22.222vw] relative">
+          <div class="flex flex-col gap-[0.556vw]">
+            <p class="text-blu text-[2.222vw] leading-[2.5vw]">02</p>
+            <h4 class="text-nero">Investimento sulla formazione</h4>
+          </div>
+          <p class="text-nero w-[22.639vw]">Lo stretto rapporto con le Università di Pisa e Firenze ci consente di entrare in contatto con tirocinanti, laureandi e apprendisti, una risorsa preziosa per continuare a crescere.</p>
+          <div class="w-[12.014vw] h-[12.014vw] absolute right-[1.667vw] bottom-[1.667vw] pulse"></div>
+        </div>
+        <!-- 03 -->
+        <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-bianco h-[22.222vw] relative">
+          <div class="flex flex-col gap-[0.556vw]">
+            <p class="text-blu text-[2.222vw] leading-[2.5vw]">03</p>
+            <h4 class="text-nero">Rapporti di fiducia con partner e fornitori</h4>
+          </div>
+          <p class="text-nero w-[22.639vw]">Collaboriamo con aziende e professionisti affidabili, precisi e puntuali. Questo è il frutto di rapporti costruiti negli anni, commessa dopo commessa.</p>
+          <div class="w-[12.014vw] h-[12.014vw] absolute right-[1.667vw] bottom-[1.667vw] move flex flex-col items-center">
+            <div id="a" class="w-[5.556vw] h-[5.556vw]"></div>
+            <div id="b" class="w-[5.556vw] h-[5.556vw]"></div>
+          </div>
+        </div>
+        <!-- 04-->
+        <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-bianco h-[22.222vw] relative">
+          <div class="flex flex-col gap-[0.556vw]">
+            <p class="text-blu text-[2.222vw] leading-[2.5vw]">04</p>
+            <h4 class="text-nero">Tutela dell’ambiente</h4>
+          </div>
+          <p class="text-nero w-[22.639vw]">I prodotti che creiamo per i nostri clienti, soprattutto quelli per la manutenzione e la pulizia, sono progettati con lo spirito di chi vuole ridurre gli sprechi e quindi i rifiuti.</p>
+          <img src="/img/page/azienda/tutela.svg" alt="" class="w-[12.014vw] h-[12.014vw] absolute right-[1.667vw] bottom-[1.667vw] rotate" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import gsap from "gsap";
+    import ScrollTrigger from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap
+      .timeline({ repeat: -1 })
+      .to(
+        "#a",
+        {
+          y: "50%",
+          duration: 0,
+          ease: "power1.inOut"
+        },
+        0
+      )
+      .to(
+        "#b",
+        {
+          y: "-50%",
+          duration: 0,
+          ease: "power1.inOut"
+        },
+        0
+      )
+      .to(
+        "#a",
+        {
+          y: "0%",
+          duration: 5,
+          ease: "power1.inOut"
+        },
+        0
+      )
+      .to(
+        "#b",
+        {
+          y: "-0%",
+          duration: 5,
+          ease: "power1.inOut"
+        },
+        0
+      )
+      .to(
+        ".move",
+        {
+          rotation: 180,
+          duration: 5,
+          ease: "power1.inOut",
+          delay: 5
+        },
+        0
+      )
+      .to(
+        "#a",
+        {
+          y: "50%",
+          duration: 5,
+          ease: "power1.inOut",
+          delay: 10
+        },
+        0
+      )
+      .to(
+        "#b",
+        {
+          y: "-50%",
+          duration: 5,
+          ease: "power1.inOut",
+          delay: 10
+        },
+        0
+      );
+  </script>
+
+  <TimelineAzienda />
+
+  <section class="h-screen px-body pt-[18.889vw]" id="img-full-azienda">
+    <p class="text-bianco text-[2.778vw] leading-[3.056vw] w-[57.708vw]">In questo paragrafo una breve descrizione emozionale sulle persone di Celyon.</p>
+  </section>
+
+  <section class="px-body py-body flex flex-col gap-body">
+    <div class="w-full flex justify-end">
+      <h3 class="text-nero w-[38.958vw]">In questo paragrafo dovrà essere inserita una descrizione introduttiva sul team Celyon. Verranno introdotti i fondatori dell’azienda e le persone rilevanti.</h3>
+    </div>
+    <div class="flex flex-row gap-[1.111vw] justify-between">
+      <div class="lg:w-1/3">
+        <a href="" class="cursor-pointer hover-target flex flex-col">
+          <img src="/img/page/azienda/Giampiero_Nelli.png" alt="" class="w-full object-contain" />
+          <div class="flex flex-col gap-[1.111vw]">
+            <div class="pt-[0.556vw] border-t border-nero flex flex-col gap-[0.556vw]">
+              <p class="text-grigio-200">Data del progetto</p>
+              <h5 class="text-blu">Nome del progetto</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="lg:w-1/3">
+        <a href="" class="cursor-pointer hover-target flex flex-col">
+          <img src="/img/page/azienda/erika_bertacchi.png" alt="" class="w-full object-contain" />
+          <div class="flex flex-col gap-[1.111vw]">
+            <div class="pt-[0.556vw] border-t border-nero flex flex-col gap-[0.556vw]">
+              <p class="text-grigio-200">Data del progetto</p>
+              <h5 class="text-blu">Nome del progetto</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="lg:w-1/3">
+        <a href="" class="cursor-pointer hover-target flex flex-col">
+          <img src="/img/page/azienda/alessandro_filippi.png" alt="" class="w-full object-contain" />
+          <div class="flex flex-col gap-[1.111vw]">
+            <div class="pt-[0.556vw] border-t border-nero flex flex-col gap-[0.556vw]">
+              <p class="text-grigio-200">Data del progetto</p>
+              <h5 class="text-blu">Nome del progetto</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-body pb-body">
+    <div class="bg-grigio-100 py-[5.556vw] px-[2.222vw] flex flex-row justify-between items-end">
+      <h2 class="text-nero">
+        Vuoi unirti a Celyon?<br />
+        Vuoi collaborare con noi?
+      </h2>
+      <p class="text-nero w-[20.833vw]">Breve paragrafo sul fatto che Celyon è sempre disposta a collaborare.</p>
+      <div class="flex items-end">
+        <Button content="Mettiti in contatto" type="btn-blu" link="/Contatti" />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Animazione scale-in
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(
+    ".scroll-animation",
+    { scale: 1 },
+    {
+      scale: 2,
+      scrollTrigger: {
+        markers: false,
+        trigger: ".scroll-animation",
+        start: "top center",
+        end: "top top",
+        scrub: true
+      }
+    }
+  );
+
+  // Pin the image
+  gsap.to(".scroll-container img", {
+    scrollTrigger: {
+      trigger: ".scroll-container",
+      start: "-=32 top",
+      end: "40% top",
+      pin: true,
+      pinSpacing: false,
+      scrub: true,
+      markers: false
+    }
+  });
+</script>

@@ -1,0 +1,267 @@
+---
+import Layout from "../layout/Layout.astro";
+import Button from "../component/Button.astro";
+import Form from "../component/Form.astro";
+---
+
+<Layout title="title" description="description">
+  <section class="px-body pt-[16.25vw] flex flex-col gap-[5.556vw] justify-between">
+    <div class="flex flex-row justify-between">
+      <h1 class="text-nero w-[56.042vw]">
+        Questo è il nome<br />
+        del servizio
+      </h1>
+      <h4 class="text-grigio-200 w-[31.25vw]">In questo paragrafo dovrà essere inserita una descrizione sul servizio di engineering, e su come può aiutare le aziende.</h4>
+    </div>
+    <div class="w-full h-[54.514vw]">
+      <img src="/img/ricambiCoponentistica/hero-servizio.jpeg" alt="" class="w-full h-full object-cover" />
+    </div>
+  </section>
+
+  <section class="px-body py-body flex flex-col gap-body">
+    <div class="w-full flex justify-end">
+      <div class="flex flex-col gap-[2.222vw] w-[38.958vw]">
+        <p class="text-nero text-[2.222vw] leading-[2.5vw]">In questo paragrafo dovrà essere inserita una descrizione introduttiva che ci invita a conoscere Celyon come azienda. Andremo a evidenziare qual è la mission aziendale, gli obiettivi aziendali e le opportunità all’interno di questo settore industriale.</p>
+        <Button content="Richiedi il servizio" type="btn-blu" link="/" />
+      </div>
+    </div>
+    <div class="w-full bg-blu px-[2.222vw] py-[0.833vw] mt-[10.417vw]">
+      <h5 class="text-bianco">Cosa possiamo fare per te</h5>
+    </div>
+
+    <div class="flex flex-col gap-[5.556vw]">
+      <div class="flex flex-row justify-between items-end gap-[13.403vw]">
+        <h2 class="text-nero w-full">
+          Soluzioni innovative per ottimizzare<br />
+          il tuo sistema industriale
+        </h2>
+        <p class="text-nero w-full">Scelerisque consectetur posuere est nibh cras donec tellus. Dolor ut posuere tempor mattis blandit. Velit adipiscing aliquam viverra vitae massa ipsum nec sed quis. Vestibulum eu lorem nam praesent ac. Tincidunt nibh ac faucibus sed morbi mi in nisl luctus. Id nunc varius amet pharetra vulputate sit imperdiet.</p>
+      </div>
+      <div class="accordion">
+        <!-- 01 -->
+        <div class="accordion-item">
+          <div class="accordion-header px-[1.667vw] py-[2.222vw]">
+            <div class="flex flex-row gap-[1.667vw]">
+              <h3 class="text-grigio-100 w-[2.778vw] number">01</h3>
+              <h3 class="text-blu title">Progettazione personalizzata</h3>
+            </div>
+            <span class="symbol text-blu">+</span>
+          </div>
+          <div class="accordion-content px-[1.667vw]">
+            <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
+              <p class="text-nero w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+            </div>
+          </div>
+        </div>
+        <!-- 02 -->
+        <div class="accordion-item">
+          <div class="accordion-header px-[1.667vw] py-[2.222vw]">
+            <div class="flex flex-row gap-[1.667vw]">
+              <h3 class="text-grigio-100 w-[2.778vw] number">02</h3>
+              <h3 class="text-blu title">Consulenza tecnica</h3>
+            </div>
+            <span class="symbol text-blu">+</span>
+          </div>
+          <div class="accordion-content px-[1.667vw]">
+            <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
+              <p class="text-nero w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+            </div>
+          </div>
+        </div>
+        <!-- 03 -->
+        <div class="accordion-item">
+          <div class="accordion-header px-[1.667vw] py-[2.222vw]">
+            <div class="flex flex-row gap-[1.667vw]">
+              <h3 class="text-grigio-100 w-[2.778vw] number">03</h3>
+              <h3 class="text-blu title">Prototipazione e collaudo</h3>
+            </div>
+            <span class="symbol text-blu">+</span>
+          </div>
+          <div class="accordion-content px-[1.667vw]">
+            <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
+              <p class="text-nero w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+            </div>
+          </div>
+        </div>
+        <!-- 04 -->
+        <div class="accordion-item">
+          <div class="accordion-header px-[1.667vw] py-[2.222vw]">
+            <div class="flex flex-row gap-[1.667vw]">
+              <h3 class="text-grigio-100 w-[2.778vw] number">04</h3>
+              <h3 class="text-blu title">Integrazione e Automatizazione</h3>
+            </div>
+            <span class="symbol text-blu">+</span>
+          </div>
+          <div class="accordion-content px-[1.667vw]">
+            <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
+              <p class="text-nero w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+            </div>
+          </div>
+        </div>
+        <!-- 05 -->
+        <div class="accordion-item">
+          <div class="accordion-header px-[1.667vw] py-[2.222vw]">
+            <div class="flex flex-row gap-[1.667vw]">
+              <h3 class="text-grigio-100 w-[2.778vw] number">05</h3>
+              <h3 class="text-blu title">Documentazione tecnica e formazione</h3>
+            </div>
+            <span class="symbol text-blu">+</span>
+          </div>
+          <div class="accordion-content px-[1.667vw]">
+            <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
+              <p class="text-nero w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-[1.111vw]">
+      <img src="/img/ricambiCoponentistica/servizi-griglia-1.jpeg" alt="" class="w-[46.944vw] h-[47.222vw] object-cover" />
+      <img src="/img/ricambiCoponentistica/servizi-griglia-2.jpeg" alt="" class="w-[46.944vw] h-[47.222vw] object-cover" />
+    </div>
+    <div class="bg-grigio-100 p-[2.5vw] flex flex-col gap-[4.962vw]">
+      <div class="flex flex-row justify-between items-end">
+        <h2 class="text-nero">
+          Spazio per focus<br />
+          su aspetto del servizio
+        </h2>
+        <p class="text-nero w-[20.833vw]">In questo paragrafo si dovrà scrivere del servizio di configurazione del cilindro secondo le proprie esigenze.</p>
+        <div class="flex items-end">
+          <Button content="Richiedi il servizio" type="btn-blu" link="" />
+        </div>
+      </div>
+      <img src="/img/page/home/img-scopri.png" alt="" class="w-full h-[47.917vw]" />
+    </div>
+  </section>
+
+  <section class="px-body pb-body flex flex-col gap-body">
+    <div class="flex flex-row justify-between">
+      <div class="flex flex-col gap-[2.222vw] w-[34.722vw]">
+        <h2 class="text-nero">
+          Impianto di oleodinamica<br />
+          ed Elettroidraulica <span class="text-blu">su misura</span>.
+        </h2>
+        <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+      </div>
+      <div class="w-[22.5vw] flex flex-col gap-[1.226vw] relative" id="animation-oleodinamica">
+        <div class="h-[5.893vw] w-[5.893vw] bg-blu rounded-full absolute top-0" id="palla-1"></div>
+        <div class="h-[5.893vw] w-[5.893vw] bg-blu rounded-full absolute bottom-0" id="palla-2"></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 gap-[1.111vw]">
+      <!-- 01 -->
+      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+        <div class="flex flex-col gap-[0.556vw]">
+          <p class="text-blu text-[2.222vw] leading-[2.5vw]">01</p>
+          <h4 class="text-nero">Progettazione</h4>
+        </div>
+        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.</p>
+      </div>
+      <!-- 02 -->
+      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+        <div class="flex flex-col gap-[0.556vw]">
+          <p class="text-blu text-[2.222vw] leading-[2.5vw]">02</p>
+          <h4 class="text-nero">Produzione</h4>
+        </div>
+        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione.</p>
+      </div>
+      <!-- 03 -->
+      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+        <div class="flex flex-col gap-[0.556vw]">
+          <p class="text-blu text-[2.222vw] leading-[2.5vw]">03</p>
+          <h4 class="text-nero">Installazione</h4>
+        </div>
+        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blu px-body py-body flex flex-col gap-[5.556vw]">
+    <h2 class="text-grigio-200">
+      <span class="text-grigio-50">Domande frequenti</span><br />
+      sul servizio di Ricambi e Componentistica.
+    </h2>
+    <div class="accordion">
+      <!-- 01 -->
+      <div class="accordion-item accordion-item-dark">
+        <div class="accordion-header px-[1.667vw] py-[2.222vw]">
+          <div class="flex flex-row gap-[1.667vw]">
+            <h3 class="text-bianco title">Domanda frequente</h3>
+          </div>
+          <span class="symbol text-bianco">+</span>
+        </div>
+        <div class="accordion-content px-[1.667vw]">
+          <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
+            <p class="text-bianco w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 01 -->
+      <div class="accordion-item accordion-item-dark">
+        <div class="accordion-header px-[1.667vw] py-[2.222vw]">
+          <div class="flex flex-row gap-[1.667vw]">
+            <h3 class="text-bianco title">Domanda frequente</h3>
+          </div>
+          <span class="symbol text-bianco">+</span>
+        </div>
+        <div class="accordion-content px-[1.667vw]">
+          <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
+            <p class="text-bianco w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 01 -->
+      <div class="accordion-item accordion-item-dark">
+        <div class="accordion-header px-[1.667vw] py-[2.222vw]">
+          <div class="flex flex-row gap-[1.667vw]">
+            <h3 class="text-bianco title">Domanda frequente</h3>
+          </div>
+          <span class="symbol text-bianco">+</span>
+        </div>
+        <div class="accordion-content px-[1.667vw]">
+          <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
+            <p class="text-bianco w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 01 -->
+      <div class="accordion-item accordion-item-dark">
+        <div class="accordion-header px-[1.667vw] py-[2.222vw]">
+          <div class="flex flex-row gap-[1.667vw]">
+            <h3 class="text-bianco title">Domanda frequente</h3>
+          </div>
+          <span class="symbol text-bianco">+</span>
+        </div>
+        <div class="accordion-content px-[1.667vw]">
+          <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
+            <p class="text-bianco w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 01 -->
+      <div class="accordion-item accordion-item-dark">
+        <div class="accordion-header px-[1.667vw] py-[2.222vw]">
+          <div class="flex flex-row gap-[1.667vw]">
+            <h3 class="text-bianco title">Domanda frequente</h3>
+          </div>
+          <span class="symbol text-bianco">+</span>
+        </div>
+        <div class="accordion-content px-[1.667vw]">
+          <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
+            <p class="text-bianco w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="h-screen px-body pt-[18.889vw] flex flex-col gap-[1.667vw]" id="img-full-azienda">
+    <p class="text-bianco text-[2.778vw] leading-[3.056vw] w-[57.708vw]">
+      In questo paragrafo una breve<br />
+      descrizione sul prodotto.
+    </p>
+    <Button content="Scarica scheda tecnica" type="btn-white" link="/" img="/img/assets/download.svg" />
+  </section>
+
+  <Form />
+</Layout>

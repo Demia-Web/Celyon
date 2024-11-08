@@ -1,0 +1,108 @@
+---
+import "../../css/style.css";
+
+import Layout from "../../layout/Layout.astro";
+
+export async function getStaticPaths() {
+  // Fetch projects from Strapi API within the function scope
+  const url = "http://localhost:1337/api/celyon-progettis?populate=*";
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Bearer c943baf6e643a3e28ed40d3c8ce00805edec091865667e3fda427e58fb9e8cfd957c0ab84a3bd2a60c9e6daa91d8e9e8d5f8e341db899d435e971b2f6b6129a5e5fd3cd51d7c06ef5f25cf7ec7a00468f3c693710b7b26ee9a20f123b0fde9ae8905a310cc1ecfe3710f0c61e322a9eb381abae43c96a64b3c1a553c17118f38`
+    }
+  });
+
+  const data = await response.json();
+  const projects = data.data;
+
+  return projects.map((project) => ({
+    params: { slug: project.id.toString() }, // Convert ID to string for slug
+    props: project
+  }));
+}
+
+type ProjectProps = {
+  id: number;
+  titolo_progetto: string;
+  descrizione_progetto: string;
+  contenuto_1: string;
+  contenuto_2: string;
+  immagine_progetto: {
+    url: string;
+  };
+  immagine_1: {
+    url: string;
+  };
+  immagine_2: {
+    url: string;
+  };
+  immagine_3: {
+    url: string;
+  };
+  immagine_4: {
+    url: string;
+  };
+  caratteristica: {
+    id: number;
+    titolo: string;
+    dato: string;
+  }[];
+};
+
+// Access the `project` data from props
+const project: ProjectProps = Astro.props;
+const { titolo_progetto, descrizione_progetto, contenuto_1, contenuto_2, immagine_progetto, immagine_1, immagine_2, immagine_3, immagine_4, caratteristica } = project;
+---
+
+<Layout title={titolo_progetto} description={descrizione_progetto}>
+  <section class="mx-[2.5vw] h-screen overflow-hidden relative">
+    <img src={`http://localhost:1337${immagine_progetto.url}`} alt={titolo_progetto} class="w-full h-full object-cover" />
+    <div class="w-full h-full absolute top-0 flex flex-col justify-end bg-black/50">
+      <div class="flex flex-row justify-between pb-[8.681vw] px-[3.056vw]">
+        <h1 class="text-bianco">
+          {titolo_progetto}
+        </h1>
+        <div class="w-full flex justify-end items-end">
+          <p class="text-bianco scroll-title">Scroll</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-body py-body">
+    <div class="py-[3.056vw] px-[2.222vw] bg-blu flex flex-col gap-[6.944vw]">
+      <h4 class="text-bianco w-1/2">{descrizione_progetto}</h4>
+      <div class="flex flex-col w-full" id="lista_caratteristiche">
+        {
+          caratteristica.map((item) => (
+            <div class="flex flex-row justify-between lista_caratteristiche_item py-[1.111vw]">
+              <p class="text-bianco">{item.titolo}</p>
+              <p class="text-bianco">{item.dato}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="px-body pb-body flex flex-col gap-body">
+    <div class="flex flex-row justify-between gap-[1.111vw]">
+      <div class="w-[38.889vw]">
+        <p class="text-nero">{contenuto_1}</p>
+      </div>
+      <div class="w-fit">
+        <img src={`http://localhost:1337${immagine_1.url}`} alt={titolo_progetto} class="object-cover h-[47.222vw] w-[46.944vw]" />
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-[1.111vw]">
+      <img src={`http://localhost:1337${immagine_2.url}`} alt={titolo_progetto} class="object-cover h-[47.222vw]" />
+      <img src={`http://localhost:1337${immagine_3.url}`} alt={titolo_progetto} class="object-cover h-[47.222vw]" />
+    </div>
+    <div>
+      <div class="w-[38.889vw]">
+        <p class="text-nero">{contenuto_2}</p>
+      </div>
+    </div>
+    <img src={`http://localhost:1337${immagine_4.url}`} alt={titolo_progetto} class="object-cover h-[47.222vw]" />
+  </section>
+</Layout>

@@ -1,22 +1,25 @@
 ---
 import Layout from "../layout/Layout.astro";
-import Button from "../component/Button.astro";
 ---
 
 <Layout title="title" description="description">
-  <section class="px-body pt-[16.25vw] flex flex-col gap-[10.417vw]">
+  <section class="px-body pt-[16.25vw] flex flex-col gap-body">
     <div class="flex flex-col">
       <div class="flex flex-row justify-between">
         <h1 class="text-nero">
           Hai una domanda?<br />
           Vuoi <span class="text-blu">collaborare</span> con noi?
         </h1>
-        <div class="animazione-contatti-container h-[22.222vw] w-[22.569vw] relative">
+        <!-- <div class="animazione-contatti-container h-[22.222vw] w-[22.569vw] relative">
           <div class="animazione-contatti blue-circle h-[10.417vw] w-[10.417vw] rounded-full bg-blu absolute"></div>
           <div class="animazione-contatti green-circle h-[10.417vw] w-[10.417vw] rounded-full border border-blu absolute"></div>
+        </div> -->
+        <div class="relative h-[22.222vw] w-[22.569vw] move flex flex-col items-center">
+          <div id="a" class="w-[10.417vw] h-[10.417vw]"></div>
+          <div id="b" class="w-[10.417vw] h-[10.417vw]"></div>
         </div>
       </div>
-      <div class="flex flex-row gap-[10.417vw]">
+      <div class="flex flex-row gap-body">
         <div class="flex flex-col gap-[0.556vw] w-[22.569vw]">
           <h5 class="text-grigio-200">Sede</h5>
           <h3 class="text-nero">
@@ -38,7 +41,7 @@ import Button from "../component/Button.astro";
       </div>
       <form action="invioEffettuato" method="POST" id="form" class="w-full">
         <div class="flex flex-col lg:gap-[2.222vw]">
-          <div class="flex flex-col lg:flex-row lg:gap-[10.417vw]">
+          <div class="flex flex-col lg:flex-row lg:gap-body">
             <div class="lg:w-1/2 relative">
               <input type="text" name="name" placeholder=" " required />
               <label for="name" class="text-grigio-200">Nome</label>
@@ -48,7 +51,7 @@ import Button from "../component/Button.astro";
               <label for="surname" class="text-grigio-200">Cognome</label>
             </div>
           </div>
-          <div class="flex flex-col lg:flex-row lg:gap-[10.417vw]">
+          <div class="flex flex-col lg:flex-row lg:gap-body">
             <div class="lg:w-1/2 relative">
               <input type="email" name="email" placeholder=" " required />
               <label for="email" class="text-grigio-200">Email</label>
@@ -58,7 +61,7 @@ import Button from "../component/Button.astro";
               <label for="phoneNumber" class="text-grigio-200">Telefono</label>
             </div>
           </div>
-          <div class="flex flex-col lg:flex-row lg:gap-[10.417vw]">
+          <div class="flex flex-col lg:flex-row lg:gap-body">
             <div class="w-full relative">
               <input type="text" name="message" placeholder=" " required />
               <label for="message" class="text-grigio-200">Messaggio</label>
@@ -99,6 +102,82 @@ import Button from "../component/Button.astro";
       </div>
     </div>
   </section>
+
+  <script>
+    import gsap from "gsap";
+    import ScrollTrigger from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap
+      .timeline({ repeat: -1 })
+      .to(
+        "#a",
+        {
+          y: "50%",
+          duration: 0,
+          ease: "power1.inOut"
+        },
+        0
+      )
+      .to(
+        "#b",
+        {
+          y: "-50%",
+          duration: 0,
+          ease: "power1.inOut"
+        },
+        0
+      )
+      .to(
+        "#a",
+        {
+          y: "0%",
+          duration: 5,
+          ease: "power1.inOut"
+        },
+        0
+      )
+      .to(
+        "#b",
+        {
+          y: "-0%",
+          duration: 5,
+          ease: "power1.inOut"
+        },
+        0
+      )
+      .to(
+        ".move",
+        {
+          rotation: 180,
+          duration: 5,
+          ease: "power1.inOut",
+          delay: 5
+        },
+        0
+      )
+      .to(
+        "#a",
+        {
+          y: "50%",
+          duration: 5,
+          ease: "power1.inOut",
+          delay: 10
+        },
+        0
+      )
+      .to(
+        "#b",
+        {
+          y: "-50%",
+          duration: 5,
+          ease: "power1.inOut",
+          delay: 10
+        },
+        0
+      );
+  </script>
 
   <script>
     // Import GSAP and ScrollTrigger
