@@ -380,10 +380,6 @@ input[type="number"] {
   border-radius: 1000px;
 }
 
-/* .griglia-animazioni .move {
-  animation: move 5s infinite;
-} */
-
 .move #a {
   background-color: #0029cc;
   border-radius: 1000px;
@@ -393,35 +389,6 @@ input[type="number"] {
   border: 0.069vw solid #0029cc;
   border-radius: 1000px;
 }
-
-/* .griglia-animazioni .move #a {
-  transform: translateY(50%);
-}
-
-.griglia-animazioni .move #b {
-  transform: translateY(-50%);
-} */
-
-/* 
-@keyframes moveA {
-  0% {
-    transform: translateY(50%);
-  }
-
-  25% {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes moveB {
-  0% {
-    transform: translateY(-50%);
-  }
-
-  25% {
-    transform: translateX(0%);
-  }
-} */
 
 @keyframes pulse {
   0% {
