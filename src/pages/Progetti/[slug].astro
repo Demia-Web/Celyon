@@ -1,14 +1,15 @@
 ---
+import ProgettiCorrelati from "../../component/ProgettiCorrelati.astro";
 import "../../css/style.css";
 
 import Layout from "../../layout/Layout.astro";
 
 export async function getStaticPaths() {
   // Fetch projects from Strapi API within the function scope
-  const url = "http://localhost:1337/api/celyon-progettis?populate=*";
+  const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*`;
   const response = await fetch(url, {
     headers: {
-      Authorization: `Bearer c943baf6e643a3e28ed40d3c8ce00805edec091865667e3fda427e58fb9e8cfd957c0ab84a3bd2a60c9e6daa91d8e9e8d5f8e341db899d435e971b2f6b6129a5e5fd3cd51d7c06ef5f25cf7ec7a00468f3c693710b7b26ee9a20f123b0fde9ae8905a310cc1ecfe3710f0c61e322a9eb381abae43c96a64b3c1a553c17118f38`
+      Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
     }
   });
 
@@ -47,14 +48,18 @@ type ProjectProps = {
     titolo: string;
     dato: string;
   }[];
+  SEO: {
+    metaTitle: string;
+    metaDescription: string;
+  }[];
 };
 
 // Access the `project` data from props
 const project: ProjectProps = Astro.props;
-const { titolo_progetto, descrizione_progetto, contenuto_1, contenuto_2, immagine_progetto, immagine_1, immagine_2, immagine_3, immagine_4, caratteristica } = project;
+const { titolo_progetto, descrizione_progetto, contenuto_1, contenuto_2, immagine_progetto, immagine_1, immagine_2, immagine_3, immagine_4, caratteristica, SEO } = project;
 ---
 
-<Layout title={titolo_progetto} description={descrizione_progetto}>
+<Layout title={SEO.metaTitle} description={SEO.metaDescription}>
   <section class="mx-[2.5vw] h-screen overflow-hidden relative">
     <img src={`http://localhost:1337${immagine_progetto.url}`} alt={titolo_progetto} class="w-full h-full object-cover" />
     <div class="w-full h-full absolute top-0 flex flex-col justify-end bg-black/50">
@@ -105,4 +110,6 @@ const { titolo_progetto, descrizione_progetto, contenuto_1, contenuto_2, immagin
     </div>
     <img src={`http://localhost:1337${immagine_4.url}`} alt={titolo_progetto} class="object-cover h-[47.222vw]" />
   </section>
+
+  <ProgettiCorrelati />
 </Layout>

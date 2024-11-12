@@ -3,24 +3,20 @@ import Layout from "../layout/Layout.astro";
 ---
 
 <Layout title="title" description="description">
-  <section class="px-body pt-[16.25vw] flex flex-col gap-body">
+  <section class="px-body lg:pt-[16.25vw] pt-[180px] flex flex-col gap-body">
     <div class="flex flex-col">
-      <div class="flex flex-row justify-between">
+      <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-[44px]">
         <h1 class="text-nero">
           Hai una domanda?<br />
           Vuoi <span class="text-blu">collaborare</span> con noi?
         </h1>
-        <!-- <div class="animazione-contatti-container h-[22.222vw] w-[22.569vw] relative">
-          <div class="animazione-contatti blue-circle h-[10.417vw] w-[10.417vw] rounded-full bg-blu absolute"></div>
-          <div class="animazione-contatti green-circle h-[10.417vw] w-[10.417vw] rounded-full border border-blu absolute"></div>
-        </div> -->
-        <div class="relative h-[22.222vw] w-[22.569vw] move flex flex-col items-center">
-          <div id="a" class="w-[10.417vw] h-[10.417vw]"></div>
-          <div id="b" class="w-[10.417vw] h-[10.417vw]"></div>
+        <div class="relative lg:h-[22.222vw] h-[174px] lg:w-[22.569vw] w-[174px] move flex flex-col items-center justify-center lg:mb-0 mb-[60px]">
+          <div id="ballFull" class="lg:w-[10.417vw] w-[78px] lg:h-[10.417vw] h-[78px]"></div>
+          <div id="ballBorder" class="lg:w-[10.417vw] w-[78px] lg:h-[10.417vw] h-[78px]"></div>
         </div>
       </div>
-      <div class="flex flex-row gap-body">
-        <div class="flex flex-col gap-[0.556vw] w-[22.569vw]">
+      <div class="flex lg:flex-row flex-col gap-body">
+        <div class="flex flex-col gap-[0.556vw] lg:w-[22.569vw]">
           <h5 class="text-grigio-200">Sede</h5>
           <h3 class="text-nero">
             Via Romana Ovest 310<br />
@@ -34,14 +30,14 @@ import Layout from "../layout/Layout.astro";
         </div>
       </div>
     </div>
-    <div class="flex flex-row justify-between">
-      <div class="flex flex-col gap-[1.667vw]">
+    <div class="flex lg:flex-row flex-col justify-between">
+      <div class="flex flex-col lg:gap-[1.667vw] gap-[20px]">
         <h4 class="text-nero">Contatta Celyon</h4>
         <p class="text-nero">Per informazioni, preventivi e richieste di consulenza: ti ricontatteremo nel più breve tempo possibile.</p>
       </div>
-      <form action="invioEffettuato" method="POST" id="form" class="w-full">
+      <form action="invioEffettuato" method="POST" id="form" class="w-full lg:mt-0 mt-[44px]">
         <div class="flex flex-col lg:gap-[2.222vw]">
-          <div class="flex flex-col lg:flex-row lg:gap-body">
+          <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
             <div class="lg:w-1/2 relative">
               <input type="text" name="name" placeholder=" " required />
               <label for="name" class="text-grigio-200">Nome</label>
@@ -51,7 +47,7 @@ import Layout from "../layout/Layout.astro";
               <label for="surname" class="text-grigio-200">Cognome</label>
             </div>
           </div>
-          <div class="flex flex-col lg:flex-row lg:gap-body">
+          <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
             <div class="lg:w-1/2 relative">
               <input type="email" name="email" placeholder=" " required />
               <label for="email" class="text-grigio-200">Email</label>
@@ -61,7 +57,7 @@ import Layout from "../layout/Layout.astro";
               <label for="phoneNumber" class="text-grigio-200">Telefono</label>
             </div>
           </div>
-          <div class="flex flex-col lg:flex-row lg:gap-body">
+          <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
             <div class="w-full relative">
               <input type="text" name="message" placeholder=" " required />
               <label for="message" class="text-grigio-200">Messaggio</label>
@@ -75,7 +71,7 @@ import Layout from "../layout/Layout.astro";
             </p>
           </div>
 
-          <div class="flex flex-col lg:flex-row items-start">
+          <div class="flex flex-col lg:flex-row items-start lg:mt-0 mt-[32px]">
             <button class="btn-gen btn-blu">
               <p class="btn-title">
                 <span class="text">Invia richiesta</span>
@@ -87,18 +83,18 @@ import Layout from "../layout/Layout.astro";
       </form>
     </div>
     <div class="pb-body">
-      <div class="bg-grigio-100 p-[2.5vw] flex flex-col gap-[4.962vw]">
-        <div class="flex flex-row justify-between items-end">
+      <div class="bg-grigio-100 lg:px-[2.5v] px-[16px] lg:py-[2.5v] py-[32px] flex flex-col lg:gap-[4.962vw] gap-[60px]">
+        <div class="flex lg:flex-row flex-col justify-between lg:items-end items-start lg:gap-0 gap-[20px]">
           <h2 class="text-nero">
             Diventa partner<br />
             o agente
           </h2>
-          <p class="text-nero w-[20.833vw]">Siamo alla ricerca di partner e agenti sia in Italia che all’estero. Scrivici per collaborare con noi.</p>
+          <p class="text-nero lg:w-[20.833vw]">Siamo alla ricerca di partner e agenti sia in Italia che all’estero. Scrivici per collaborare con noi.</p>
           <div class="flex items-end">
             <h3 class="text-blu">info@celyon.it</h3>
           </div>
         </div>
-        <img src="/img/page/home/img-scopri.png" alt="" class="w-full h-[47.917vw]" />
+        <img src="/img/page/home/img-scopri.png" alt="" class="w-full lg:h-[47.917vw] h-[240px] object-cover" />
       </div>
     </div>
   </section>
@@ -112,7 +108,7 @@ import Layout from "../layout/Layout.astro";
     gsap
       .timeline({ repeat: -1 })
       .to(
-        "#a",
+        "#ballFull",
         {
           y: "50%",
           duration: 0,
@@ -121,7 +117,7 @@ import Layout from "../layout/Layout.astro";
         0
       )
       .to(
-        "#b",
+        "#ballBorder",
         {
           y: "-50%",
           duration: 0,
@@ -130,7 +126,7 @@ import Layout from "../layout/Layout.astro";
         0
       )
       .to(
-        "#a",
+        "#ballFull",
         {
           y: "0%",
           duration: 5,
@@ -139,7 +135,7 @@ import Layout from "../layout/Layout.astro";
         0
       )
       .to(
-        "#b",
+        "#ballBorder",
         {
           y: "-0%",
           duration: 5,
@@ -158,7 +154,7 @@ import Layout from "../layout/Layout.astro";
         0
       )
       .to(
-        "#a",
+        "#ballFull",
         {
           y: "50%",
           duration: 5,
@@ -168,7 +164,7 @@ import Layout from "../layout/Layout.astro";
         0
       )
       .to(
-        "#b",
+        "#ballBorder",
         {
           y: "-50%",
           duration: 5,

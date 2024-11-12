@@ -1,0 +1,50 @@
+---
+import Button from "./Button.astro";
+
+const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*`;
+const response = await fetch(url, {
+  headers: {
+    Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+  }
+});
+
+const data = await response.json();
+const projects = data.data;
+
+function getRandomProjects(projects, count = 3) {
+  const shuffledProjects = [...projects].sort(() => 0.5 - Math.random());
+  return shuffledProjects.slice(0, count);
+}
+
+const randomProjects = getRandomProjects(projects);
+---
+
+<section class="px-body py-body bg-grigio-100 flex flex-col lg:gap-[6.944vw] gap-[60px]">
+  <div class="flex lg:flex-row flex-col lg:gap-0 gap-[20px] justify-between lg:items-end items-start">
+    <h2 class="text-nero">
+      Alcune delle nostre <br />
+      <span class="text-blu">realizzazioni</span>
+    </h2>
+    <p class="text-nero lg:w-[20.833vw]">Una breve descrizione che introduca ai progetti realizzati, interventi frutto della collaborazione con partner affidabili.</p>
+    <div class="flex items-end">
+      <Button content="Vedi tutti i progetti" type="btn-blu" link="" />
+    </div>
+  </div>
+  <div class="flex lg:flex-row flex-col justify-between lg:gap-[1.111vw] gap-[44px]">
+    {
+      randomProjects.map((project) => (
+        <div class="lg:w-1/3">
+          <a href={`/Progetti/${project.id}`} class="cursor-pointer hover-target flex flex-col lg:gap-[1.111vw] gap-[16px]">
+            <img src={`http://localhost:1337${project.immagine_progetto.url}`} alt={project.titolo_progetto} class="lg:h-[41.667vw] h-[240px] w-full object-cover" />
+            <div class="flex flex-col lg:gap-[1.111vw] gap-[8px]">
+              <div class="lg:pb-[0.556vw] pb-[8px] border-b border-nero">
+                <p class="text-grigio-200">{project.data_progetto}</p>
+              </div>
+              <h5 class="">{project.titolo_progetto}</h5>
+            </div>
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</section>

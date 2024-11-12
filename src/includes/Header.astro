@@ -1,65 +1,138 @@
 ---
-/* Astro frontmatter */
+import Button from "../component/Button.astro";
 ---
 
-<header class="z-50 absolute px-body h-[7.222vw] flex flex-row justify-between w-full items-center bg-bianco">
+<header class="z-[100] absolute px-body lg:h-[7.222vw] h-[88px] flex flex-row justify-between w-full items-center bg-bianco" id="navbar">
   <a data-astro-reload href="/">
-    <img src="/img/assets/logo-multi.svg" alt="" class="w-[11.111vw] h-[3.472vw]" />
+    <img src="/img/assets/logo-multi.svg" alt="" class="lg:w-[11.111vw] w-[127px] lg:h-[3.472vw] h-[40px]" />
   </a>
-  <div class="flex flex-row gap-[1.944vw] items-center">
+  <div class="hamburger-icon click-menu lg:hidden block" id="icon">
+    <div class="icon-1" id="a"></div>
+    <div class="icon-2" id="b"></div>
+  </div>
+  <div class="hidden lg:flex flex-row gap-[1.944vw] items-center">
     <div class="bg-grigio-100 flex flex-row gap-[3.056vw] items-center" id="menu">
-      <a href="/Azienda" class="menu-item"> Azienda </a>
+      <a data-astro-reload href="/Azienda" class="btn-header">
+        <p class="btn-title">
+          <span class="text">Azienda</span>
+          <span class="hover-text">Azienda</span>
+        </p>
+      </a>
 
       <!-- "Prodotti" menu with dropdown -->
       <div class="menu-item prodotti relative">
-        <a href="" class="hover-trigger">
+        <a data-astro-reload href="" class="hover-trigger">
           <div class="flex flex-row gap-[0.556vw]">
-            <span class="">Prodotti</span>
+            <p class="btn-title">
+              <span class="text">Prodotti</span>
+              <span class="hover-text">Prodotti</span>
+            </p>
             <img src="/img/assets/plus.svg" alt="" class="w-[1.181vw]" id="plus" />
             <img src="/img/assets/minus.svg" alt="" class="w-[1.181vw] hidden" id="minus" />
           </div>
         </a>
         <div class="submenu hidden absolute bg-grigio-200">
-          <div class="flex flex-col">
-            <a href="/Oleodinamica" class="submenu-item block text-nero py-[0.5vw] btn-title"> Impianti di Oleodinamica ed Elettroidraulica </a>
-            <a href="/Lubrificazione" class="submenu-item block text-nero py-[0.5vw] btn-title">Impianti di Lubrificazione a Olio e a Grasso</a>
-            <a href="/Purificazione" class="submenu-item block text-nero py-[0.5vw] btn-title">Sistemi di Purificazione e Filtraggio</a>
-            <a href="/Disaereazione" class="submenu-item block text-nero py-[0.5vw] btn-title">Unità di Disaerazione</a>
-            <a href="/Cilindri" class="submenu-item block text-nero py-[0.5vw] btn-title">Cilindri Oleodinamici</a>
-          </div>
+          <a data-astro-reload href="/Oleodinamica" class="btn-header">
+            <p class="btn-title">
+              <span class="text">Impianti di Oleodinamica ed Elettroidraulica</span>
+              <span class="hover-text">Impianti di Oleodinamica ed Elettroidraulica</span>
+            </p>
+          </a>
+          <a data-astro-reload href="/Lubrificazione" class="btn-header">
+            <p class="btn-title">
+              <span class="text">Impianti di Lubrificazione a Olio e a Grasso</span>
+              <span class="hover-text">Impianti di Lubrificazione a Olio e a Grasso</span>
+            </p>
+          </a>
+          <a data-astro-reload href="/Purificazione" class="btn-header">
+            <p class="btn-title">
+              <span class="text">Sistemi di Purificazione e Filtraggio</span>
+              <span class="hover-text">Sistemi di Purificazione e Filtraggio</span>
+            </p>
+          </a>
+          <a data-astro-reload href="/Disaereazione" class="btn-header">
+            <p class="btn-title">
+              <span class="text">Unità di Disaerazione</span>
+              <span class="hover-text">Unità di Disaerazione</span>
+            </p>
+          </a>
+          <a data-astro-reload href="/Cilindri" class="btn-header">
+            <p class="btn-title">
+              <span class="text">Cilindri Oleodinamici</span>
+              <span class="hover-text">Cilindri Oleodinamici</span>
+            </p>
+          </a>
         </div>
       </div>
 
       <!-- "Servizi" menu with dropdown -->
       <div class="menu-item servizi relative">
-        <a href="" class="hover-trigger">
+        <a data-astro-reload href="" class="hover-trigger">
           <div class="flex flex-row gap-[0.556vw]">
-            <span class="">Servizi</span>
+            <p class="btn-title">
+              <span class="text">Servizi</span>
+              <span class="hover-text">Servizi</span>
+            </p>
             <img src="/img/assets/plus.svg" alt="" class="w-[1.181vw]" id="plus" />
             <img src="/img/assets/minus.svg" alt="" class="w-[1.181vw] hidden" id="minus" />
           </div>
         </a>
         <div class="submenu hidden absolute bg-grigio-200">
-          <a href="Ricambi_e_Componentistica" class="submenu-item block text-nero py-[0.5vw]">Ricambi e Componentistica</a>
-          <a href="#" class="submenu-item block text-nero py-[0.5vw]">Automazione Industriale</a>
-          <a href="#" class="submenu-item block text-nero py-[0.5vw]">Pulizia e Filtraggio</a>
-          <a href="#" class="submenu-item block text-nero py-[0.5vw]">Engineering</a>
-          <a href="#" class="submenu-item block text-nero py-[0.5vw]">Manutenzione e Assistenza</a>
+          <a data-astro-reload href="/Ricambi_e_Componentistica" class="btn-header">
+            <p class="btn-title">
+              <span class="text">Ricambi e Componentistica</span>
+              <span class="hover-text">Ricambi e Componentistica</span>
+            </p>
+          </a>
+          <a data-astro-reload href="/" class="btn-header">
+            <p class="btn-title">
+              <span class="text">Automazione Industriale</span>
+              <span class="hover-text">Automazione Industriale</span>
+            </p>
+          </a>
+          <a data-astro-reload href="/" class="btn-header">
+            <p class="btn-title">
+              <span class="text">Pulizia e Filtraggio</span>
+              <span class="hover-text">Pulizia e Filtraggio</span>
+            </p>
+          </a>
+          <a data-astro-reload href="/" class="btn-header">
+            <p class="btn-title">
+              <span class="text">Engineering</span>
+              <span class="hover-text">Engineering</span>
+            </p>
+          </a>
+          <a data-astro-reload href="/" class="btn-header">
+            <p class="btn-title">
+              <span class="text">Manutenzione e Assistenza</span>
+              <span class="hover-text">Manutenzione e Assistenza</span>
+            </p>
+          </a>
         </div>
       </div>
 
-      <!-- Use an absolute path for the "Progetti" link -->
-      <a href="/Progetti" class="menu-item"> Progetti </a>
-      <a href="#" class="menu-item"> Area Riservata </a>
-      <a href="/Contatti" class="menu-item contatti"> Contatti </a>
+      <a data-astro-reload href="/Progetti" class="btn-header">
+        <p class="btn-title">
+          <span class="text">Progetti</span>
+          <span class="hover-text">Progetti</span>
+        </p>
+      </a>
+      <a data-astro-reload href="/AreaRiservata" class="btn-header">
+        <p class="btn-title">
+          <span class="text">Area Riservata</span>
+          <span class="hover-text">Area Riservata</span>
+        </p>
+      </a>
+      <Button content="Contatti" type="btn-white" link="/Contatti" />
+    </div>
+    <div class="flex flex-row gap-[4px]">
+      <p class="text-grigio-200 font-medium">IT</p>
+      <img src="/img/assets/globe.svg" alt="" />
     </div>
   </div>
 
   <style>
     /* Define hidden class for controlling visibility */
-    .hidden {
-      display: none;
-    }
 
     /* Basic styles for the submenu */
     .submenu {
@@ -73,15 +146,17 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       z-index: 10;
       width: fit-content;
+      flex-direction: column;
+      gap: 1.111vw;
     }
 
     .submenu.show {
-      display: block;
+      display: flex;
     }
   </style>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("astro:page-load", () => {
       // Selecting elements with null checks and logging for debugging
       const prodottiMenuItem = document.querySelector(".menu-item.prodotti .hover-trigger");
       const serviziMenuItem = document.querySelector(".menu-item.servizi .hover-trigger");

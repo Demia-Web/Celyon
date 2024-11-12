@@ -6,33 +6,33 @@ import Form from "../component/Form.astro";
 
 <Layout title="title" description="description">
   <section class="hero flex flex-col justify-between">
-    <div class="flex flex-row justify-between gap-[6.944vw] items-center">
-      <div class="flex flex-col gap-[5.556vw]">
-        <div class="flex flex-col gap-[1.667vw]">
+    <div class="flex lg:flex-row flex-col justify-between gap-[6.944vw] lg:items-center">
+      <div class="flex flex-col lg:gap-[5.556vw] gap-[44px]">
+        <div class="flex flex-col lg:gap-[1.667vw] gap-[20px]">
           <h1 class="test-nero">
             Impianti di Oleodinamica<br />
             ed Elettroidraulica
           </h1>
           <p class="text-grigio-200">Breve frase che indica il vantaggio di avere questo prodotto.</p>
         </div>
-        <div class="flex flex-row gap-[0.556vw]">
+        <div class="flex lg:flex-row flex-col lg:gap-[0.556vw] gap-[8px]">
           <Button content="Richiedi informazioni" type="btn-blu" link="" />
           <Button content="Scarica scheda tecnica" type="btn-transparent" link="/" img="/img/assets/download.svg" />
         </div>
       </div>
-      <img src="/img/page/oleodinamica/impiantiOleodinamica.png" alt="" class="w-[38.889vw] h-[40.278vw] object-cover" />
+      <img src="/img/page/oleodinamica/impiantiOleodinamica.png" alt="" class="lg:w-[38.889vw] w-full lg:h-[40.278vw] object-cover" />
     </div>
     <div class="w-full flex justify-center">
       <p class="text-nero scroll-title">Scroll</p>
     </div>
   </section>
 
-  <section class="px-body py-body bg-blu flex flex-col gap-body">
-    <div class="flex flex-row items-end justify-between">
-      <h3 class="text-bianco w-[43.472vw]">In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.</h3>
-      <p class="text-bianco w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.</p>
+  <section class="px-body py-body bg-blu flex flex-col lg:gap-body gap-[60px]">
+    <div class="flex lg:flex-row flex-col lg:items-end justify-between lg:gap-0 gap-[24px]">
+      <h3 class="text-bianco lg:w-[43.472vw]">In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.</h3>
+      <p class="text-bianco lg:w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.</p>
     </div>
-    <div class="marquee-container w-full bg-bianco py-[2.5vw] overflow-hidden whitespace-nowrap">
+    <div class="marquee-container w-full bg-bianco lg:py-[2.5vw] py-[18px] overflow-hidden whitespace-nowrap">
       <div class="marquee-content inline-flex gap-[6.944vw]">
         <h4 class="text-grigio-100">Industriale</h4>
         <h4 class="text-grigio-100">Industriale</h4>
@@ -45,26 +45,26 @@ import Form from "../component/Form.astro";
         <h4 class="text-bianco">Industriale</h4>
       </div>
     </div>
-    <div class="w-full h-[48.611vw]">
+    <div class="w-full lg:h-[48.611vw] h-[320px]">
       <img src="/img/page/oleodinamica/img-full-oleodinamica.jpeg" alt="" class="w-full h-full object-cover" />
     </div>
   </section>
 
-  <section class="px-body py-body flex flex-col gap-body">
-    <div class="flex flex-row justify-between">
-      <div class="flex flex-col gap-[2.222vw] w-[34.722vw]">
+  <section class="px-body py-body">
+    <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-[32px]">
+      <div class="flex flex-col lg:gap-[2.222vw] gap-[20px] lg:w-[34.722vw] lg:order-1 order-2">
         <h2 class="text-nero">
-          Impianto di oleodinamica<br />
+          Impianto di oleodinamica<br class="lg:block hidden" />
           ed Elettroidraulica <span class="text-blu">su misura</span>.
         </h2>
         <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
       </div>
-      <div class="w-[22.5vw] flex flex-col gap-[1.226vw] relative" id="animation-oleodinamica">
-        <div class="h-[5.893vw] w-[5.893vw] bg-blu rounded-full absolute top-0" id="palla-1"></div>
-        <div class="h-[5.893vw] w-[5.893vw] bg-blu rounded-full absolute bottom-0" id="palla-2"></div>
+      <div class="w-[22.5vw] flex flex-col lg:gap-[1.226vw] gap-[17px] relative lg:h-fit h-[170px] lg:order-2 order-1" id="animation-oleodinamica">
+        <div class="lg:h-[5.893vw] h-[84px] lg:w-[5.893vw] w-[84px] bg-blu rounded-full absolute top-0" id="palla-1"></div>
+        <div class="lg:h-[5.893vw] h-[84px] lg:w-[5.893vw] w-[84px] bg-blu rounded-full absolute bottom-0" id="palla-2"></div>
       </div>
     </div>
-    <div class="grid grid-cols-3 gap-[1.111vw]">
+    <div class="lg:grid hidden grid-cols-3 gap-[1.111vw] mt-[10.417vw]">
       <!-- 01 -->
       <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
         <div class="flex flex-col gap-[0.556vw]">
@@ -90,24 +90,60 @@ import Form from "../component/Form.astro";
         <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
       </div>
     </div>
-    <div class="bg-blu py-[3.056vw] px-[2.222vw] flex flex-col gap-body">
-      <div class="flex flex-row justify-between items-end">
-        <h2 class="text-bianco">Alcuni numeri</h2>
-        <p class="text-bianco w-[20.833vw]">Breve descrizione su cosa può far risparmiare il prodotto.</p>
-        <div class="flex items-end gap-[0.556vw]">
-          <Button content="Richiedi un preventivo" type="btn-white" link="" />
+    <div class="lg:hidden block mt-[60px]">
+      <div class="swiper swiper-impianti h-[240px]">
+        <div class="swiper-wrapper">
+          <!-- 01 -->
+          <div class="swiper-slide">
+            <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
+              <div class="flex flex-col gap-[8px]">
+                <p class="text-blu text-[20px] leading-[24px]">01</p>
+                <h4 class="text-nero">Progettazione</h4>
+              </div>
+              <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.</p>
+            </div>
+          </div>
+          <!-- 02 -->
+          <div class="swiper-slide">
+            <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
+              <div class="flex flex-col gap-[8px]">
+                <p class="text-blu text-[20px] leading-[24px]">02</p>
+                <h4 class="text-nero">Produzione</h4>
+              </div>
+              <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione.</p>
+            </div>
+          </div>
+          <!-- 03 -->
+          <div class="swiper-slide">
+            <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
+              <div class="flex flex-col gap-[8px]">
+                <p class="text-blu text-[20px] leading-[24px]">03</p>
+                <h4 class="text-nero">Installazione</h4>
+              </div>
+              <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="flex flex-row justify-between">
-        <div class="flex flex-col gap-[0.556vw] w-full">
+    </div>
+    <div class="bg-blu lg:py-[3.056vw] py-[32px] lg:px-[2.222vw] px-[16px] flex flex-col lg:gap-body gap-[60px] lg:mt-[10.417vw] mt-[60px]">
+      <div class="flex lg:flex-row flex-col justify-between lg:items-end items-start lg:gap-0 gap-[20px]">
+        <h2 class="text-bianco">Alcuni numeri</h2>
+        <p class="text-bianco lg:w-[20.833vw]">Breve descrizione su cosa può far risparmiare il prodotto.</p>
+        <div class="flex items-end gap-[0.556vw]">
+          <Button content="Richiedi un preventivo" type="btn-gray" link="" />
+        </div>
+      </div>
+      <div class="flex lg:flex-row flex-col lg:gap-0 gap-[44px] justify-between">
+        <div class="flex flex-col lg:gap-[0.556vw] gap-[8px] w-full">
           <h1 id="counter-1" class="text-grigio-200">130</h1>
           <h4 class="text-grigio-50">Contatore 1</h4>
         </div>
-        <div class="flex flex-col gap-[0.556vw] w-full">
+        <div class="flex flex-col lg:gap-[0.556vw] gap-[8px] w-full">
           <h1 id="counter-2" class="text-grigio-200">8h</h1>
           <h4 class="text-grigio-50">Contatore 2</h4>
         </div>
-        <div class="flex flex-col gap-[0.556vw] w-full">
+        <div class="flex flex-col lg:gap-[0.556vw] gap-[8px] w-full">
           <h1 id="counter-3" class="text-grigio-200">+2000</h1>
           <h4 class="text-grigio-50">Contatore 3</h4>
         </div>
@@ -115,11 +151,11 @@ import Form from "../component/Form.astro";
     </div>
   </section>
 
-  <section class="h-screen px-body pt-[18.889vw] flex flex-col gap-[1.667vw]" id="img-full-azienda">
-    <p class="text-bianco text-[2.778vw] leading-[3.056vw] w-[57.708vw]">
+  <section class="h-screen px-body pt-[18.889vw] flex flex-col lg:gap-[1.667vw] gap-[24px]" id="img-full-azienda">
+    <h1 class="text-bianco lg:w-[57.708vw]">
       In questo paragrafo una breve<br />
       descrizione sul prodotto.
-    </p>
+    </h1>
     <Button content="Scarica scheda tecnica" type="btn-white" link="/" img="/img/assets/download.svg" />
   </section>
 
@@ -128,7 +164,7 @@ import Form from "../component/Form.astro";
   <script>
     import gsap from "gsap";
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("astro:page-load", () => {
       const marqueeContent = document.querySelector(".marquee-content");
 
       // Duplicate content for a seamless loop
@@ -137,10 +173,32 @@ import Form from "../component/Form.astro";
 
       // GSAP animation for infinite marquee
       gsap.to(".marquee-content", {
-        xPercent: -100, // Move to the left by 100% of the container width
-        ease: "none", // Linear motion for continuous scrolling
-        duration: 20, // Adjust duration for speed
-        repeat: -1 // Infinite loop
+        xPercent: -100,
+        ease: "none",
+        duration: 20,
+        repeat: -1
+      });
+    });
+  </script>
+
+  <script>
+    import Swiper from "swiper";
+    import { Navigation } from "swiper/modules";
+    import "swiper/css";
+    import "swiper/css/navigation";
+
+    document.addEventListener("astro:page-load", () => {
+      new Swiper(".swiper-impianti", {
+        breakpoints: {
+          390: {
+            spaceBetween: 16,
+            slidesPerView: 1.1
+          },
+          1024: {
+            spaceBetween: 16,
+            slidesPerView: 1.4
+          }
+        }
       });
     });
   </script>

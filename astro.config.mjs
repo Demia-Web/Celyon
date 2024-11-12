@@ -7,5 +7,5 @@ import react from "@astrojs/react";
 import lenis from "astro-lenis";
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), lenis()]
+  integrations: [tailwind(), react()]
 });

@@ -1,0 +1,143 @@
+---
+import Button from "../component/Button.astro";
+---
+
+<div class="h-full bg-bianco lg:hidden flex absolute z-[50] flex-col justify-between pt-[180px] pb-[60px] px-body" id="menuMobile">
+  <div class="flex flex-col gap-[24px]">
+    <a href="/" class="text-[24px] leading-[28px] font-semibold">Home</a>
+    <a href="/Azienda" class="text-[24px] leading-[28px] font-semibold">Azienda</a>
+    <div class="accordion">
+      <!-- 01 -->
+      <div class="accordion-item accordion-item-header accordion-big">
+        <div class="accordion-header">
+          <p class="text-[24px] leading-[28px] text-nero font-semibold z-20">Prodotti</p>
+          <span class="symbol text-nero text-[24px]">+</span>
+        </div>
+        <div class="accordion-content px-[1.667vw]">
+          <div class="flex flex-col gap-[12px] mb-[24px] pt-[24px]">
+            <a href="/Oleodinamica" class="text-[16px] leading-[20px]">Impianti di Oleodinamica ed Elettroidraulica</a>
+            <a href="/Lubrificazione" class="text-[16px] leading-[20px]">Impianti di Lubrificazione a Olio e a Grasso</a>
+            <a href="/Purificazione" class="text-[16px] leading-[20px]">Sistemi di Purificazione e Filtraggio</a>
+            <a href="/Disaereazione" class="text-[16px] leading-[20px]">Unità di Disaerazione</a>
+            <a href="/Cilindri" class="text-[16px] leading-[20px]">Cilindri Oleodinamici</a>
+          </div>
+        </div>
+      </div>
+      <!-- 02 -->
+      <div class="accordion-item accordion-item-header accordion-big">
+        <div class="accordion-header">
+          <p class="text-[24px] leading-[28px] text-nero font-semibold z-20">Servizi</p>
+          <span class="symbol text-nero text-[24px]">+</span>
+        </div>
+        <div class="accordion-content px-[1.667vw]">
+          <div class="flex flex-col gap-[12px] mb-[24px] pt-[24px]">
+            <a href="/Ricambi_e_Componentistica" class="text-[16px] leading-[20px]">Ricambi e Componentistica</a>
+            <a href="/" class="text-[16px] leading-[20px]">Automazione Industriale</a>
+            <a href="/" class="text-[16px] leading-[20px]">Pulizia e Filtraggio</a>
+            <a href="/" class="text-[16px] leading-[20px]">Engineering</a>
+            <a href="/" class="text-[16px] leading-[20px]">Manutenzione e Assistenza</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="/Progetti" class="text-[24px] leading-[28px] font-semibold">Progetti</a>
+    <a href="" class="text-[24px] leading-[28px] font-semibold">Area Riservata</a>
+    <a href="/Contatti" class="btn-gen btn-blu flex flex-row lg:gap-[0.556vw] gap-[8px]">
+      <p class="btn-title">
+        <span class="text text-[24px] leading-[28px]">Contatti</span>
+        <span class="hover-text text-[24px] leading-[28px]">Contatti</span>
+      </p>
+    </a>
+  </div>
+  <div class="flex flex-row gap-[4px]">
+    <p class="text-grigio-200 font-medium">IT</p>
+    <img src="/img/assets/globe.svg" alt="" />
+  </div>
+</div>
+<div class="h-full bg-blu lg:hidden block absolute z-[49]" id="slideBLu"></div>
+
+<script>
+  import gsap from "gsap";
+  document.addEventListener("astro:page-load", () => {
+    const accordions = document.querySelectorAll(".accordion-item");
+
+    const triggerOffset = -200; // Offset del trigger point di 200 px sopra l'accordion generale
+    const animationDuration = 0.5; // Durata dell'animazione in secondi
+
+    // Imposta l'osservatore di intersezione per animare gli accordion all'entrata nel viewport
+    const observerOptions = {
+      root: null,
+      rootMargin: `${triggerOffset}px 0px 0px 0px`,
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const accordion = entry.target;
+          const index = Array.from(accordions).indexOf(accordion);
+          gsap.to(accordion, {
+            opacity: 1,
+            y: 0,
+            duration: animationDuration,
+            ease: "power4.out",
+            delay: index * 0.1 // Ritardo a cascata
+          });
+          observer.unobserve(accordion); // Interrompi l'osservazione dopo l'animazione iniziale
+        }
+      });
+    }, observerOptions);
+
+    // Imposta gli accordion per essere inizialmente invisibili e fuori posizione
+    accordions.forEach((accordion) => {
+      gsap.set(accordion, {
+        opacity: 0,
+        y: 50
+      });
+      observer.observe(accordion);
+    });
+
+    // Funzione per chiudere tutti gli accordion
+    function closeAllAccordions() {
+      accordions.forEach((accordion) => {
+        const content = accordion.querySelector(".accordion-content");
+        const symbol = accordion.querySelector(".symbol");
+
+        if (content.classList.contains("open")) {
+          gsap.to(content, {
+            maxHeight: 0,
+            duration: animationDuration,
+            ease: "power4.inOut"
+          });
+          symbol.classList.remove("rotate-90");
+          content.classList.remove("open");
+        }
+      });
+    }
+
+    // Aggiunge l'evento di click per aprire/chiudere gli accordion
+    accordions.forEach((accordion) => {
+      const header = accordion.querySelector(".accordion-header");
+      const content = accordion.querySelector(".accordion-content");
+      const symbol = accordion.querySelector(".symbol");
+
+      header.addEventListener("click", () => {
+        const isOpen = content.classList.contains("open");
+
+        // Chiudi tutti gli altri accordion prima di aprire quello cliccato
+        closeAllAccordions();
+
+        if (!isOpen) {
+          const fullHeight = content.scrollHeight + "px";
+          gsap.to(content, {
+            maxHeight: fullHeight,
+            duration: animationDuration,
+            ease: "power4.inOut"
+          });
+          symbol.classList.add("rotate-90");
+          content.classList.add("open");
+        }
+      });
+    });
+  });
+</script>

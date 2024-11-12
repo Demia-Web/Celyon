@@ -4,10 +4,10 @@ import Layout from "../layout/Layout.astro";
 import Button from "../component/Button.astro";
 
 // Fetch projects from Strapi API directly in the component
-const url = "http://localhost:1337/api/celyon-progettis?populate=*";
+const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*`;
 const response = await fetch(url, {
   headers: {
-    Authorization: `Bearer c943baf6e643a3e28ed40d3c8ce00805edec091865667e3fda427e58fb9e8cfd957c0ab84a3bd2a60c9e6daa91d8e9e8d5f8e341db899d435e971b2f6b6129a5e5fd3cd51d7c06ef5f25cf7ec7a00468f3c693710b7b26ee9a20f123b0fde9ae8905a310cc1ecfe3710f0c61e322a9eb381abae43c96a64b3c1a553c17118f38`
+    Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
   }
 });
 

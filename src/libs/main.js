@@ -1,6 +1,6 @@
 import gsap from "gsap";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("astro:page-load", () => {
   const accordions = document.querySelectorAll(".accordion-item");
 
   const triggerOffset = -200; // Offset del trigger point di 200 px sopra l'accordion generale
@@ -76,5 +76,94 @@ document.addEventListener("DOMContentLoaded", () => {
         content.classList.add("open");
       }
     });
+  });
+});
+
+import Lenis from "lenis";
+
+const lenis = new Lenis({
+  autoRaf: true
+});
+
+// Listen for the scroll event and log the event data
+lenis.on("scroll", (e) => {
+  // console.log(e);
+});
+
+var isLenisRunning = true; // Variabile di stato per tenere traccia di Lenis
+
+function toggleLenis() {
+  if (lenis) {
+    if (isLenisRunning) {
+      lenis.stop();
+      isLenisRunning = false;
+    } else {
+      lenis.start();
+      isLenisRunning = true;
+    }
+  } else {
+  }
+}
+
+export function stopLenis() {
+  lenis.stop();
+}
+
+export function startLenis() {
+  lenis.start();
+}
+
+document.addEventListener("astro:page-load", () => {
+  var icons = document.getElementsByClassName("click-menu");
+  var icon1 = document.getElementById("a");
+  var icon2 = document.getElementById("b");
+  var body = document.getElementById("body");
+  var html = document.getElementById("html");
+  var menu = document.getElementById("menuMobile");
+  var slide = document.getElementById("slideBLu");
+
+  Array.prototype.forEach.call(icons, function (icon) {
+    icon.addEventListener("click", function () {
+      console.log("Icon clicked");
+      icon1.classList.toggle("a");
+      icon2.classList.toggle("b");
+      menu.classList.toggle("show");
+      body.classList.toggle("block");
+      html.classList.toggle("overflow-hidden");
+      slide.classList.toggle("slide");
+      toggleLenis();
+    });
+  });
+});
+
+// HEADER
+document.addEventListener("astro:page-load", () => {
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("navbar");
+  const navbarHeight = navbar.offsetHeight;
+
+  // Funzione per controllare se l'utente è su un dispositivo desktop
+  function isDesktop() {
+    return window.innerWidth > 1024; // Definisci il breakpoint per mobile/desktop (qui 1024px)
+  }
+
+  // Evento scroll per mostrare o nascondere la navbar
+  window.addEventListener("scroll", () => {
+    // if (isDesktop()) {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Se si scorre verso il basso, nascondi l'header
+    if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+      navbar.classList.remove("nav-down");
+      navbar.classList.add("nav-up");
+    }
+    // Se si scorre verso l'alto, mostra l'header
+    else if (scrollTop < lastScrollTop) {
+      navbar.classList.remove("nav-up");
+      navbar.classList.add("nav-down");
+    }
+
+    lastScrollTop = scrollTop;
+    // }
   });
 });

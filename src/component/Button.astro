@@ -2,7 +2,7 @@
 const { content, type, link, img } = Astro.props;
 ---
 
-<a href={link} class={`btn-gen ${type} flex flex-row gap-[0.556vw]`}>
+<a href={link} class={`btn-gen ${type} flex flex-row lg:gap-[0.556vw] gap-[8px]`}>
   <p class="btn-title">
     <span class="text">{content}</span>
     <span class="hover-text">{content}</span>

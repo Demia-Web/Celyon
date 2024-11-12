@@ -35,21 +35,21 @@ const products = [
 ---
 
 <!-- Swiper Component -->
-<div class="swiper swiper-prodotti mt-[6.944vw]">
+<div class="swiper swiper-prodotti lg:mt-[6.944vw] mt-[60px]">
   <div class="swiper-wrapper">
     {
       products.map((product) => (
         <div class="swiper-slide">
-          <div class="p-[1.667vw] bg-grigio-100 flex flex-row gap-[3.056vw] justify-between h-[40.278vw]">
-            <img src={product.image} alt={product.title} class="h-full w-[29.167vw]" />
-            <div class="flex flex-col justify-between py-[3.056vw]">
-              <div class="pb-[2.222vw] border-b border-nero">
+          <div class="lg:p-[1.667vw] p-[16px] bg-grigio-100 flex lg:flex-row flex-col lg:gap-[3.056vw] gap-[32px]  lg:h-[40.278vw] h-full">
+            <img src={product.image} alt={product.title} class="lg:h-full h-[240px] lg:w-[29.167vw]" />
+            <div class="flex flex-col justify-between py-[3.056vw] w-full">
+              <div class="lg:pb-[2.222vw] pb-[40px] border-b border-nero">
                 <div class="flex flex-col gap-[0.694vw]">
                   <h3 class="text-blu">{product.id}</h3>
                   <h3 class="text-nero">{product.title}</h3>
                 </div>
               </div>
-              <p class="text-nero">{product.description}</p>
+              <p class="text-nero lg:mt-0 mt-[32px]">{product.description}</p>
             </div>
           </div>
         </div>
