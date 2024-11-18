@@ -1,23 +1,25 @@
 ---
 import Button from "./Button.astro";
+import { t } from "i18next";
+import { Trans } from "astro-i18next/components";
 ---
 
 <section class="px-body py-body flex flex-col lg:gap-[6.944vw] gap-[44px]">
   <div class="w-full bg-blu lg:px-[2.222vw] px-[16px] lg:py-[0.833vw] py-[8px]">
-    <h5 class="text-bianco">Mettiti in contatto con Celyon</h5>
+    <h5 class="text-bianco">{t("contatti.form.component.focus")}</h5>
   </div>
   <div class="flex lg:flex-row flex-col justify-between">
     <div class="flex flex-col lg:gap-[1.389vw] gap-[20px] lg:w-[43.75vw] w-[290px]">
       <h2 class="text-nero">
-        Realizziamo insieme<br />
-        la <span class="text-blu">soluzione perfetta</span>.
+        <Trans i18nKey="contatti.form.component.title">
+          Realizziamo insieme la <span class="text-blu">soluzione perfetta</span>.
+        </Trans>
       </h2>
       <p class="text-nero">
-        Hai bisogno di un prodotto o una consulenza? <br class="lg:block hidden" />
-        Siamo qui per aiutarti a scegliere la soluzione più adatta alle tue esigenze.
+        {t("contatti.form.component.desc")}
       </p>
     </div>
-    <div class="circle-container relative w-[10.417vw] flex items-center">
+    <div class="circle-container relative lg:w-[10.417vw] flex items-center lg:h-fit h-[100px]">
       <div class="circle absolute a h-[10.417vw] w-[10.417vw] bg-blu rounded-full flex items-center">
         <div class="circle absolute b h-[8vw] w-[8vw] bg-blu rounded-full flex items-center">
           <div class="circle absolute c h-[6vw] w-[6vw] bg-blu rounded-full flex items-center">
@@ -27,47 +29,49 @@ import Button from "./Button.astro";
       </div>
     </div>
   </div>
-  <form action="invioEffettuato" method="POST" id="form">
+  <form action="invioEffettuato" method="POST" id="form" class="w-full lg:mt-0 mt-[44px]">
     <div class="flex flex-col lg:gap-[2.222vw]">
       <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
         <div class="lg:w-1/2 relative">
           <input type="text" name="name" placeholder=" " required />
-          <label for="name" class="text-grigio-200">Nome</label>
+          <label for="name" class="text-grigio-200">{t("contatti.form.nome")}</label>
         </div>
         <div class="lg:w-1/2 relative">
           <input type="text" name="surname" placeholder=" " required />
-          <label for="surname" class="text-grigio-200">Cognome</label>
+          <label for="surname" class="text-grigio-200">{t("contatti.form.cognome")}</label>
         </div>
       </div>
       <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
         <div class="lg:w-1/2 relative">
           <input type="email" name="email" placeholder=" " required />
-          <label for="email" class="text-grigio-200">Email</label>
+          <label for="email" class="text-grigio-200">{t("contatti.form.email")}</label>
         </div>
         <div class="lg:w-1/2 relative">
           <input type="number" name="phoneNumber" placeholder=" " required />
-          <label for="phoneNumber" class="text-grigio-200">Telefono</label>
+          <label for="phoneNumber" class="text-grigio-200">{t("contatti.form.telefono")}</label>
         </div>
       </div>
       <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
         <div class="w-full relative">
           <input type="text" name="message" placeholder=" " required />
-          <label for="message" class="text-grigio-200">Messaggio</label>
+          <label for="message" class="text-grigio-200">{t("contatti.form.messaggio")}</label>
         </div>
       </div>
       <div class="flex flex-row items-center lg:gap-[0.833vw] gap-[16px]">
         <input type="checkbox" name="privacy" id="privacy" required />
         <p class="text-grigio-200 !opacity-100 !top-0 !translate-x-0 lg:text-[0.83vw] text-[16px]">
-          Acconsento al trattamento dei dati personali come specificato nella
-          <a href="https://www.iubenda.com/privacy-policy/35285413" class="font-[600] z-[20] text-blu">Privacy Policy</a>
+          <Trans i18nKey="contatti.form.privacy">
+            Acconsento al trattamento dei dati personali come specificato nella
+            <a href="" class="font-[600] z-[20] text-blu">Privacy Policy</a>
+          </Trans>
         </p>
       </div>
 
       <div class="flex flex-col lg:flex-row items-start lg:mt-0 mt-[32px]">
         <button class="btn-gen btn-blu">
           <p class="btn-title">
-            <span class="text">Invia richiesta</span>
-            <span class="hover-text">Invia richiesta</span>
+            <span class="text">{t("contatti.form.button")}</span>
+            <span class="hover-text">{t("contatti.form.button")}</span>
           </p>
         </button>
       </div>
@@ -96,9 +100,10 @@ import Button from "./Button.astro";
           x: `-${(index + 1) * 2}vw`, // Incremento progressivo a sinistra per ogni cerchio
           scrollTrigger: {
             trigger: ".circle-container",
-            start: "top center",
+            start: "-40% top",
             end: "bottom center",
-            scrub: true // Animazione fluida, legata allo scroll
+            markers: false,
+            scrub: true
           },
           ease: "power2.out"
         }

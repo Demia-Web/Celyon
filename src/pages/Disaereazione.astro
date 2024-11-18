@@ -1,7 +1,10 @@
 ---
+import { changeLanguage } from "i18next";
 import Layout from "../layout/Layout.astro";
 import Button from "../component/Button.astro";
 import Form from "../component/Form.astro";
+
+changeLanguage("it");
 ---
 
 <Layout title="title" description="description">
@@ -28,7 +31,7 @@ import Form from "../component/Form.astro";
     </div>
   </section>
 
-  <section class="px-body py-body bg-blu flex flex-col lg:gap-body gap-[60px]">
+  <section class="px-body py-body bg-blu flex flex-col lg:gap-[10.417vw] gap-[60px]">
     <div class="flex lg:flex-row flex-col lg:items-end justify-between lg:gap-0 gap-[24px]">
       <h3 class="text-bianco lg:w-[43.472vw]">In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.</h3>
       <p class="text-bianco lg:w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.</p>
@@ -115,7 +118,7 @@ import Form from "../component/Form.astro";
         <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
       </div>
     </div>
-    <div class="bg-blu lg:py-[3.056vw] py-[32px] lg:px-[2.222vw] px-[16px] flex flex-col lg:gap-body gap-[60px] lg:mt-[10.417vw] mt-[60px]">
+    <div class="bg-blu lg:py-[3.056vw] py-[32px] lg:px-[2.222vw] px-[16px] flex flex-col lg:gap-[10.417vw] gap-[60px] lg:mt-[10.417vw] mt-[60px]">
       <div class="flex lg:flex-row flex-col justify-between lg:items-end items-start lg:gap-0 gap-[20px]">
         <h2 class="text-bianco">Alcuni numeri</h2>
         <p class="text-bianco lg:w-[20.833vw]">Breve descrizione su cosa può far risparmiare il prodotto.</p>

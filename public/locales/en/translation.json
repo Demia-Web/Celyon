@@ -1,0 +1,207 @@
+{
+  "componenti": {
+    "collaborazione": {
+      "title": "Do you want to join Celyon?<br /> Would you like to collaborate with us?",
+      "subtitle": "A short paragraph about how Celyon is always open to collaboration.",
+      "button": "Get in touch"
+    },
+    "progettiCorrelati": {
+      "title": "Some of our <br /> <0>projects</0>",
+      "desc": "A brief description introducing the completed projects, the result of collaboration with reliable partners.",
+      "button": "See all projects"
+    },
+    "header": {
+      "azienda": "Company",
+      "prodotti": {
+        "title": "Products",
+        "voce1": "Hydraulic and Electromechanical Systems",
+        "voce2": "Oil and Grease Lubrication Systems",
+        "voce3": "Purification and Filtration Systems",
+        "voce4": "Degassing Units",
+        "voce5": "Hydraulic Cylinders"
+      },
+      "servizi": {
+        "title": "Services",
+        "voce1": "Spare Parts and Components",
+        "voce2": "Industrial Automation",
+        "voce3": "Cleaning and Filtration",
+        "voce4": "Engineering",
+        "voce5": "Maintenance and Assistance"
+      },
+      "progetti": "Projects",
+      "areaRiservata": "Reserved Area",
+      "contatti": "Contact Us"
+    }
+  },
+  "home": {
+    "metaTitle": "Celyon - Homepage",
+    "metaDescription": "Lorem ipsum",
+    "hero": {
+      "title": "Design and production of <0>lubrication</0><br /> and <1>hydraulic systems</1> for industry.",
+      "subtitle": "This paragraph should include a brief description that further explores the company’s core business, creating curiosity and encouraging users to scroll.",
+      "button": "Discover our solutions"
+    },
+    "brand": {
+      "title": "Bertacchi and Filippi<br /> becomes Celyon",
+      "desc": "This paragraph should include a brief description explaining that Bertacchi and Filippi is now Celyon, with a link to the 'company' page where more details will be provided.",
+      "button": "Discover the company"
+    },
+    "prodotti": {
+      "focus": "Our products",
+      "title": "Efficient and certified<br /> cleaning and filtration solutions<br /> <0>customized systems.</0>",
+      "desc": "This paragraph should include a brief description that further explores the company’s core business, creating curiosity and encouraging users to scroll.",
+      "swiper": {
+        "1": {
+          "number": "01",
+          "title": "Hydraulic and Electromechanical Systems",
+          "desc": "A very short description of what the product is and its possible uses.",
+          "image": "/img/page/home/swiper/01.png",
+          "altImage": "Swiper image of product 1"
+        },
+        "2": {
+          "number": "02",
+          "title": "Hydraulic and Electromechanical Systems",
+          "desc": "A very short description of what the product is and its possible uses.",
+          "image": "/img/page/home/swiper/01.png",
+          "altImage": "Swiper image of product 2"
+        },
+        "3": {
+          "number": "03",
+          "title": "Hydraulic and Electromechanical Systems",
+          "desc": "A very short description of what the product is and its possible uses.",
+          "image": "/img/page/home/swiper/01.png",
+          "altImage": "Swiper image of product 3"
+        },
+        "4": {
+          "number": "04",
+          "title": "Hydraulic and Electromechanical Systems",
+          "desc": "A very short description of what the product is and its possible uses.",
+          "image": "/img/page/home/swiper/01.png",
+          "altImage": "Swiper image of product 4"
+        },
+        "5": {
+          "number": "05",
+          "title": "Hydraulic and Electromechanical Systems",
+          "desc": "A very short description of what the product is and its possible uses.",
+          "image": "/img/page/home/swiper/01.png",
+          "altImage": "Swiper image of product 5"
+        }
+      }
+    },
+    "partners": "Our partners",
+    "imageFull": {
+      "title": "This paragraph should be an emotional description about the benefits of relying on Celyon. It should express how Celyon can make a difference and meet the customer’s needs.",
+      "button": "Contact us"
+    },
+    "servizi": {
+      "title": "Our services for your lubrication and hydraulic systems.",
+      "desc": "This paragraph should include a brief introduction to Celyon’s services, with each service having a dedicated page. It should also explain Celyon’s approach to service delivery.",
+      "array": {
+        "1": {
+          "number": "01",
+          "title": "Spare Parts and Components",
+          "link": "/Ricambi_e_Componentistica"
+        },
+        "2": {
+          "number": "01",
+          "title": "Spare Parts and Components",
+          "link": "/Ricambi_e_Componentistica"
+        },
+        "3": {
+          "number": "01",
+          "title": "Spare Parts and Components",
+          "link": "/Ricambi_e_Componentistica"
+        },
+        "4": {
+          "number": "01",
+          "title": "Spare Parts and Components",
+          "link": "/Ricambi_e_Componentistica"
+        },
+        "5": {
+          "number": "01",
+          "title": "Spare Parts and Components",
+          "link": "/Ricambi_e_Componentistica"
+        }
+      }
+    }
+  },
+  "azienda": {
+    "metaTitle": "About Us",
+    "metaDescription": "Discover Celyon's history and values",
+    "hero": {
+      "title": "Over <0>30 years of experience</0><br /> in Lubrication and<br /> Hydraulic Systems",
+      "button": "Discover our history"
+    },
+    "intro": {
+      "descrizioneSopra": "This paragraph should include an introductory description inviting users to learn more about Celyon as a company. It will highlight the company’s mission, objectives, and opportunities within this industrial sector.",
+      "descrizioneSotto": "This paragraph should include a brief description that further explores the company’s core business, creating curiosity and encouraging users to scroll."
+    },
+    "prodotti": {
+      "focus": "Our products",
+      "title": "What enables us to<br /> <0>continually grow</0>",
+      "subtitle": "A brief description introducing the company philosophy and the focus areas where Celyon makes a difference. What characterizes this company.",
+      "items": {
+        "1": {
+          "title": "No outsourcing",
+          "desc": "Our systems are designed, developed, and assembled here by us, using local, high-quality labor and materials. This allows us to maintain a high level of control."
+        },
+        "2": {
+          "title": "Investment in training",
+          "desc": "Close ties with the Universities of Pisa and Florence allow us to connect with interns, graduates, and apprentices, a valuable resource for continued growth."
+        },
+        "3": {
+          "title": "Trust-based relationships with partners and suppliers",
+          "desc": "We collaborate with reliable, precise, and punctual companies and professionals. This is the result of relationships built over years, project by project."
+        },
+        "4": {
+          "title": "Environmental protection",
+          "desc": "The products we create for our clients, especially those for maintenance and cleaning, are designed with a waste-reduction mindset."
+        }
+      }
+    },
+    "immagineFullTitle": "This paragraph should be an emotional description about the people of Celyon.",
+    "teams": {
+      "title": "This paragraph should provide an introductory description of the Celyon team, introducing the company founders and key people.",
+      "personale": {
+        "1": {
+          "name": "Giampiero Nelli",
+          "ruolo": "Role and position in the company"
+        },
+        "2": {
+          "name": "Erika Bertacchi",
+          "ruolo": "Role and position in the company"
+        },
+        "3": {
+          "name": "Alessandro Filippi",
+          "ruolo": "Role and position in the company"
+        }
+      }
+    }
+  },
+  "contatti": {
+    "metaTitle": "Contacts",
+    "metaDescription": "Contact us for support or to contribute",
+    "hero": {
+      "title": "Do you have a question?<br /> Want to <0>collaborate</0> with us?"
+    },
+    "info": {
+      "sede": "Headquarters",
+      "contatti": "Contacts"
+    },
+    "form": {
+      "title": "Contact Celyon",
+      "desc": "For information, quotes, and consultation requests: we will get back to you as soon as possible.",
+      "nome": "First Name",
+      "cognome": "Last Name",
+      "email": "Email",
+      "telefono": "Phone",
+      "messaggio": "Message",
+      "privacy": "I consent to the processing of personal data as specified in the <0>Privacy Policy</0>",
+      "button": "Send request"
+    },
+    "cta": {
+      "title": "Become a partner<br /> or agent",
+      "desc": "We are looking for partners and agents both in Italy and abroad. Write to us to collaborate with us."
+    }
+  }
+}

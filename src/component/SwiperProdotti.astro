@@ -1,37 +1,20 @@
 ---
-// JSON data directly in the component
-const products = [
-  {
-    id: "01",
-    title: "Impianti di oleodinamica e Elettroidraulica",
-    description: "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
-    image: "/img/page/home/swiper/oleodinamica.png"
-  },
-  {
-    id: "02",
-    title: "Impianti di oleodinamica e Elettroidraulica",
-    description: "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
-    image: "/img/page/home/swiper/oleodinamica.png"
-  },
-  {
-    id: "03",
-    title: "Impianti di oleodinamica e Elettroidraulica",
-    description: "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
-    image: "/img/page/home/swiper/oleodinamica.png"
-  },
-  {
-    id: "04",
-    title: "Impianti di oleodinamica e Elettroidraulica",
-    description: "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
-    image: "/img/page/home/swiper/oleodinamica.png"
-  },
-  {
-    id: "05",
-    title: "Impianti di oleodinamica e Elettroidraulica",
-    description: "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
-    image: "/img/page/home/swiper/oleodinamica.png"
-  }
-];
+import { t } from "i18next";
+
+const swiperData = t("home.prodotti.swiper", { returnObjects: true });
+
+const products =
+  swiperData && typeof swiperData === "object"
+    ? Object.keys(swiperData).map((key) => {
+        return {
+          id: swiperData[key].number,
+          title: swiperData[key].title,
+          description: swiperData[key].desc,
+          image: swiperData[key].image,
+          altImage: swiperData[key].altImage
+        };
+      })
+    : [];
 ---
 
 <!-- Swiper Component -->
@@ -40,8 +23,8 @@ const products = [
     {
       products.map((product) => (
         <div class="swiper-slide">
-          <div class="lg:p-[1.667vw] p-[16px] bg-grigio-100 flex lg:flex-row flex-col lg:gap-[3.056vw] gap-[32px]  lg:h-[40.278vw] h-full">
-            <img src={product.image} alt={product.title} class="lg:h-full h-[240px] lg:w-[29.167vw]" />
+          <div class="lg:p-[1.667vw] p-[16px] bg-grigio-100 flex lg:flex-row flex-col lg:gap-[3.056vw] gap-[32px] lg:h-[40.278vw] h-full">
+            <img src={product.image} alt={product.altImage} class="lg:h-full h-[240px] lg:w-[29.167vw]" />
             <div class="flex flex-col justify-between py-[3.056vw] w-full">
               <div class="lg:pb-[2.222vw] pb-[40px] border-b border-nero">
                 <div class="flex flex-col gap-[0.694vw]">

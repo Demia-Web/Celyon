@@ -1,12 +1,12 @@
 ---
-import Layout from "../layout/Layout.astro";
-import Button from "../component/Button.astro";
-import Form from "../component/Form.astro";
-import Marquee from "../component/Marquee.astro";
+import Layout from "../../layout/Layout.astro";
+import Button from "../../component/Button.astro";
+import Form from "../../component/Form.astro";
+import Marquee from "../../component/Marquee.astro";
 import { t, changeLanguage } from "i18next";
 import { Trans } from "astro-i18next/components";
 
-changeLanguage("it");
+changeLanguage("en");
 ---
 
 <Layout title={t("oleodinamica.metaTitle")} description={t("oleodinamica.metaDescription")}>

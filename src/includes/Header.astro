@@ -1,9 +1,12 @@
 ---
 import Button from "../component/Button.astro";
+import { localizePath } from "astro-i18next";
+import { LanguageSelector } from "astro-i18next/components";
+import { t } from "i18next";
 ---
 
 <header class="z-[100] absolute px-body lg:h-[7.222vw] h-[88px] flex flex-row justify-between w-full items-center bg-bianco" id="navbar">
-  <a data-astro-reload href="/">
+  <a href={localizePath("/")}>
     <img src="/img/assets/logo-multi.svg" alt="" class="lg:w-[11.111vw] w-[127px] lg:h-[3.472vw] h-[40px]" />
   </a>
   <div class="hamburger-icon click-menu lg:hidden block" id="icon">
@@ -12,54 +15,54 @@ import Button from "../component/Button.astro";
   </div>
   <div class="hidden lg:flex flex-row gap-[1.944vw] items-center">
     <div class="bg-grigio-100 flex flex-row gap-[3.056vw] items-center" id="menu">
-      <a data-astro-reload href="/Azienda" class="btn-header">
+      <a href={localizePath("/Azienda")} class="btn-header">
         <p class="btn-title">
-          <span class="text">Azienda</span>
-          <span class="hover-text">Azienda</span>
+          <span class="text">{t("componenti.header.azienda")}</span>
+          <span class="hover-text">{t("componenti.header.azienda")}</span>
         </p>
       </a>
 
       <!-- "Prodotti" menu with dropdown -->
       <div class="menu-item prodotti relative">
-        <a data-astro-reload href="" class="hover-trigger">
+        <a href="#" class="hover-trigger">
           <div class="flex flex-row gap-[0.556vw]">
             <p class="btn-title">
-              <span class="text">Prodotti</span>
-              <span class="hover-text">Prodotti</span>
+              <span class="text">{t("componenti.header.prodotti.title")}</span>
+              <span class="hover-text">{t("componenti.header.prodotti.title")}</span>
             </p>
             <img src="/img/assets/plus.svg" alt="" class="w-[1.181vw]" id="plus" />
             <img src="/img/assets/minus.svg" alt="" class="w-[1.181vw] hidden" id="minus" />
           </div>
         </a>
         <div class="submenu hidden absolute bg-grigio-200">
-          <a data-astro-reload href="/Oleodinamica" class="btn-header">
+          <a href={localizePath("/Oleodinamica")} class="btn-header">
             <p class="btn-title">
-              <span class="text">Impianti di Oleodinamica ed Elettroidraulica</span>
-              <span class="hover-text">Impianti di Oleodinamica ed Elettroidraulica</span>
+              <span class="text">{t("componenti.header.prodotti.voce1")}</span>
+              <span class="hover-text">{t("componenti.header.prodotti.voce1")}</span>
             </p>
           </a>
-          <a data-astro-reload href="/Lubrificazione" class="btn-header">
+          <a href={localizePath("/Lubrificazione")} class="btn-header">
             <p class="btn-title">
-              <span class="text">Impianti di Lubrificazione a Olio e a Grasso</span>
-              <span class="hover-text">Impianti di Lubrificazione a Olio e a Grasso</span>
+              <span class="text">{t("componenti.header.prodotti.voce2")}</span>
+              <span class="hover-text">{t("componenti.header.prodotti.voce2")}</span>
             </p>
           </a>
-          <a data-astro-reload href="/Purificazione" class="btn-header">
+          <a href={localizePath("/Purificazione")} class="btn-header">
             <p class="btn-title">
-              <span class="text">Sistemi di Purificazione e Filtraggio</span>
-              <span class="hover-text">Sistemi di Purificazione e Filtraggio</span>
+              <span class="text">{t("componenti.header.prodotti.voce3")}</span>
+              <span class="hover-text">{t("componenti.header.prodotti.voce3")}</span>
             </p>
           </a>
-          <a data-astro-reload href="/Disaereazione" class="btn-header">
+          <a href={localizePath("/Disaereazione")} class="btn-header">
             <p class="btn-title">
-              <span class="text">Unità di Disaerazione</span>
-              <span class="hover-text">Unità di Disaerazione</span>
+              <span class="text">{t("componenti.header.prodotti.voce4")}</span>
+              <span class="hover-text">{t("componenti.header.prodotti.voce4")}</span>
             </p>
           </a>
-          <a data-astro-reload href="/Cilindri" class="btn-header">
+          <a href={localizePath("/Cilindri")} class="btn-header">
             <p class="btn-title">
-              <span class="text">Cilindri Oleodinamici</span>
-              <span class="hover-text">Cilindri Oleodinamici</span>
+              <span class="text">{t("componenti.header.prodotti.voce5")}</span>
+              <span class="hover-text">{t("componenti.header.prodotti.voce5")}</span>
             </p>
           </a>
         </div>
@@ -67,67 +70,69 @@ import Button from "../component/Button.astro";
 
       <!-- "Servizi" menu with dropdown -->
       <div class="menu-item servizi relative">
-        <a data-astro-reload href="" class="hover-trigger">
+        <a href="#" class="hover-trigger">
           <div class="flex flex-row gap-[0.556vw]">
             <p class="btn-title">
-              <span class="text">Servizi</span>
-              <span class="hover-text">Servizi</span>
+              <span class="text">{t("componenti.header.servizi.title")}</span>
+              <span class="hover-text">{t("componenti.header.servizi.title")}</span>
             </p>
             <img src="/img/assets/plus.svg" alt="" class="w-[1.181vw]" id="plus" />
             <img src="/img/assets/minus.svg" alt="" class="w-[1.181vw] hidden" id="minus" />
           </div>
         </a>
         <div class="submenu hidden absolute bg-grigio-200">
-          <a data-astro-reload href="/Ricambi_e_Componentistica" class="btn-header">
+          <a href={localizePath("/Ricambi_e_Componentistica")} class="btn-header">
             <p class="btn-title">
-              <span class="text">Ricambi e Componentistica</span>
-              <span class="hover-text">Ricambi e Componentistica</span>
+              <span class="text">{t("componenti.header.servizi.voce1")}</span>
+              <span class="hover-text">{t("componenti.header.servizi.voce1")}</span>
             </p>
           </a>
-          <a data-astro-reload href="/" class="btn-header">
+          <a href={localizePath("/AutomazioneIndustriale")} class="btn-header">
             <p class="btn-title">
-              <span class="text">Automazione Industriale</span>
-              <span class="hover-text">Automazione Industriale</span>
+              <span class="text">{t("componenti.header.servizi.voce2")}</span>
+              <span class="hover-text">{t("componenti.header.servizi.voce2")}</span>
             </p>
           </a>
-          <a data-astro-reload href="/" class="btn-header">
+          <a href={localizePath("/PuliziaFiltraggio")} class="btn-header">
             <p class="btn-title">
-              <span class="text">Pulizia e Filtraggio</span>
-              <span class="hover-text">Pulizia e Filtraggio</span>
+              <span class="text">{t("componenti.header.servizi.voce3")}</span>
+              <span class="hover-text">{t("componenti.header.servizi.voce3")}</span>
             </p>
           </a>
-          <a data-astro-reload href="/" class="btn-header">
+          <a href={localizePath("/Engineering")} class="btn-header">
             <p class="btn-title">
-              <span class="text">Engineering</span>
-              <span class="hover-text">Engineering</span>
+              <span class="text">{t("componenti.header.servizi.voce4")}</span>
+              <span class="hover-text">{t("componenti.header.servizi.voce4")}</span>
             </p>
           </a>
-          <a data-astro-reload href="/" class="btn-header">
+          <a href={localizePath("/ManutenzioneAssistenza")} class="btn-header">
             <p class="btn-title">
-              <span class="text">Manutenzione e Assistenza</span>
-              <span class="hover-text">Manutenzione e Assistenza</span>
+              <span class="text">{t("componenti.header.servizi.voce5")}</span>
+              <span class="hover-text">{t("componenti.header.servizi.voce5")}</span>
             </p>
           </a>
         </div>
       </div>
 
-      <a data-astro-reload href="/Progetti" class="btn-header">
+      <a href={localizePath("/Progetti")} class="btn-header">
         <p class="btn-title">
-          <span class="text">Progetti</span>
-          <span class="hover-text">Progetti</span>
+          <span class="text">{t("componenti.header.progetti")}</span>
+          <span class="hover-text">{t("componenti.header.progetti")}</span>
         </p>
       </a>
-      <a data-astro-reload href="/AreaRiservata" class="btn-header">
+      <!-- <a href={localizePath("/AreaRiservata")} class="btn-header">
         <p class="btn-title">
-          <span class="text">Area Riservata</span>
-          <span class="hover-text">Area Riservata</span>
+          <span class="text">{t("componenti.header.areaRiservata")}</span>
+          <span class="hover-text">{t("componenti.header.areaRiservata")}</span>
         </p>
-      </a>
-      <Button content="Contatti" type="btn-white" link="/Contatti" />
+      </a> -->
+      <Button content={t("componenti.header.contatti")} type="btn-white" link={localizePath("/Contatti")} />
     </div>
-    <div class="flex flex-row gap-[4px]">
-      <p class="text-grigio-200 font-medium">IT</p>
-      <img src="/img/assets/globe.svg" alt="" />
+    <div class="relative">
+      <div class="flex flex-row gap-[0.278vw]">
+        <LanguageSelector showFlag={false} languageMapping={{ en: "EN", it: "IT" }} class="abosolute" />
+        <img src="/img/assets/globe.svg" alt="" />
+      </div>
     </div>
   </div>
 
@@ -156,80 +161,83 @@ import Button from "../component/Button.astro";
   </style>
 
   <script>
-    document.addEventListener("astro:page-load", () => {
-      // Selecting elements with null checks and logging for debugging
-      const prodottiMenuItem = document.querySelector(".menu-item.prodotti .hover-trigger");
-      const serviziMenuItem = document.querySelector(".menu-item.servizi .hover-trigger");
-      const prodottiSubmenu = prodottiMenuItem?.nextElementSibling;
-      const serviziSubmenu = serviziMenuItem?.nextElementSibling;
+    // Funzione per inizializzare i menu
+    function initializeMenu() {
+      console.log("Initializing menus...");
 
-      // Function to close all submenus and reset styles
+      // Seleziona tutti i menu
+      const menuItems = document.querySelectorAll(".menu-item");
+
+      // Funzione per chiudere tutti i sottomenù
       function closeAllSubmenus() {
-        const allSubmenus = document.querySelectorAll(".submenu");
-        allSubmenus.forEach((submenu) => submenu.classList.remove("show"));
+        console.log("Closing all submenus...");
+        menuItems.forEach((menuItem) => {
+          const submenu = menuItem.querySelector(".submenu");
+          const plusIcon = menuItem.querySelector("#plus");
+          const minusIcon = menuItem.querySelector("#minus");
 
-        // Reset icons and text colors for all menu items
-        document.querySelectorAll(".menu-item").forEach((menuItem) => {
-          const textElement = menuItem.querySelector(".hover-trigger > div");
-          const plusIcon = menuItem.querySelector(".hover-trigger #plus");
-          const minusIcon = menuItem.querySelector(".hover-trigger #minus");
-
-          // Apply resets only if elements exist
-          textElement?.classList.remove("text-blu");
+          submenu?.classList.remove("show");
           plusIcon?.classList.remove("hidden");
           minusIcon?.classList.add("hidden");
         });
       }
 
-      // Toggle function for "Prodotti" submenu
-      prodottiMenuItem?.addEventListener("click", function (event) {
-        event.preventDefault();
-        const isVisible = prodottiSubmenu?.classList.contains("show");
-        closeAllSubmenus(); // Close other submenu
+      // Chiude tutti i sottomenù durante l'inizializzazione
+      closeAllSubmenus();
 
-        if (!isVisible) {
-          prodottiSubmenu?.classList.add("show");
+      // Gestisce i click sui menu principali
+      menuItems.forEach((menuItem) => {
+        const trigger = menuItem.querySelector(".hover-trigger");
+        const submenu = menuItem.querySelector(".submenu");
+        const plusIcon = menuItem.querySelector("#plus");
+        const minusIcon = menuItem.querySelector("#minus");
 
-          // Apply styles for "Prodotti" submenu
-          const prodottiText = prodottiMenuItem.querySelector("div");
-          const plusIcon = prodottiMenuItem.querySelector("#plus");
-          const minusIcon = prodottiMenuItem.querySelector("#minus");
+        if (!trigger || !submenu) return; // Se mancano elementi, salta
 
-          // Apply styles if elements exist
-          prodottiText?.classList.add("text-blu");
-          plusIcon?.classList.add("hidden");
-          minusIcon?.classList.remove("hidden");
-        }
+        trigger.addEventListener("click", (event) => {
+          event.preventDefault();
+          console.log(`Toggled menu: ${menuItem.classList}`);
+
+          // Usa lo stato del DOM per verificare visibilità
+          const isCurrentlyVisible = submenu.classList.contains("show");
+          console.log(isCurrentlyVisible);
+
+          // Chiude tutti i sottomenù
+          closeAllSubmenus();
+
+          console.log(isCurrentlyVisible);
+
+          // Apre il sottomenu corrente se non era già visibile
+          if (!isCurrentlyVisible) {
+            submenu.classList.add("show");
+            plusIcon?.classList.add("hidden");
+            minusIcon?.classList.remove("hidden");
+          }
+        });
       });
 
-      // Toggle function for "Servizi" submenu
-      serviziMenuItem?.addEventListener("click", function (event) {
-        event.preventDefault();
-        const isVisible = serviziSubmenu?.classList.contains("show");
-        closeAllSubmenus(); // Close other submenu
-
-        if (!isVisible) {
-          serviziSubmenu?.classList.add("show");
-
-          // Apply styles for "Servizi" submenu
-          const serviziText = serviziMenuItem.querySelector("div");
-          const plusIcon = serviziMenuItem.querySelector("#plus");
-          const minusIcon = serviziMenuItem.querySelector("#minus");
-
-          // Apply styles if elements exist
-          serviziText?.classList.add("text-blu");
-          plusIcon?.classList.add("hidden");
-          minusIcon?.classList.remove("hidden");
-        }
-      });
-
-      // Close submenus when clicking outside
-      document.addEventListener("click", function (event) {
+      // Chiude i sottomenù cliccando fuori
+      document.addEventListener("click", (event) => {
         const target = event.target;
-        if (!prodottiMenuItem?.contains(target) && !prodottiSubmenu?.contains(target) && !serviziMenuItem?.contains(target) && !serviziSubmenu?.contains(target)) {
+        const clickedInsideMenu = [...menuItems].some((menuItem) => menuItem.contains(target));
+
+        if (!clickedInsideMenu) {
+          console.log("Clicked outside menus, closing all submenus.");
           closeAllSubmenus();
         }
       });
+    }
+
+    // Eventi per Astro
+    document.addEventListener("astro:page-load", () => {
+      console.log("astro:page-load triggered");
+      initializeMenu();
+    });
+
+    // Per SPA: ricarica menu dopo una navigazione
+    document.addEventListener("astro:after-swap", () => {
+      console.log("astro:after-swap triggered");
+      initializeMenu();
     });
   </script>
 </header>

@@ -1,5 +1,7 @@
 import gsap from "gsap";
 
+import Lenis from "lenis";
+
 document.addEventListener("astro:page-load", () => {
   const accordions = document.querySelectorAll(".accordion-item");
 
@@ -32,10 +34,15 @@ document.addEventListener("astro:page-load", () => {
 
   // Imposta gli accordion per essere inizialmente invisibili e fuori posizione
   accordions.forEach((accordion) => {
+    if (accordion.classList.contains("accordion-item-header")) {
+      return;
+    }
+
     gsap.set(accordion, {
       opacity: 0,
       y: 50
     });
+
     observer.observe(accordion);
   });
 
@@ -79,8 +86,6 @@ document.addEventListener("astro:page-load", () => {
   });
 });
 
-import Lenis from "lenis";
-
 const lenis = new Lenis({
   autoRaf: true
 });
@@ -97,9 +102,11 @@ function toggleLenis() {
     if (isLenisRunning) {
       lenis.stop();
       isLenisRunning = false;
+      console.log("Lenis stopped");
     } else {
       lenis.start();
       isLenisRunning = true;
+      console.log("Lenis started");
     }
   } else {
   }
@@ -112,6 +119,10 @@ export function stopLenis() {
 export function startLenis() {
   lenis.start();
 }
+
+document.addEventListener("astro:page-load", () => {
+  lenis.start();
+});
 
 document.addEventListener("astro:page-load", () => {
   var icons = document.getElementsByClassName("click-menu");

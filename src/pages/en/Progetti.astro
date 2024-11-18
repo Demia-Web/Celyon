@@ -1,27 +1,27 @@
 ---
-import Layout from "../layout/Layout.astro";
-import Button from "../component/Button.astro";
-import Collaborazione from "../component/Collaborazione.astro";
+import Layout from "../../layout/Layout.astro";
+import Button from "../../component/Button.astro";
+import Collaborazione from "../../component/Collaborazione.astro";
 import i18next, { t, changeLanguage } from "i18next";
 
-changeLanguage("it");
+changeLanguage("en");
 
 const currentLang = i18next.language;
 async function fetchProjects(locale) {
-  const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*&locale=${currentLang}&?sort=order:asc`;
-  const response = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
-    }
-  });
-  const data = await response.json();
-  return data.data;
+    const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*&locale=${currentLang}`;
+    const response = await fetch(url, {
+        headers: {
+            Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+        }
+    });
+    const data = await response.json();
+    return data.data;
 }
 let locale = "it";
 let projects = await fetchProjects(locale);
 async function updateLocale(newLocale) {
-  locale = newLocale;
-  projects = await fetchProjects(newLocale);
+    locale = newLocale;
+    projects = await fetchProjects(newLocale);
 }
 ---
 

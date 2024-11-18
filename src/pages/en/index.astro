@@ -1,14 +1,14 @@
 ---
-import Layout from "../layout/Layout.astro";
-import Button from "../component/Button.astro";
-import SwiperProdotti from "../component/SwiperProdotti.astro";
-import Form from "../component/Form.astro";
-import ProgettiCorrelati from "../component/ProgettiCorrelati.astro";
-import Loader from "../component/Loader.astro";
+import Layout from "../../layout/Layout.astro";
+import Button from "../../component/Button.astro";
+import SwiperProdotti from "../../component/SwiperProdotti.astro";
+import Form from "../../component/Form.astro";
+import ProgettiCorrelati from "../../component/ProgettiCorrelati.astro";
+import Loader from "../../component/Loader.astro";
 import i18next, { t, changeLanguage } from "i18next";
 import { Trans } from "astro-i18next/components";
 
-changeLanguage("it");
+changeLanguage("en");
 ---
 
 <Layout title={t("home.metaTitle")} description={t("home.metaDescription")}>
@@ -251,5 +251,5 @@ changeLanguage("it");
       }
     );
   </script>
-  <script src="../libs/SwiperHome.js"></script>
+  <script src="../../libs/SwiperHome.js"></script>
 </Layout>

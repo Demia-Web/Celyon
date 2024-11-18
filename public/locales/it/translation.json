@@ -1,0 +1,577 @@
+{
+  "componenti": {
+    "collaborazione": {
+      "title": "Vuoi unirti a Celyon?<br /> Vuoi collaborare con noi?",
+      "subtitle": "Breve paragrafo sul fatto che Celyon è sempre disposta a collaborare.",
+      "button": "Mettiti in contatto"
+    },
+    "progettiCorrelati": {
+      "title": "Alcune delle nostre <br /> <0>realizzazioni</0>",
+      "desc": "Una breve descrizione che introduca ai progetti realizzati, interventi frutto della collaborazione con partner affidabili",
+      "button": "Vedi tutti i progetti"
+    },
+    "header": {
+      "azienda": "Azienda",
+      "prodotti": {
+        "title": "Prodotti",
+        "voce1": "Impianti di Oleodinamica ed Elettroidraulica",
+        "voce2": "Impianti di Lubrificazione a Olio e a Grasso",
+        "voce3": "Sistemi di Purificazione e Filtraggio",
+        "voce4": "Unità di Disaerazione",
+        "voce5": "Cilindri Oleodinamici"
+      },
+      "servizi": {
+        "title": "Servizi",
+        "voce1": "Ricambi e Componentistica",
+        "voce2": "Automazione Industriale",
+        "voce3": "Pulizia e Filtraggio",
+        "voce4": "Engineering",
+        "voce5": "Manutenzione e Assistenza"
+      },
+      "progetti": "Progetti",
+      "areaRiservata": "Area Riservata",
+      "contatti": "Contatti"
+    },
+    "marquee": {
+      "1": {
+        "title": "Marquee 1"
+      },
+      "2": {
+        "title": "Marquee 2"
+      },
+      "3": {
+        "title": "Marquee 3"
+      },
+      "4": {
+        "title": "Marquee 4"
+      },
+      "5": {
+        "title": "Marquee 5"
+      },
+      "6": {
+        "title": "Marquee 6"
+      },
+      "7": {
+        "title": "Marquee 7"
+      }
+    }
+  },
+  "home": {
+    "metaTitle": "Celyon",
+    "metaDescription": "Lorem ipsum",
+    "hero": {
+      "title": "Progettazione e produzione <br /> di impianti di <span class='text-blu'>lubrificazione</span> <br />  e <span class='text-blu'>oleodinamica</span> per l’industria.",
+      "subtitle": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.",
+      "button": "Scopri le nostre soluzioni"
+    },
+    "brand": {
+      "title": "Bertacchi e Filippi<br /> diventa Celyon",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il fatto che Bertacchi e Filippi adesso è Celyon, si rimanderà alla pagina “azienda”, dove verrà approfondito il tutto.",
+      "button": "Scopri l'azienda"
+    },
+    "prodotti": {
+      "focus": "I nostri prodotti",
+      "title": "Soluzioni di pulizia e filtraggio<br /> efficienti e certificate e <br /> <0>impianti personalizzati.</0>",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.",
+      "swiper": {
+        "1": {
+          "number": "01",
+          "title": "Impianti di oleodinamica e Elettroidraulica",
+          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "image": "/img/page/home/swiper/01.png",
+          "altImage": "Immagine swiper del prodotto 1"
+        },
+        "2": {
+          "number": "02",
+          "title": "Impianti di oleodinamica e Elettroidraulica",
+          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "image": "/img/page/home/swiper/01.png",
+          "altImage": "Immagine swiper del prodotto 2"
+        },
+        "3": {
+          "number": "03",
+          "title": "Impianti di oleodinamica e Elettroidraulica",
+          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "image": "/img/page/home/swiper/01.png",
+          "altImage": "Immagine swiper del prodotto 3"
+        },
+        "4": {
+          "number": "04",
+          "title": "Impianti di oleodinamica e Elettroidraulica",
+          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "image": "/img/page/home/swiper/01.png",
+          "altImage": "Immagine swiper del prodotto 4"
+        },
+        "5": {
+          "number": "05",
+          "title": "Impianti di oleodinamica e Elettroidraulica",
+          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "image": "/img/page/home/swiper/01.png",
+          "altImage": "Immagine swiper del prodotto 5"
+        }
+      }
+    },
+    "partners": "I nostri partner",
+    "imageFull": {
+      "title": "In questo paragrafo una breve descrizione emozionale sul vantaggio di affidarsi a Celyon.  Vorrei che fosse espresso in cosa Celyon può fare la differenza, come può dare risposta alle esigenze del cliente.",
+      "button": "Contattaci"
+    },
+    "servizi": {
+      "title": "I nostri servizi per il tuo impianto di lubrificazione e oleodinamica.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "array": {
+        "1": {
+          "number": "01",
+          "title": "Ricambi e Componentistica",
+          "link": "/Ricambi_e_Componentistica"
+        },
+        "2": {
+          "number": "01",
+          "title": "Ricambi e Componentistica",
+          "link": "/Ricambi_e_Componentistica"
+        },
+        "3": {
+          "number": "01",
+          "title": "Ricambi e Componentistica",
+          "link": "/Ricambi_e_Componentistica"
+        },
+        "4": {
+          "number": "01",
+          "title": "Ricambi e Componentistica",
+          "link": "/Ricambi_e_Componentistica"
+        },
+        "5": {
+          "number": "01",
+          "title": "Ricambi e Componentistica",
+          "link": "/Ricambi_e_Componentistica"
+        }
+      }
+    }
+  },
+  "azienda": {
+    "metaTitle": "Chi siamo - Celyon",
+    "metaDescription": "Scopri la storia e i valori di Celyon",
+    "hero": {
+      "title": "Oltre <0>30 anni di esperienza</0><br /> negli Impianti di<br /> Lubrificazione e Oleodinamica",
+      "button": "Scopri la nostra storia"
+    },
+    "intro": {
+      "descrizioneSopra": "In questo paragrafo dovrà essere inserita una descrizione introduttiva che ci invita a conoscere Celyon come azienda. Andremo a evidenziare qual è la mission aziendale, gli obiettivi aziendali e le opportunità all’interno di questo settore industriale.",
+      "descrizioneSotto": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll."
+    },
+    "prodotti": {
+      "focus": "I nostri prodotti",
+      "title": "Che cosa ci permette di<br /> <0>crescere continuamente</0>",
+      "subtitle": "Una breve descrizione che introduca alla filosofia aziendale, ai focus su cui Celyon riesce a fare la differenza. Che cosa caratterizza questa azienda.",
+      "items": {
+        "1": {
+          "title": "Nessuna delocalizzazione",
+          "desc": "I nostri impianti sono studiati, progettati e assemblati qui da noi con manodopera e materiali locali e di qualità. Questo ci consente di mantenere sempre alto il livello di controllo."
+        },
+        "2": {
+          "title": "Investimento sulla formazione",
+          "desc": "Lo stretto rapporto con le Università di Pisa e Firenze ci consente di entrare in contatto con tirocinanti, laureandi e apprendisti, una risorsa preziosa per continuare a crescere."
+        },
+        "3": {
+          "title": "Rapporti di fiducia con partner e fornitori",
+          "desc": "Collaboriamo con aziende e professionisti affidabili, precisi e puntuali. Questo è il frutto di rapporti costruiti negli anni, commessa dopo commessa."
+        },
+        "4": {
+          "title": "Tutela dell’ambiente",
+          "desc": "I prodotti che creiamo per i nostri clienti, soprattutto quelli per la manutenzione e la pulizia, sono progettati con lo spirito di chi vuole ridurre gli sprechi e quindi i rifiuti."
+        }
+      }
+    },
+    "immagineFullTitle": "In questo paragrafo una breve descrizione emozionale sulle persone di Celyon.",
+    "teams": {
+      "title": "In questo paragrafo dovrà essere inserita una descrizione introduttiva sul team Celyon. Verranno introdotti i fondatori dell’azienda e le persone rilevanti.",
+      "personale": {
+        "1": {
+          "name": "Giampiero Nelli",
+          "ruolo": "Ruolo e Posizione aziendale"
+        },
+        "2": {
+          "name": "Erika Bertacchi",
+          "ruolo": "Ruolo e Posizione aziendale"
+        },
+        "3": {
+          "name": "Alessando Filippi",
+          "ruolo": "Ruolo e Posizione aziendale"
+        }
+      }
+    }
+  },
+  "contatti": {
+    "metaTitle": "Contatti - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Hai una domanda?<br /> Vuoi <0>collaborare</0> con noi?"
+    },
+    "info": {
+      "sede": "Sede",
+      "contatti": "Contatti"
+    },
+    "form": {
+      "title": "Contatta Celyon",
+      "desc": "Per informazioni, preventivi e richieste di consulenza: ti ricontatteremo nel più breve tempo possibile.",
+      "nome": "Nome",
+      "cognome": "Cognome",
+      "email": "Email",
+      "telefono": "Telefono",
+      "messaggio": "Messaggio",
+      "privacy": "Acconsento al trattamento dei dati personali come specificato nella <0>Privacy Policy</0>",
+      "button": "Invia richiesta",
+      "component": {
+        "focus": "Mettiti in contatto con Celyon",
+        "title": "Realizziamo insieme<br /> la <0>soluzione perfetta</0>.",
+        "desc": "Hai bisogno di un prodotto o una consulenza? Siamo qui per aiutarti a scegliere la soluzione più adatta alle tue esigenze."
+      }
+    },
+    "cta": {
+      "title": "Diventa partner<br /> o agente",
+      "desc": "Siamo alla ricerca di partner e agenti sia in Italia che all’estero. Scrivici per collaborare con noi."
+    }
+  },
+  "oleodinamica": {
+    "metaTitle": "Oleodinamica - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Impianti di Oleodinamica<br /> ed Elettroidraulica",
+      "desc": "Breve frase che indica il vantaggio di avere questo prodotto.",
+      "button": {
+        "left": "Richiedi informazioni",
+        "right": "Scarica scheda tecnica"
+      }
+    },
+    "intro": {
+      "descIntroduttiva": "In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll"
+    },
+    "prodotti": {
+      "title": "Le nostre tipologie di <br /> impianti di lubrificazione.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "array": {
+        "1": {
+          "number": "01",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "2": {
+          "number": "02",
+          "title": "Produzione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione."
+        },
+        "3": {
+          "number": "03",
+          "title": "Installazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione."
+        }
+      }
+    },
+    "numeri": {
+      "title": "Alcuni numeri",
+      "desc": "Breve descrizione su cosa può far risparmiare il prodotto.",
+      "button": "Richiedi un preventivo",
+      "contatori": {
+        "1": {
+          "number": "130",
+          "title": "Contatore 1"
+        },
+        "2": {
+          "number": "8h",
+          "title": "Contatore 2"
+        },
+        "3": {
+          "number": "+2000",
+          "title": "Contatore 3"
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve descrizione del prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "lubrificazione": {
+    "metaTitle": "Lubrificazione - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Impianti di Oleodinamica<br /> ed Elettroidraulica",
+      "desc": "Breve frase che indica il vantaggio di avere questo prodotto.",
+      "button": {
+        "left": "Richiedi informazioni",
+        "right": "Scarica scheda tecnica"
+      }
+    },
+    "intro": {
+      "descIntroduttiva": "In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll"
+    },
+    "prodotti": {
+      "title": "Le nostre tipologie di <br /> impianti di lubrificazione.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "button": "Hai una richiesta",
+      "array": {
+        "1": {
+          "number": "01",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
+          "box": {
+            "1": {
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "2": {
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            }
+          }
+        },
+        "2": {
+          "number": "02",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
+          "box": {
+            "1": {
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "2": {
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            }
+          }
+        },
+        "3": {
+          "number": "03",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
+          "box": {
+            "1": {
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "2": {
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            }
+          }
+        },
+        "4": {
+          "number": "04",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
+          "box": {
+            "1": {
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "2": {
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            }
+          }
+        },
+        "5": {
+          "number": "05",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
+          "box": {
+            "1": {
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "2": {
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            }
+          }
+        }
+      }
+    },
+    "numeri": {
+      "title": "Alcuni numeri",
+      "desc": "Breve descrizione su cosa può far risparmiare il prodotto.",
+      "button": "Richiedi un preventivo",
+      "contatori": {
+        "1": {
+          "number": "130",
+          "title": "Contatore 1"
+        },
+        "2": {
+          "number": "8h",
+          "title": "Contatore 2"
+        },
+        "3": {
+          "number": "+2000",
+          "title": "Contatore 3"
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve descrizione del prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "purificazione": {
+    "metaTitle": "Lubrificazione - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Sistema di Purificazione<br /> e Filtraggio a Olio VDO",
+      "desc": "Breve frase che indica il vantaggio di avere questo prodotto.",
+      "button": {
+        "left": "Richiedi informazioni",
+        "right": "Scarica scheda tecnica"
+      }
+    },
+    "intro": {
+      "descIntroduttiva": "In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll"
+    },
+    "prodotti": {
+      "title": "Le nostre tipologie di <br /> impianti di lubrificazione.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "button": "Hai una richiesta",
+      "array": {
+        "1": {
+          "number": "01",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
+          "box": {
+            "1": {
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "2": {
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            }
+          }
+        },
+        "2": {
+          "number": "02",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
+          "box": {
+            "1": {
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "2": {
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            }
+          }
+        },
+        "3": {
+          "number": "03",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
+          "box": {
+            "1": {
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "2": {
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            }
+          }
+        },
+        "4": {
+          "number": "04",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
+          "box": {
+            "1": {
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "2": {
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            }
+          }
+        },
+        "5": {
+          "number": "05",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
+          "box": {
+            "1": {
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "2": {
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+            }
+          }
+        }
+      }
+    },
+    "numeri": {
+      "title": "Alcuni numeri",
+      "desc": "Breve descrizione su cosa può far risparmiare il prodotto.",
+      "button": "Richiedi un preventivo",
+      "contatori": {
+        "1": {
+          "number": "130",
+          "title": "Contatore 1"
+        },
+        "2": {
+          "number": "8h",
+          "title": "Contatore 2"
+        },
+        "3": {
+          "number": "+2000",
+          "title": "Contatore 3"
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve descrizione del prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  }
+}

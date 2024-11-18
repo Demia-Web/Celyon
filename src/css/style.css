@@ -100,7 +100,7 @@ p.small {
   padding-bottom: 10.417vw; /* 150px */
 }
 
-.gap-body {
+.gap-[10.417vw] {
   gap: 10.417vw;
 }
 
@@ -836,6 +836,10 @@ input[type="number"] {
     padding-bottom: 100px;
   }
 
+  .gap-[10.417vw] {
+    gap: 100px;
+  }
+
   /* Homepage */
   .griglia-colorata div {
     width: 38px;
@@ -873,5 +877,13 @@ input[type="number"] {
     left: 0px;
     font-size: 12px; /* 12px max, 10px min */
     opacity: 1;
+  }
+
+  /* Accordion */
+  .accordion-item-dark .symbol {
+    font-size: 36px;
+  }
+  .symbol {
+    font-size: 36px;
   }
 }
