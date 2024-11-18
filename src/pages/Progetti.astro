@@ -8,20 +8,20 @@ changeLanguage("it");
 
 const currentLang = i18next.language;
 async function fetchProjects(locale) {
-  const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*&locale=${currentLang}&?sort=order:asc`;
-  const response = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
-    }
-  });
-  const data = await response.json();
-  return data.data;
+    const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*&locale=${currentLang}&?sort=order:asc`;
+    const response = await fetch(url, {
+        headers: {
+            Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+        }
+    });
+    const data = await response.json();
+    return data.data;
 }
 let locale = "it";
 let projects = await fetchProjects(locale);
 async function updateLocale(newLocale) {
-  locale = newLocale;
-  projects = await fetchProjects(newLocale);
+    locale = newLocale;
+    projects = await fetchProjects(newLocale);
 }
 ---
 

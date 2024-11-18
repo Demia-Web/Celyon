@@ -836,10 +836,6 @@ input[type="number"] {
     padding-bottom: 100px;
   }
 
-  .gap-[10.417vw] {
-    gap: 100px;
-  }
-
   /* Homepage */
   .griglia-colorata div {
     width: 38px;

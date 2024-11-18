@@ -203,5 +203,146 @@
       "title": "Become a partner<br /> or agent",
       "desc": "We are looking for partners and agents both in Italy and abroad. Write to us to collaborate with us."
     }
+  },
+  "purificazione": {
+    "metaTitle": "Lubrication - Celyon",
+    "metaDescription": "Contact us for support or to contribute",
+    "hero": {
+      "title": "Oil VDO Purification<br /> and Filtration System",
+      "desc": "A brief phrase highlighting the advantage of this product.",
+      "button": {
+        "left": "Request Information",
+        "right": "Download Technical Data Sheet"
+      }
+    },
+    "intro": {
+      "descIntroduttiva": "This paragraph should contain an introductory description of the product. What it is, in which environments and industries it is used, and how it can help.",
+      "desc": "This paragraph should contain a brief description that delves into the company’s core business, creating even more curiosity to encourage the user to scroll."
+    },
+    "prodotti": {
+      "title": "Our Types of <br /> Lubrication Systems.",
+      "desc": "This paragraph should contain a brief introduction to Celyon’s services. Each item will have a dedicated page. Include how Celyon approaches its services.",
+      "button": "Have a Request",
+      "array": {
+        "1": {
+          "number": "01",
+          "title": "Design",
+          "desc": "This paragraph should contain a brief description of the design service.",
+          "box": {
+            "1": {
+              "title": "High-Pressure Usage",
+              "desc": "This paragraph should contain a brief description of the design service."
+            },
+            "2": {
+              "title": "System Expansion or Modification",
+              "desc": "This paragraph should contain a brief description of the design service."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "This paragraph should contain a brief description of the design service."
+            }
+          }
+        },
+        "2": {
+          "number": "02",
+          "title": "Design",
+          "desc": "This paragraph should contain a brief description of the design service.",
+          "box": {
+            "1": {
+              "title": "High-Pressure Usage",
+              "desc": "This paragraph should contain a brief description of the design service."
+            },
+            "2": {
+              "title": "System Expansion or Modification",
+              "desc": "This paragraph should contain a brief description of the design service."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "This paragraph should contain a brief description of the design service."
+            }
+          }
+        },
+        "3": {
+          "number": "03",
+          "title": "Design",
+          "desc": "This paragraph should contain a brief description of the design service.",
+          "box": {
+            "1": {
+              "title": "High-Pressure Usage",
+              "desc": "This paragraph should contain a brief description of the design service."
+            },
+            "2": {
+              "title": "System Expansion or Modification",
+              "desc": "This paragraph should contain a brief description of the design service."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "This paragraph should contain a brief description of the design service."
+            }
+          }
+        },
+        "4": {
+          "number": "04",
+          "title": "Design",
+          "desc": "This paragraph should contain a brief description of the design service.",
+          "box": {
+            "1": {
+              "title": "High-Pressure Usage",
+              "desc": "This paragraph should contain a brief description of the design service."
+            },
+            "2": {
+              "title": "System Expansion or Modification",
+              "desc": "This paragraph should contain a brief description of the design service."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "This paragraph should contain a brief description of the design service."
+            }
+          }
+        },
+        "5": {
+          "number": "05",
+          "title": "Design",
+          "desc": "This paragraph should contain a brief description of the design service.",
+          "box": {
+            "1": {
+              "title": "High-Pressure Usage",
+              "desc": "This paragraph should contain a brief description of the design service."
+            },
+            "2": {
+              "title": "System Expansion or Modification",
+              "desc": "This paragraph should contain a brief description of the design service."
+            },
+            "3": {
+              "title": "Business Continuity",
+              "desc": "This paragraph should contain a brief description of the design service."
+            }
+          }
+        }
+      }
+    },
+    "numeri": {
+      "title": "Some Figures",
+      "desc": "A brief description of what the product can save.",
+      "button": "Request a Quote",
+      "contatori": {
+        "1": {
+          "number": "130",
+          "title": "Counter 1"
+        },
+        "2": {
+          "number": "8h",
+          "title": "Counter 2"
+        },
+        "3": {
+          "number": "+2000",
+          "title": "Counter 3"
+        }
+      }
+    },
+    "imgFull": {
+      "title": "A brief description of the product in this paragraph.",
+      "button": "Download Technical Data Sheet"
+    }
   }
 }

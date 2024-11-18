@@ -68,7 +68,8 @@ const { titolo_progetto, descrizione_progetto, contenuto_1, contenuto_2 } = {
 const { immagine_progetto, immagine_1, immagine_2, immagine_3, immagine_4, caratteristica, SEO } = project;
 ---
 
-<Layout title={SEO.metaTitle} description={SEO.metaDescription}>
+<!-- <Layout title={SEO.metaTitle} description={SEO.metaDescription}> -->
+<Layout title={t("home.metaTitle")} description={t("home.metaDescription")}>
   <section class="mx-[2.5vw] lg:h-screen overflow-hidden relative lg:pt-0 pt-[100px]">
     <img src={`http://localhost:1337${immagine_progetto.url}`} alt={titolo_progetto} class="w-full lg:h-full h-[550px] object-cover" />
     <div class="w-full lg:h-full h-[550px] absolute lg:top-0 top-[100px] flex flex-col justify-end bg-black/50">

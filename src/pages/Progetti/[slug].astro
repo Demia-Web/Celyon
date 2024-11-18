@@ -7,63 +7,63 @@ import Layout from "../../layout/Layout.astro";
 changeLanguage("it");
 
 export async function getStaticPaths() {
-  const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*`;
-  const response = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
-    }
-  });
-  const data = await response.json();
-  const projects = data.data;
-  return projects.map((project) => ({
-    params: { slug: project.id.toString() },
-    props: project
-  }));
+    const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*`;
+    const response = await fetch(url, {
+        headers: {
+            Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+        }
+    });
+    const data = await response.json();
+    const projects = data.data;
+    return projects.map((project) => ({
+        params: { slug: project.id.toString() },
+        props: project
+    }));
 }
 type ProjectProps = {
-  id: number;
-  titolo_progetto: string;
-  descrizione_progetto: string;
-  contenuto_1: string;
-  contenuto_2: string;
-  immagine_progetto: {
-    url: string;
-  };
-  immagine_1: {
-    url: string;
-  };
-  immagine_2: {
-    url: string;
-  };
-  immagine_3: {
-    url: string;
-  };
-  immagine_4: {
-    url: string;
-  };
-  caratteristica: {
     id: number;
-    titolo: string;
-    dato: string;
-  }[];
-  SEO: {
-    metaTitle: string;
-    metaDescription: string;
-  }[];
-  localizations?: {
     titolo_progetto: string;
     descrizione_progetto: string;
     contenuto_1: string;
     contenuto_2: string;
-  }[];
+    immagine_progetto: {
+        url: string;
+    };
+    immagine_1: {
+        url: string;
+    };
+    immagine_2: {
+        url: string;
+    };
+    immagine_3: {
+        url: string;
+    };
+    immagine_4: {
+        url: string;
+    };
+    caratteristica: {
+        id: number;
+        titolo: string;
+        dato: string;
+    }[];
+    SEO: {
+        metaTitle: string;
+        metaDescription: string;
+    }[];
+    localizations?: {
+        titolo_progetto: string;
+        descrizione_progetto: string;
+        contenuto_1: string;
+        contenuto_2: string;
+    }[];
 };
 // Access the `project` data from props
 const project: ProjectProps = Astro.props;
 const currentLang = i18next.language;
 const localizedContent = currentLang === "en" && project.localizations && project.localizations.length > 0 ? project.localizations[0] : {};
 const { titolo_progetto, descrizione_progetto, contenuto_1, contenuto_2 } = {
-  ...project,
-  ...localizedContent
+    ...project,
+    ...localizedContent
 };
 const { immagine_progetto, immagine_1, immagine_2, immagine_3, immagine_4, caratteristica, SEO } = project;
 ---

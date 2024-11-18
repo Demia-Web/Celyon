@@ -26,7 +26,7 @@ import { t } from "i18next";
       <div class="menu-item prodotti relative">
         <a href="#" class="hover-trigger">
           <div class="flex flex-row gap-[0.556vw]">
-            <p class="btn-title">
+            <p class="btn-title titolo">
               <span class="text">{t("componenti.header.prodotti.title")}</span>
               <span class="hover-text">{t("componenti.header.prodotti.title")}</span>
             </p>
@@ -34,7 +34,7 @@ import { t } from "i18next";
             <img src="/img/assets/minus.svg" alt="" class="w-[1.181vw] hidden" id="minus" />
           </div>
         </a>
-        <div class="submenu hidden absolute bg-grigio-200">
+        <div class="submenu absolute bg-grigio-200">
           <a href={localizePath("/Oleodinamica")} class="btn-header">
             <p class="btn-title">
               <span class="text">{t("componenti.header.prodotti.voce1")}</span>
@@ -72,7 +72,7 @@ import { t } from "i18next";
       <div class="menu-item servizi relative">
         <a href="#" class="hover-trigger">
           <div class="flex flex-row gap-[0.556vw]">
-            <p class="btn-title">
+            <p class="btn-title titolo">
               <span class="text">{t("componenti.header.servizi.title")}</span>
               <span class="hover-text">{t("componenti.header.servizi.title")}</span>
             </p>
@@ -80,7 +80,7 @@ import { t } from "i18next";
             <img src="/img/assets/minus.svg" alt="" class="w-[1.181vw] hidden" id="minus" />
           </div>
         </a>
-        <div class="submenu hidden absolute bg-grigio-200">
+        <div class="submenu absolute bg-grigio-200">
           <a href={localizePath("/Ricambi_e_Componentistica")} class="btn-header">
             <p class="btn-title">
               <span class="text">{t("componenti.header.servizi.voce1")}</span>
@@ -137,9 +137,6 @@ import { t } from "i18next";
   </div>
 
   <style>
-    /* Define hidden class for controlling visibility */
-
-    /* Basic styles for the submenu */
     .submenu {
       display: none;
       position: absolute;
@@ -155,89 +152,81 @@ import { t } from "i18next";
       gap: 1.111vw;
     }
 
-    .submenu.show {
+    .submenu.active {
       display: flex;
     }
+
+    .menu-item.active .btn-title.titolo {
+      color: #0029cc;
+    }
+
+    .menu-item.active #plus {
+      display: none;
+    }
+
+    .menu-item.active #minus {
+      display: block !important;
+    }
   </style>
-
   <script>
-    // Funzione per inizializzare i menu
-    function initializeMenu() {
-      console.log("Initializing menus...");
+    document.addEventListener("astro:page-load", () => {
+      // Seleziona l'elemento con classe "prodotti"
+      const prodottiElement = document.querySelector(".menu-item.prodotti");
 
-      // Seleziona tutti i menu
-      const menuItems = document.querySelectorAll(".menu-item");
+      if (prodottiElement) {
+        // Aggiungi un event listener per il click
+        prodottiElement.addEventListener("click", (event) => {
+          // Previeni la navigazione se c'è un link
+          event.preventDefault();
 
-      // Funzione per chiudere tutti i sottomenù
-      function closeAllSubmenus() {
-        console.log("Closing all submenus...");
-        menuItems.forEach((menuItem) => {
-          const submenu = menuItem.querySelector(".submenu");
-          const plusIcon = menuItem.querySelector("#plus");
-          const minusIcon = menuItem.querySelector("#minus");
+          // Seleziona il sottomenu
+          const submenuProdotti = prodottiElement.querySelector(".submenu");
 
-          submenu?.classList.remove("show");
-          plusIcon?.classList.remove("hidden");
-          minusIcon?.classList.add("hidden");
+          // Seleziona il sottomenu "servizi" e rimuovi l'active
+          const submenuServizi = document.querySelector(".menu-item.servizi .submenu");
+          if (submenuServizi && submenuServizi.classList.contains("active")) {
+            submenuServizi.classList.remove("active");
+            serviziElement.classList.remove("active");
+          }
+
+          // Aggiungi o rimuovi la classe active al sottomenu prodotti
+          if (submenuProdotti) {
+            submenuProdotti.classList.toggle("active");
+            prodottiElement.classList.toggle("active");
+          } else {
+            console.error("Submenu prodotti not found.");
+          }
         });
       }
 
-      // Chiude tutti i sottomenù durante l'inizializzazione
-      closeAllSubmenus();
+      // Seleziona l'elemento con classe "servizi"
+      const serviziElement = document.querySelector(".menu-item.servizi");
 
-      // Gestisce i click sui menu principali
-      menuItems.forEach((menuItem) => {
-        const trigger = menuItem.querySelector(".hover-trigger");
-        const submenu = menuItem.querySelector(".submenu");
-        const plusIcon = menuItem.querySelector("#plus");
-        const minusIcon = menuItem.querySelector("#minus");
-
-        if (!trigger || !submenu) return; // Se mancano elementi, salta
-
-        trigger.addEventListener("click", (event) => {
+      if (serviziElement) {
+        // Aggiungi un event listener per il click
+        serviziElement.addEventListener("click", (event) => {
+          // Previeni la navigazione se c'è un link
           event.preventDefault();
-          console.log(`Toggled menu: ${menuItem.classList}`);
 
-          // Usa lo stato del DOM per verificare visibilità
-          const isCurrentlyVisible = submenu.classList.contains("show");
-          console.log(isCurrentlyVisible);
+          // Seleziona il sottomenu
+          const submenuServizi = serviziElement.querySelector(".submenu");
 
-          // Chiude tutti i sottomenù
-          closeAllSubmenus();
+          // Seleziona il sottomenu "prodotti" e rimuovi l'active
+          const submenuProdotti = document.querySelector(".menu-item.prodotti .submenu");
+          if (submenuProdotti && submenuProdotti.classList.contains("active")) {
+            submenuProdotti.classList.remove("active");
+            prodottiElement.classList.remove("active");
+          }
 
-          console.log(isCurrentlyVisible);
-
-          // Apre il sottomenu corrente se non era già visibile
-          if (!isCurrentlyVisible) {
-            submenu.classList.add("show");
-            plusIcon?.classList.add("hidden");
-            minusIcon?.classList.remove("hidden");
+          // Aggiungi o rimuovi la classe active al sottomenu servizi
+          if (submenuServizi) {
+            submenuServizi.classList.toggle("active");
+            serviziElement.classList.toggle("active");
+          } else {
+            console.error("Submenu servizi not found.");
           }
         });
-      });
-
-      // Chiude i sottomenù cliccando fuori
-      document.addEventListener("click", (event) => {
-        const target = event.target;
-        const clickedInsideMenu = [...menuItems].some((menuItem) => menuItem.contains(target));
-
-        if (!clickedInsideMenu) {
-          console.log("Clicked outside menus, closing all submenus.");
-          closeAllSubmenus();
-        }
-      });
-    }
-
-    // Eventi per Astro
-    document.addEventListener("astro:page-load", () => {
-      console.log("astro:page-load triggered");
-      initializeMenu();
-    });
-
-    // Per SPA: ricarica menu dopo una navigazione
-    document.addEventListener("astro:after-swap", () => {
-      console.log("astro:after-swap triggered");
-      initializeMenu();
+      }
     });
   </script>
 </header>

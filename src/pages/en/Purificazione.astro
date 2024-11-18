@@ -1,9 +1,9 @@
 ---
-import { changeLanguage } from "i18next";
 import Layout from "../../layout/Layout.astro";
 import Button from "../../component/Button.astro";
 import Form from "../../component/Form.astro";
 import Marquee from "../../component/Marquee.astro";
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
 ---
@@ -13,15 +13,12 @@ changeLanguage("en");
     <div class="flex lg:flex-row flex-col justify-between gap-[6.944vw] lg:items-center">
       <div class="flex flex-col lg:gap-[5.556vw] gap-[44px]">
         <div class="flex flex-col lg:gap-[1.667vw] gap-[20px]">
-          <h1 class="test-nero">
-            Sistema di Purificazione<br />
-            e Filtraggio a Olio VDO
-          </h1>
-          <p class="text-grigio-200">Breve frase che indica il vantaggio di avere questo prodotto.</p>
+          <h1 class="text-nero" set:html={t("purificazione.hero.title")} />
+          <p class="text-grigio-200">{t("purificazione.hero.desc")}.</p>
         </div>
         <div class="flex lg:flex-row flex-col lg:gap-[0.556vw] gap-[8px]">
-          <Button content="Richiedi informazioni" type="btn-blu" link="" />
-          <Button content="Scarica scheda tecnica" type="btn-transparent" link="/" img="/img/assets/download.svg" />
+          <Button content={t("purificazione.hero.button.left")} type="btn-blu" link="" />
+          <Button content={t("purificazione.hero.button.right")} type="btn-transparent" link="/" img="/img/assets/download.svg" />
         </div>
       </div>
       <img src="/img/page/oleodinamica/impiantiOleodinamica.png" alt="" class="lg:w-[38.889vw] w-full lg:h-[40.278vw] object-cover" />
@@ -33,12 +30,10 @@ changeLanguage("en");
 
   <section class="px-body py-body bg-blu flex flex-col lg:gap-[10.417vw] gap-[60px]">
     <div class="flex lg:flex-row flex-col lg:items-end justify-between lg:gap-0 gap-[24px]">
-      <h3 class="text-bianco lg:w-[43.472vw]">In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.</h3>
-      <p class="text-bianco lg:w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.</p>
+      <h3 class="text-bianco lg:w-[43.472vw]">{t("lubrificazione.intro.descIntroduttiva")}</h3>
+      <p class="text-bianco lg:w-[22.639vw]">{t("lubrificazione.intro.desc")}</p>
     </div>
-
     <Marquee />
-
     <div class="w-full lg:h-[48.611vw] h-[320px]">
       <img src="/img/page/oleodinamica/img-full-oleodinamica.jpeg" alt="" class="w-full h-full object-cover" />
     </div>
