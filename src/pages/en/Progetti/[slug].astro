@@ -7,63 +7,63 @@ import Layout from "../../../layout/Layout.astro";
 changeLanguage("en");
 
 export async function getStaticPaths() {
-    const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*`;
-    const response = await fetch(url, {
-        headers: {
-            Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
-        }
-    });
-    const data = await response.json();
-    const projects = data.data;
-    return projects.map((project) => ({
-        params: { slug: project.id.toString() },
-        props: project
-    }));
+  const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?populate=*`;
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+    }
+  });
+  const data = await response.json();
+  const projects = data.data;
+  return projects.map((project) => ({
+    params: { slug: project.id.toString() },
+    props: project
+  }));
 }
 type ProjectProps = {
+  id: number;
+  titolo_progetto: string;
+  descrizione_progetto: string;
+  contenuto_1: string;
+  contenuto_2: string;
+  immagine_progetto: {
+    url: string;
+  };
+  immagine_1: {
+    url: string;
+  };
+  immagine_2: {
+    url: string;
+  };
+  immagine_3: {
+    url: string;
+  };
+  immagine_4: {
+    url: string;
+  };
+  caratteristica: {
     id: number;
+    titolo: string;
+    dato: string;
+  }[];
+  SEO: {
+    metaTitle: string;
+    metaDescription: string;
+  }[];
+  localizations?: {
     titolo_progetto: string;
     descrizione_progetto: string;
     contenuto_1: string;
     contenuto_2: string;
-    immagine_progetto: {
-        url: string;
-    };
-    immagine_1: {
-        url: string;
-    };
-    immagine_2: {
-        url: string;
-    };
-    immagine_3: {
-        url: string;
-    };
-    immagine_4: {
-        url: string;
-    };
-    caratteristica: {
-        id: number;
-        titolo: string;
-        dato: string;
-    }[];
-    SEO: {
-        metaTitle: string;
-        metaDescription: string;
-    }[];
-    localizations?: {
-        titolo_progetto: string;
-        descrizione_progetto: string;
-        contenuto_1: string;
-        contenuto_2: string;
-    }[];
+  }[];
 };
 // Access the `project` data from props
 const project: ProjectProps = Astro.props;
 const currentLang = i18next.language;
 const localizedContent = currentLang === "en" && project.localizations && project.localizations.length > 0 ? project.localizations[0] : {};
 const { titolo_progetto, descrizione_progetto, contenuto_1, contenuto_2 } = {
-    ...project,
-    ...localizedContent
+  ...project,
+  ...localizedContent
 };
 const { immagine_progetto, immagine_1, immagine_2, immagine_3, immagine_4, caratteristica, SEO } = project;
 ---
@@ -71,7 +71,7 @@ const { immagine_progetto, immagine_1, immagine_2, immagine_3, immagine_4, carat
 <!-- <Layout title={SEO.metaTitle} description={SEO.metaDescription}> -->
 <Layout title={t("home.metaTitle")} description={t("home.metaDescription")}>
   <section class="mx-[2.5vw] lg:h-screen overflow-hidden relative lg:pt-0 pt-[100px]">
-    <img src={`http://localhost:1337${immagine_progetto.url}`} alt={titolo_progetto} class="w-full lg:h-full h-[550px] object-cover" />
+    <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${immagine_progetto.url}`} alt={titolo_progetto} class="w-full lg:h-full h-[550px] object-cover" />
     <div class="w-full lg:h-full h-[550px] absolute lg:top-0 top-[100px] flex flex-col justify-end bg-black/50">
       <div class="flex flex-row justify-between lg:pb-[8.681vw] pb-[44px] lg:px-[3.056vw] px-[16px]">
         <h1 class="text-bianco">
@@ -107,19 +107,19 @@ const { immagine_progetto, immagine_1, immagine_2, immagine_3, immagine_4, carat
       </div>
 
       <div class="w-fit">
-        <img src={`http://localhost:1337${immagine_1.url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px] lg:w-[46.944vw] w-full" />
+        <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${immagine_1.url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px] lg:w-[46.944vw] w-full" />
       </div>
     </div>
     <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-[1.111vw] gap-[16px]">
-      <img src={`http://localhost:1337${immagine_2.url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px] w-full" />
-      <img src={`http://localhost:1337${immagine_3.url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px] w-full" />
+      <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${immagine_2.url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px] w-full" />
+      <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${immagine_3.url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px] w-full" />
     </div>
     <div>
       <div class="lg:w-[38.889vw]">
         <div class="text-nero" set:html={contenuto_2} />
       </div>
     </div>
-    <img src={`http://localhost:1337${immagine_4.url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px]" />
+    <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${immagine_4.url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px]" />
   </section>
 
   <ProgettiCorrelati />

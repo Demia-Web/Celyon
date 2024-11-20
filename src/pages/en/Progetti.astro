@@ -8,20 +8,20 @@ changeLanguage("en");
 
 const currentLang = i18next.language;
 async function fetchProjects(locale) {
-    const url = `${import.meta.env.PUBLIC_URL_STRAPI}?populate=*&locale=${currentLang}&?sort=order:asc`;
-    const response = await fetch(url, {
-        headers: {
-            Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
-        }
-    });
-    const data = await response.json();
-    return data.data;
+  const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?populate=*&locale=${currentLang}&?sort=order:asc`;
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+    }
+  });
+  const data = await response.json();
+  return data.data;
 }
 let locale = "it";
 let projects = await fetchProjects(locale);
 async function updateLocale(newLocale) {
-    locale = newLocale;
-    projects = await fetchProjects(newLocale);
+  locale = newLocale;
+  projects = await fetchProjects(newLocale);
 }
 ---
 
@@ -39,7 +39,7 @@ async function updateLocale(newLocale) {
       projects.map((project) => (
         <div class="card-progetto">
           <a href={`${currentLang === "en" ? "/en" : ""}/Progetti/${currentLang === "en" ? project.localizations[0].id : project.id}`} class="cursor-pointer hover-target flex flex-col lg:gap-[1.111vw] gap-[16px]">
-            <img src={`http://localhost:1337${project.immagine_progetto.url}`} alt={project.titolo_progetto} class="lg:h-[41.667vw] h-[244px] w-full object-cover" />
+            <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${project.immagine_progetto.url}`} alt={project.titolo_progetto} class="lg:h-[41.667vw] h-[244px] w-full object-cover" />
             <div class="flex flex-col gap-[1.111vw]">
               <div class="pb-[0.556vw] border-b border-nero">
                 <p class="text-grigio-200">{project.data_progetto}</p>

@@ -170,63 +170,64 @@ import { t } from "i18next";
   </style>
   <script>
     document.addEventListener("astro:page-load", () => {
-      // Seleziona l'elemento con classe "prodotti"
       const prodottiElement = document.querySelector(".menu-item.prodotti");
+      const serviziElement = document.querySelector(".menu-item.servizi");
 
       if (prodottiElement) {
-        // Aggiungi un event listener per il click
         prodottiElement.addEventListener("click", (event) => {
-          // Previeni la navigazione se c'è un link
           event.preventDefault();
+          console.log("Menu 'Prodotti' cliccato.");
 
-          // Seleziona il sottomenu
           const submenuProdotti = prodottiElement.querySelector(".submenu");
-
-          // Seleziona il sottomenu "servizi" e rimuovi l'active
           const submenuServizi = document.querySelector(".menu-item.servizi .submenu");
+
           if (submenuServizi && submenuServizi.classList.contains("active")) {
             submenuServizi.classList.remove("active");
             serviziElement.classList.remove("active");
+            console.log("Sottomenu 'Servizi' chiuso.");
           }
 
-          // Aggiungi o rimuovi la classe active al sottomenu prodotti
           if (submenuProdotti) {
-            submenuProdotti.classList.toggle("active");
-            prodottiElement.classList.toggle("active");
+            const isActive = submenuProdotti.classList.toggle("active");
+            prodottiElement.classList.toggle("active", isActive);
+            console.log(`Sottomenu 'Prodotti' ${isActive ? "aperto" : "chiuso"}.`);
           } else {
-            console.error("Submenu prodotti not found.");
+            console.error("Submenu prodotti non trovato.");
           }
         });
       }
 
-      // Seleziona l'elemento con classe "servizi"
-      const serviziElement = document.querySelector(".menu-item.servizi");
-
       if (serviziElement) {
-        // Aggiungi un event listener per il click
         serviziElement.addEventListener("click", (event) => {
-          // Previeni la navigazione se c'è un link
           event.preventDefault();
+          console.log("Menu 'Servizi' cliccato.");
 
-          // Seleziona il sottomenu
           const submenuServizi = serviziElement.querySelector(".submenu");
-
-          // Seleziona il sottomenu "prodotti" e rimuovi l'active
           const submenuProdotti = document.querySelector(".menu-item.prodotti .submenu");
+
           if (submenuProdotti && submenuProdotti.classList.contains("active")) {
             submenuProdotti.classList.remove("active");
             prodottiElement.classList.remove("active");
+            console.log("Sottomenu 'Prodotti' chiuso.");
           }
 
-          // Aggiungi o rimuovi la classe active al sottomenu servizi
           if (submenuServizi) {
-            submenuServizi.classList.toggle("active");
-            serviziElement.classList.toggle("active");
+            const isActive = submenuServizi.classList.toggle("active");
+            serviziElement.classList.toggle("active", isActive);
+            console.log(`Sottomenu 'Servizi' ${isActive ? "aperto" : "chiuso"}.`);
           } else {
-            console.error("Submenu servizi not found.");
+            console.error("Submenu servizi non trovato.");
           }
         });
       }
+
+      // Prevenire la propagazione sui link del sottomenu
+      const submenuLinks = document.querySelectorAll(".submenu a");
+      submenuLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.stopPropagation(); // Blocca la propagazione dell'evento
+        });
+      });
     });
   </script>
 </header>
