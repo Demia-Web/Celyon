@@ -3,6 +3,7 @@ import { changeLanguage } from "i18next";
 import Layout from "../layout/Layout.astro";
 import Button from "../component/Button.astro";
 import Form from "../component/Form.astro";
+import Marquee from "../component/Marquee.astro";
 
 changeLanguage("it");
 ---
@@ -24,7 +25,7 @@ changeLanguage("it");
           <Button content="Scarica scheda tecnica" type="btn-transparent" link="/" img="/img/assets/download.svg" />
         </div>
       </div>
-      <img src="/img/page/oleodinamica/impiantiOleodinamica.png" alt="" class="lg:w-[38.889vw] w-full lg:h-[40.278vw] object-cover" />
+      <img src="/img/page/oleodinamica/impiantiOleodinamica.png" alt="" class="lg:w-[38.889vw] w-full lg:h-[40.278vw] md:h-[330px] h-[300px] object-cover" />
     </div>
     <div class="w-full flex justify-center">
       <p class="text-nero scroll-title">Scroll</p>
@@ -36,19 +37,7 @@ changeLanguage("it");
       <h3 class="text-bianco lg:w-[43.472vw]">In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.</h3>
       <p class="text-bianco lg:w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.</p>
     </div>
-    <div class="marquee-container w-full bg-bianco lg:py-[2.5vw] py-[18px] overflow-hidden whitespace-nowrap">
-      <div class="marquee-content inline-flex gap-[6.944vw]">
-        <h4 class="text-grigio-100">Industriale</h4>
-        <h4 class="text-grigio-100">Industriale</h4>
-        <h4 class="text-grigio-100">Industriale</h4>
-        <h4 class="text-grigio-100">Industriale</h4>
-        <h4 class="text-grigio-100">Industriale</h4>
-        <h4 class="text-grigio-100">Industriale</h4>
-        <h4 class="text-grigio-100">Industriale</h4>
-        <h4 class="text-grigio-100">Industriale</h4>
-        <h4 class="text-bianco">Industriale</h4>
-      </div>
-    </div>
+    <Marquee />
     <div class="w-full lg:h-[48.611vw] h-[320px]">
       <img src="/img/page/oleodinamica/img-full-oleodinamica.jpeg" alt="" class="w-full h-full object-cover" />
     </div>
@@ -143,7 +132,7 @@ changeLanguage("it");
     </div>
   </section>
 
-  <section class="h-screen px-body pt-[18.889vw] flex flex-col lg:gap-[1.667vw] gap-[24px]" id="img-full-azienda">
+  <section class="lg:h-screen md:h-[500px] h-[840px] px-body lg:pt-[18.889vw] pt-[130px] flex flex-col lg:gap-[2.222vw] gap-[30px]" id="img-full-azienda">
     <h1 class="text-bianco lg:w-[57.708vw]">
       In questo paragrafo una breve<br />
       descrizione sul prodotto.

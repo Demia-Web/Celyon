@@ -152,7 +152,7 @@
     "metaTitle": "Chi siamo - Celyon",
     "metaDescription": "Scopri la storia e i valori di Celyon",
     "hero": {
-      "title": "Oltre <0>30 anni di esperienza</0><br /> negli Impianti di<br /> Lubrificazione e Oleodinamica",
+      "title": "Oltre <span class='text-blu'>30 anni di esperienza</span> negli Impianti di Lubrificazione e Oleodinamica",
       "button": "Scopri la nostra storia"
     },
     "intro": {
@@ -205,7 +205,7 @@
     "metaTitle": "Contatti - Celyon",
     "metaDescription": "Contattaci per ottenere supporto o contribuire",
     "hero": {
-      "title": "Hai una domanda?<br /> Vuoi <0>collaborare</0> con noi?"
+      "title": "Hai una domanda? <br> Vuoi <span class='text-blu'>collaborare</span> con noi?"
     },
     "info": {
       "sede": "Sede",
@@ -219,7 +219,7 @@
       "email": "Email",
       "telefono": "Telefono",
       "messaggio": "Messaggio",
-      "privacy": "Acconsento al trattamento dei dati personali come specificato nella <0>Privacy Policy</0>",
+      "privacy": "Acconsento al trattamento dei dati personali come specificato nella <a href='' class='font-[600] z-[20] text-blu'>Privacy Policy</a>",
       "button": "Invia richiesta",
       "component": {
         "focus": "Mettiti in contatto con Celyon",

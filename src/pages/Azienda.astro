@@ -12,16 +12,11 @@ changeLanguage("it");
 <Layout title={t("azienda.metaTitle")} description={t("azienda.metaDescription")}>
   <section class="hero overflow-hidden !px-0 flex flex-col justify-between relative">
     <div class="flex flex-col lg:gap-[1.667vw] gap-[24px] items-center">
-      <h1 class="text-nero text-center">
-        <Trans i18nKey="azienda.hero.title">
-          Oltre <span class="text-blu">30 anni di esperienza</span>
-          negli Impianti di Lubrificazione e Oleodinamica
-        </Trans>
-      </h1>
+      <h1 class="text-nero text-center" set:html={t("azienda.hero.title")} />
       <Button content={t("azienda.hero.button")} type="btn-blu" link="" />
     </div>
     <div class="flex justify-center absolute w-full lg:-bottom-[26.5vw] -bottom-[220px] scroll-animation">
-      <img src="/img/page/azienda/about_animation.svg" alt="" class="lg:w-[50vw]" />
+      <img src="/img/page/azienda/about_animation.svg" alt="" class="lg:w-[50vw] md:w-[450px]" />
     </div>
     <div class="w-full flex justify-center">
       <p class="text-nero scroll-title">Scroll</p>
@@ -35,7 +30,7 @@ changeLanguage("it");
         <p class="text-white lg:w-[22.639vw]">{t("azienda.intro.descrizioneSotto")}</p>
       </div>
       <div class="scroll-container h-full relative overflow-hidden lg:mt-0 mt-[60px]">
-        <img src="/img/page/azienda/scroll-image.jpeg" alt="" class="lg:w-[38.889vw] lg:h-[33.333vw] h-[240px] object-cover" />
+        <img src="/img/page/azienda/scroll-image.jpeg" alt="" class="lg:w-[38.889vw] md:w-full lg:h-[33.333vw] md:h-[450px] h-[240px] object-cover" />
       </div>
     </div>
     <div class="flex flex-col gap-[6.944vw]">
@@ -53,9 +48,9 @@ changeLanguage("it");
           <p class="text-bianco lg:w-[23.611vw]">{t("azienda.prodotti.subtitle")}</p>
         </div>
       </div>
-      <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-[1.111vw] gap-[20px] griglia-animazioni">
+      <div class="grid md:grid-cols-2 grid-cols-1 lg:gap-[1.111vw] gap-[20px] griglia-animazioni">
         <!-- 01 -->
-        <div class="lg:p-[1.667vw] p-[16px] flex flex-col lg:gap-[1.667vw] gap-[20px] bg-bianco lg:h-[22.222vw] h-fit relative">
+        <div class="lg:p-[1.667vw] p-[16px] flex flex-col lg:gap-[1.667vw] gap-[20px] bg-bianco lg:h-[22.222vw] md:h-full h-fit relative">
           <div class="flex flex-col lg:gap-[0.556vw] gap-[8px]">
             <p class="text-blu lg:text-[2.222vw] text-[24px] lg:leading-[2.5vw] leading-[28px]">01</p>
             <h4 class="text-nero">{t("azienda.prodotti.items.1.title")}</h4>
@@ -64,7 +59,7 @@ changeLanguage("it");
           <img src="/img/page/azienda/delocalizzazione.svg" alt="" class="lg:w-[12.014vw] w-[120px] lg:h-[12.014vw] h-[120px] lg:absolute right-[1.667vw] bottom-[1.667vw] rotate" />
         </div>
         <!-- 02 -->
-        <div class="lg:p-[1.667vw] p-[16px] flex flex-col lg:gap-[1.667vw] gap-[20px] bg-bianco lg:h-[22.222vw] h-fit relative">
+        <div class="lg:p-[1.667vw] p-[16px] flex flex-col lg:gap-[1.667vw] gap-[20px] bg-bianco lg:h-[22.222vw] md:h-full h-fit relative">
           <div class="flex flex-col lg:gap-[0.556vw] gap-[8px]">
             <p class="text-blu lg:text-[2.222vw] text-[24px] lg:leading-[2.5vw] leading-[28px]">02</p>
             <h4 class="text-nero">{t("azienda.prodotti.items.2.title")}</h4>
@@ -73,7 +68,7 @@ changeLanguage("it");
           <div class="lg:w-[12.014vw] w-[120px] lg:h-[12.014vw] h-[120px] lg:absolute right-[1.667vw] bottom-[1.667vw] pulse"></div>
         </div>
         <!-- 03 -->
-        <div class="lg:p-[1.667vw] p-[16px] flex flex-col lg:gap-[1.667vw] gap-[20px] bg-bianco lg:h-[22.222vw] h-fit relative">
+        <div class="lg:p-[1.667vw] p-[16px] flex flex-col lg:gap-[1.667vw] gap-[20px] bg-bianco lg:h-[22.222vw] md:h-full h-fit relative">
           <div class="flex flex-col lg:gap-[0.556vw] gap-[8px]">
             <p class="text-blu lg:text-[2.222vw] text-[24px] lg:leading-[2.5vw] leading-[28px]">03</p>
             <h4 class="text-nero">{t("azienda.prodotti.items.3.title")}</h4>
@@ -85,7 +80,7 @@ changeLanguage("it");
           </div>
         </div>
         <!-- 04-->
-        <div class="lg:p-[1.667vw] p-[16px] flex flex-col lg:gap-[1.667vw] gap-[20px] bg-bianco lg:h-[22.222vw] h-fit relative">
+        <div class="lg:p-[1.667vw] p-[16px] flex flex-col lg:gap-[1.667vw] gap-[20px] bg-bianco lg:h-[22.222vw] md:h-full h-fit relative">
           <div class="flex flex-col lg:gap-[0.556vw] gap-[8px]">
             <p class="text-blu lg:text-[2.222vw] text-[24px] lg:leading-[2.5vw] leading-[28px]">04</p>
             <h4 class="text-nero">{t("azienda.prodotti.items.4.title")}</h4>
@@ -175,7 +170,7 @@ changeLanguage("it");
 
   <TimelineAzienda />
 
-  <section class="h-screen px-body lg:pt-[18.889vw] pt-[130px]" id="img-full-azienda">
+  <section class="lg:h-screen md:h-[500px] h-[840px] px-body lg:pt-[18.889vw] pt-[130px] flex flex-col lg:gap-[2.222vw] gap-[30px]" id="img-full-azienda">
     <p class="text-bianco lg:text-[2.778vw] text-[28px] lg:leading-[3.056vw] leading-[32px] lg:w-[57.708vw] font-medium">{t("azienda.immagineFullTitle")}</p>
   </section>
 
@@ -238,7 +233,18 @@ changeLanguage("it");
       scrollTrigger: {
         markers: false,
         trigger: ".scroll-animation",
-        start: () => (window.innerWidth <= 768 ? "top 90%" : "top center"),
+        start: () => {
+          if (window.innerWidth <= 390) {
+            // Mobile
+            return "top 90%";
+          } else if (window.innerWidth <= 768) {
+            // Tablet
+            return "0% center%";
+          } else {
+            // Desktop
+            return "top center";
+          }
+        },
         end: "top top",
         scrub: true
       }

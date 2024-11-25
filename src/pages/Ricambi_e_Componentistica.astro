@@ -146,7 +146,7 @@ changeLanguage("it");
         </h2>
         <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
       </div>
-      <img src="/img/assets/animation-service.svg" alt="" class="palla-rotante lg:w-fit w-[170px] lg:order-2 order-1 lg:pb-0 pb-[40px]" />
+      <img src="/img/assets/animation-service.svg" alt="" class="palla-rotante lg:w-fit w-[170px] lg:order-2 order-1 lg:pb-0 pb-[70px]" />
     </div>
     <div class="hidden lg:grid grid-cols-3 gap-[1.111vw]">
       <!-- 01 -->
@@ -181,7 +181,7 @@ changeLanguage("it");
           <div class="swiper-slide">
             <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
               <div class="flex flex-col gap-[8px]">
-                <p class="text-blu text-[20px] leading-[24px]">01</p>
+                <h4 class="text-blu">01</h4>
                 <h4 class="text-nero">Progettazione</h4>
               </div>
               <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.</p>
@@ -191,7 +191,7 @@ changeLanguage("it");
           <div class="swiper-slide">
             <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
               <div class="flex flex-col gap-[8px]">
-                <p class="text-blu text-[20px] leading-[24px]">02</p>
+                <h4 class="text-blu">02</h4>
                 <h4 class="text-nero">Produzione</h4>
               </div>
               <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione.</p>
@@ -201,7 +201,7 @@ changeLanguage("it");
           <div class="swiper-slide">
             <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
               <div class="flex flex-col gap-[8px]">
-                <p class="text-blu text-[20px] leading-[24px]">03</p>
+                <h4 class="text-blu">03</h4>
                 <h4 class="text-nero">Installazione</h4>
               </div>
               <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
@@ -291,7 +291,7 @@ changeLanguage("it");
     </div>
   </section>
 
-  <section class="h-screen px-body pt-[18.889vw] flex flex-col lg:gap-[1.667vw] gap-[24px]" id="img-full-azienda">
+  <section class="lg:h-screen md:h-[500px] h-[840px] px-body lg:pt-[18.889vw] pt-[130px] flex flex-col lg:gap-[2.222vw] gap-[30px]" id="img-full-azienda">
     <h3 class="text-bianco lg:w-[57.708vw]">
       In questo paragrafo una breve<br />
       descrizione sul prodotto.
@@ -309,16 +309,8 @@ changeLanguage("it");
 
     document.addEventListener("astro:page-load", () => {
       new Swiper(".swiper-impianti", {
-        breakpoints: {
-          390: {
-            spaceBetween: 16,
-            slidesPerView: 1.1
-          },
-          1024: {
-            spaceBetween: 16,
-            slidesPerView: 1.4
-          }
-        }
+        spaceBetween: 16,
+        slidesPerView: 1.1
       });
     });
   </script>
