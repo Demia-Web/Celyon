@@ -841,7 +841,7 @@ input[type="number"] {
 @media screen and (max-width: 640px) {
   /* Main */
   .hero {
-    height: 100vh;
+    height: auto;
     padding: 100px 16px 16px 16px;
   }
 
