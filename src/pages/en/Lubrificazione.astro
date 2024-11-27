@@ -41,15 +41,11 @@ changeLanguage("en");
   </section>
 
   <section class="px-body py-body flex flex-col">
-    <div class="flex flex-col gap-[5.556vw]">
-      <div class="flex flex-row justify-between items-end">
-        <h2 class="text-nero">
-          <Trans i18nKey="lubrificazione.prodotti.title">
-            Le nostre tipologie di<br /> impianti di lubrificazione
-          </Trans>
-        </h2>
-        <p class="text-nero w-[20.833vw]">{t("lubrificazione.prodotti.desc")}</p>
-        <div class="flex items-end gap-[0.556vw]">
+    <div class="flex flex-col lg:gap-[5.556vw] gap-[44px]">
+      <div class="flex lg:flex-row flex-col justify-between lg:items-end lg:gap-0 gap-[20px]">
+        <h2 class="text-nero" set:html={t("lubrificazione.prodotti.title")} />
+        <p class="text-nero lg:w-[20.833vw]">{t("lubrificazione.prodotti.desc")}</p>
+        <div class="flex lg:items-end gap-[0.556vw]">
           <Button content={t("lubrificazione.prodotti.button")} type="btn-blu" link="" />
         </div>
       </div>
@@ -71,25 +67,40 @@ changeLanguage("en");
                 : [];
 
             return prodotti.map((prodotto, index) => (
-              <div class="accordion-item accordion-big">
+              <div class="accordion-item ">
                 <div class="accordion-header px-[1.667vw] py-[2.222vw]">
                   <div class="flex flex-row gap-[1.667vw]">
-                    <h3 class="text-grigio-100 w-[2.778vw] number">{prodotto.number}</h3>
+                    <h3 class="text-grigio-100 lg:w-[2.778vw] w-[64px] number">{prodotto.number}</h3>
                     <h3 class="text-blu title">{prodotto.title}</h3>
                   </div>
                   <span class="symbol text-blu">+</span>
                 </div>
                 <div class="accordion-content px-[1.667vw]">
                   <div class="flex flex-col gap-[5.556vw] mb-[2.222vw] pt-[3.056vw]">
-                    <p class="text-nero w-1/3">{prodotto.desc}</p>
-                    <div class="grid grid-cols-3 gap-[1.111vw]">
+                    <p class="text-nero lg:w-1/3">{prodotto.desc}</p>
+                    <div class="lg:grid grid-cols-3 hidden lg:gap-[1.111vw] gap-[16px]">
                       {prodotto.box &&
                         Object.keys(prodotto.box).map((boxKey) => (
-                          <div class="bg-grigio-100 py-[3.056vw] px-[1.667vw] flex flex-col gap-[1.667vw]">
+                          <div class="bg-grigio-100 lg:py-[3.056vw] py-[32px] lg:px-[1.667vw] px-[16px] flex flex-col lg:gap-[1.667vw] gap-[20px]">
                             <h4 class="text-nero">{prodotto.box[boxKey].title}</h4>
                             <p class="text-nero">{prodotto.box[boxKey].desc}</p>
                           </div>
                         ))}
+                    </div>
+                    <div class="lg:hidden block">
+                      <div class="swiper swiper-accordion">
+                        <div class="swiper-wrapper">
+                          {prodotto.box &&
+                            Object.keys(prodotto.box).map((boxKey) => (
+                              <div class="swiper-slide">
+                                <div class="bg-grigio-100 py-[32px] px-[16px] flex flex-col gap-[20px]">
+                                  <h4 class="text-nero">{prodotto.box[boxKey].title}</h4>
+                                  <p class="text-nero">{prodotto.box[boxKey].desc}</p>
+                                </div>
+                              </div>
+                            ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -169,7 +180,7 @@ changeLanguage("en");
           <div class="swiper-slide">
             <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
               <div class="flex flex-col gap-[8px]">
-                <p class="text-blu text-[2.222vw] leading-[2.5vw]">{t("lubrificazione.prodotti.array.1.number")}</p>
+                <h4 class="text-blu">{t("lubrificazione.prodotti.array.1.number")}</h4>
                 <h4 class="text-nero">{t("lubrificazione.prodotti.array.1.title")}</h4>
               </div>
               <p class="text-nero">{t("lubrificazione.prodotti.array.1.desc")}</p>
@@ -179,7 +190,7 @@ changeLanguage("en");
           <div class="swiper-slide">
             <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
               <div class="flex flex-col gap-[8px]">
-                <p class="text-blu text-[2.222vw] leading-[2.5vw]">{t("lubrificazione.prodotti.array.2.number")}</p>
+                <h4 class="text-blu">{t("lubrificazione.prodotti.array.2.number")}</h4>
                 <h4 class="text-nero">{t("lubrificazione.prodotti.array.2.title")}</h4>
               </div>
               <p class="text-nero">{t("lubrificazione.prodotti.array.2.desc")}</p>
@@ -189,7 +200,7 @@ changeLanguage("en");
           <div class="swiper-slide">
             <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
               <div class="flex flex-col gap-[8px]">
-                <p class="text-blu text-[2.222vw] leading-[2.5vw]">{t("lubrificazione.prodotti.array.3.number")}</p>
+                <h4 class="text-blu">{t("lubrificazione.prodotti.array.3.number")}</h4>
                 <h4 class="text-nero">{t("lubrificazione.prodotti.array.3.title")}</h4>
               </div>
               <p class="text-nero">{t("lubrificazione.prodotti.array.3.desc")}</p>
@@ -207,24 +218,28 @@ changeLanguage("en");
 
   <Form />
 
-  <script>
+  <script is:inline>
     import Swiper from "swiper";
-    import { Navigation } from "swiper/modules";
     import "swiper/css";
     import "swiper/css/navigation";
 
     document.addEventListener("astro:page-load", () => {
       new Swiper(".swiper-impianti", {
-        breakpoints: {
-          390: {
-            spaceBetween: 16,
-            slidesPerView: 1.1
-          },
-          1024: {
-            spaceBetween: 16,
-            slidesPerView: 1.4
-          }
-        }
+        spaceBetween: 16,
+        slidesPerView: 1.1
+      });
+    });
+  </script>
+
+  <script is:inline>
+    import Swiper from "swiper";
+    import "swiper/css";
+    import "swiper/css/navigation";
+
+    document.addEventListener("astro:page-load", () => {
+      new Swiper(".swiper-accordion", {
+        spaceBetween: 16,
+        slidesPerView: 1.1
       });
     });
   </script>

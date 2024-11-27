@@ -15,7 +15,7 @@ changeLanguage("it");
   <!-- <Loader /> -->
 
   <section class="hero flex flex-col justify-between">
-    <div class="flex flex-row justify-between">
+    <div class="flex flex-row justify-between h-full">
       <div class="flex flex-col justify-between">
         <h1 class="text-nero" set:html={t("home.hero.title")} />
 
@@ -170,7 +170,7 @@ changeLanguage("it");
 
   <Form />
 
-  <script>
+  <script is:inline>
     // Animazione palle colorate
 
     const divs = document.querySelectorAll(".griglia-colorata > div");
@@ -189,14 +189,13 @@ changeLanguage("it");
     }, 1000);
   </script>
 
-  <script>
-    // Animazione scale-in
-
+  <!-- <script is:inline>
     import gsap from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
 
     gsap.registerPlugin(ScrollTrigger);
 
+    // Animazione scale-in
     gsap.fromTo(
       ".scroll-animation",
       { scale: 0.7 }, // Scala iniziale
@@ -264,6 +263,7 @@ changeLanguage("it");
         }
       }
     );
-  </script>
-  <script src="../libs/SwiperHome.js"></script>
+  </script> -->
+
+  <script src="../../public/libs/SwiperHome.js"></script>
 </Layout>

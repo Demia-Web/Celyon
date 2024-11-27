@@ -1,28 +1,11 @@
 ---
+import { changeLanguage } from "i18next";
 import Layout from "../../layout/Layout.astro";
-import Button from "../../component/Button.astro";
 import Collaborazione from "../../component/Collaborazione.astro";
-import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
 
-const currentLang = i18next.language;
-async function fetchProjects(locale) {
-  const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?populate=*&locale=${currentLang}&?sort=order:asc`;
-  const response = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
-    }
-  });
-  const data = await response.json();
-  return data.data;
-}
-let locale = "it";
-let projects = await fetchProjects(locale);
-async function updateLocale(newLocale) {
-  locale = newLocale;
-  projects = await fetchProjects(newLocale);
-}
+const currentLang = "it";
 ---
 
 <Layout title="I nostri ultimi progetti" description="Descrizione della pagina">
@@ -35,22 +18,68 @@ async function updateLocale(newLocale) {
   </section>
 
   <section class="px-body py-body grid lg:grid-cols-2 grid-cols-1 lg:gap-y-[5.556vw] gap-y-[80px] gap-x-[9.028vw]" id="griglia-progetti">
-    {
-      projects.map((project) => (
-        <div class="card-progetto">
-          <a href={`${currentLang === "en" ? "/en" : ""}/Progetti/${currentLang === "en" ? project.localizations[0].id : project.id}`} class="cursor-pointer hover-target flex flex-col lg:gap-[1.111vw] gap-[16px]">
-            <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${project.immagine_progetto.url}`} alt={project.titolo_progetto} class="lg:h-[41.667vw] h-[244px] w-full object-cover" />
-            <div class="flex flex-col gap-[1.111vw]">
-              <div class="pb-[0.556vw] border-b border-nero">
-                <p class="text-grigio-200">{project.data_progetto}</p>
-              </div>
-              <h5 class="textClass !hover-target mt-[12px]">{project.titolo_progetto}</h5>
-            </div>
-          </a>
-        </div>
-      ))
-    }
+    <!-- I progetti saranno inseriti dinamicamente qui -->
   </section>
 
   <Collaborazione />
+
+  <script>
+    const currentLang = "it";
+
+    async function fetchProjects(locale) {
+      const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?populate=*&locale=${locale}&sort=order:asc`;
+      const response = await fetch(url, {
+        headers: {
+          Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+        }
+      });
+      const data = await response.json();
+      return data.data;
+    }
+
+    async function loadProjects() {
+      const container = document.getElementById("griglia-progetti");
+      container.innerHTML = "<p>Caricamento in corso...</p>";
+
+      try {
+        const projects = await fetchProjects(currentLang);
+        container.innerHTML = "";
+
+        if (projects.length === 0) {
+          container.innerHTML = "<p>Nessun progetto trovato.</p>";
+          return;
+        }
+
+        projects.forEach((project) => {
+          const projectCard = document.createElement("div");
+          projectCard.className = "card-progetto";
+
+          projectCard.innerHTML = `
+            <a href="${currentLang === "en" ? "/en" : ""}/Progetti/${currentLang === "en" ? project.localizations[0]?.slug : project.slug}" 
+                class="cursor-pointer hover-target flex flex-col lg:gap-[1.111vw] gap-[16px]">
+              <img
+                src="${import.meta.env.PUBLIC_URL_STRAPI}${project.immagine_progetto.url}"
+                alt="${project.titolo_progetto}"
+                class="lg:h-[41.667vw] h-[244px] w-full object-cover"
+              />
+              <div class="flex flex-col gap-[1.111vw]">
+                <div class="pb-[0.556vw] border-b border-nero">
+                  <p class="text-grigio-200">${project.data_progetto}</p>
+                </div>
+                <h5 class="textClass !hover-target mt-[12px]">${project.titolo_progetto}</h5>
+              </div>
+            </a>
+          `;
+
+          container.appendChild(projectCard);
+        });
+      } catch (error) {
+        container.innerHTML = "<p>Errore durante il caricamento dei progetti. Riprova più tardi.</p>";
+        console.error("Errore nel caricamento dei progetti:", error);
+      }
+    }
+    document.addEventListener("astro:page-load", () => {
+      loadProjects();
+    });
+  </script>
 </Layout>

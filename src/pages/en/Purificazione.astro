@@ -21,7 +21,7 @@ changeLanguage("en");
           <Button content={t("purificazione.hero.button.right")} type="btn-transparent" link="/" img="/img/assets/download.svg" />
         </div>
       </div>
-      <img src="/img/page/oleodinamica/impiantiOleodinamica.png" alt="" class="lg:w-[38.889vw] w-full lg:h-[40.278vw] md:h-[330px] object-cover" />
+      <img src="/img/page/oleodinamica/impiantiOleodinamica.png" alt="" class="lg:w-[38.889vw] w-full lg:h-[40.278vw] md:h-[330px] h-[300px] object-cover" />
     </div>
     <div class="w-full flex justify-center">
       <p class="text-nero scroll-title">Scroll</p>
@@ -57,7 +57,7 @@ changeLanguage("en");
       <!-- 01 -->
       <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
         <div class="flex flex-col gap-[0.556vw]">
-          <p class="text-blu text-[2.222vw] leading-[2.5vw]">01</p>
+          <h4 class="text-blu">01</h4>
           <h4 class="text-nero">Progettazione</h4>
         </div>
         <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.</p>
@@ -65,7 +65,7 @@ changeLanguage("en");
       <!-- 02 -->
       <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
         <div class="flex flex-col gap-[0.556vw]">
-          <p class="text-blu text-[2.222vw] leading-[2.5vw]">02</p>
+          <h4 class="text-blu">02</h4>
           <h4 class="text-nero">Produzione</h4>
         </div>
         <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione.</p>
@@ -73,7 +73,7 @@ changeLanguage("en");
       <!-- 03 -->
       <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
         <div class="flex flex-col gap-[0.556vw]">
-          <p class="text-blu text-[2.222vw] leading-[2.5vw]">03</p>
+          <h4 class="text-blu">03</h4>
           <h4 class="text-nero">Installazione</h4>
         </div>
         <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
@@ -150,7 +150,7 @@ changeLanguage("en");
 
   <Form />
 
-  <script>
+  <script is:inline>
     import Swiper from "swiper";
     import { Navigation } from "swiper/modules";
     import "swiper/css";
@@ -158,16 +158,8 @@ changeLanguage("en");
 
     document.addEventListener("astro:page-load", () => {
       new Swiper(".swiper-impianti", {
-        breakpoints: {
-          390: {
-            spaceBetween: 16,
-            slidesPerView: 1.1
-          },
-          1024: {
-            spaceBetween: 16,
-            slidesPerView: 1.4
-          }
-        }
+        spaceBetween: 16,
+        slidesPerView: 1.1
       });
     });
   </script>

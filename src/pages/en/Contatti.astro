@@ -1,7 +1,6 @@
 ---
 import Layout from "../../layout/Layout.astro";
 import i18next, { t, changeLanguage } from "i18next";
-import { Trans } from "astro-i18next/components";
 
 changeLanguage("en");
 ---
@@ -10,11 +9,7 @@ changeLanguage("en");
   <section class="px-body lg:pt-[16.25vw] pt-[180px] flex flex-col gap-[10.417vw]">
     <div class="flex flex-col">
       <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-[44px]">
-        <h1 class="text-nero">
-          <Trans i18nKey="contatti.hero.title">
-            Hai una domanda? Vuoi <span class="text-blu">collaborare</span> con noi?
-          </Trans>
-        </h1>
+        <h1 class="text-nero" set:html={t("contatti.hero.title")} />
         <div class="relative lg:h-[22.222vw] h-[174px] lg:w-[22.569vw] w-[174px] move flex flex-col items-center justify-center lg:mb-0 mb-[60px]">
           <div id="ballFull" class="lg:w-[10.417vw] w-[78px] lg:h-[10.417vw] h-[78px]"></div>
           <div id="ballBorder" class="lg:w-[10.417vw] w-[78px] lg:h-[10.417vw] h-[78px]"></div>
@@ -70,12 +65,7 @@ changeLanguage("en");
           </div>
           <div class="flex flex-row items-center lg:gap-[0.833vw] gap-[16px]">
             <input type="checkbox" name="privacy" id="privacy" required />
-            <p class="text-grigio-200 !opacity-100 !top-0 !translate-x-0 lg:text-[0.83vw] text-[16px]">
-              <Trans i18nKey="contatti.form.privacy">
-                Acconsento al trattamento dei dati personali come specificato nella
-                <a href="" class="font-[600] z-[20] text-blu">Privacy Policy</a>
-              </Trans>
-            </p>
+            <p class="text-grigio-200 !opacity-100 !top-0 !translate-x-0 lg:text-[0.83vw] text-[16px]" set:html={t("contatti.form.privacy")} />
           </div>
 
           <div class="flex flex-col lg:flex-row items-start lg:mt-0 mt-[32px]">
@@ -92,12 +82,12 @@ changeLanguage("en");
     <div class="pb-body">
       <div class="bg-grigio-100 lg:px-[2.5v] px-[16px] lg:py-[2.5v] py-[32px] flex flex-col lg:gap-[4.962vw] gap-[60px]">
         <div class="flex lg:flex-row flex-col justify-between lg:items-end items-start lg:gap-0 gap-[20px]">
-          <h2 class="text-nero">
-            <Trans i18nKey="contatti.cta.title"> Diventa partner o agente </Trans>
-          </h2>
+          <h2 class="text-nero" set:html={t("contatti.cta.title")} />
           <p class="text-nero lg:w-[20.833vw]">{t("contatti.cta.desc")}</p>
           <div class="flex items-end">
-            <h3 class="text-blu">info@celyon.it</h3>
+            <h3 class="text-blu">
+              <a href="mailto:info@celyon.it">info@celyon.it</a>
+            </h3>
           </div>
         </div>
         <img src="/img/page/home/img-scopri.png" alt="" class="w-full lg:h-[47.917vw] h-[240px] object-cover" />
@@ -105,7 +95,7 @@ changeLanguage("en");
     </div>
   </section>
 
-  <script>
+  <script is:inline>
     import gsap from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -181,7 +171,7 @@ changeLanguage("en");
       );
   </script>
 
-  <script>
+  <script is:inline>
     // Import GSAP and ScrollTrigger
     import gsap from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";

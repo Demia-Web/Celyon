@@ -21,7 +21,7 @@
   </div>
 </section>
 
-<script>
+<script is:inline>
   // Animazione scale-in
   import gsap from "gsap";
   import ScrollTrigger from "gsap/ScrollTrigger";
@@ -60,9 +60,9 @@
     const { year, image, caption } = timelineData[index];
 
     // Explicitly cast elements to their specific types
-    const timelineYear = document.querySelector(".timeline-year") as HTMLElement;
-    const timelineImage = document.querySelector(".timeline-image") as HTMLImageElement;
-    const timelineCaption = document.querySelector(".timeline-caption") as HTMLElement;
+    const timelineYear = document.querySelector(".timeline-year");
+    const timelineImage = document.querySelector(".timeline-image");
+    const timelineCaption = document.querySelector(".timeline-caption");
 
     // GSAP animation for slide effect
     gsap.fromTo([timelineYear, timelineCaption, timelineImage], { y: "100%", opacity: 0 }, { y: "0%", opacity: 1, duration: 1, ease: "power2.out" });

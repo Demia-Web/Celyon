@@ -21,6 +21,8 @@ import { ViewTransitions } from "astro:transitions";
     <ViewTransitions />
   </head>
   <body id="body">
+    <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <Header />
     <Menu />
     <slot />

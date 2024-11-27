@@ -168,7 +168,7 @@ import { t } from "i18next";
       display: block !important;
     }
   </style>
-  <script>
+  <script is:inline>
     document.addEventListener("astro:page-load", () => {
       const prodottiElement = document.querySelector(".menu-item.prodotti");
       const serviziElement = document.querySelector(".menu-item.servizi");
@@ -176,7 +176,7 @@ import { t } from "i18next";
       if (prodottiElement) {
         prodottiElement.addEventListener("click", (event) => {
           event.preventDefault();
-          console.log("Menu 'Prodotti' cliccato.");
+          // console.log("Menu 'Prodotti' cliccato.");
 
           const submenuProdotti = prodottiElement.querySelector(".submenu");
           const submenuServizi = document.querySelector(".menu-item.servizi .submenu");
@@ -184,15 +184,15 @@ import { t } from "i18next";
           if (submenuServizi && submenuServizi.classList.contains("active")) {
             submenuServizi.classList.remove("active");
             serviziElement.classList.remove("active");
-            console.log("Sottomenu 'Servizi' chiuso.");
+            // console.log("Sottomenu 'Servizi' chiuso.");
           }
 
           if (submenuProdotti) {
             const isActive = submenuProdotti.classList.toggle("active");
             prodottiElement.classList.toggle("active", isActive);
-            console.log(`Sottomenu 'Prodotti' ${isActive ? "aperto" : "chiuso"}.`);
+            // console.log(`Sottomenu 'Prodotti' ${isActive ? "aperto" : "chiuso"}.`);
           } else {
-            console.error("Submenu prodotti non trovato.");
+            // console.error("Submenu prodotti non trovato.");
           }
         });
       }
@@ -208,15 +208,15 @@ import { t } from "i18next";
           if (submenuProdotti && submenuProdotti.classList.contains("active")) {
             submenuProdotti.classList.remove("active");
             prodottiElement.classList.remove("active");
-            console.log("Sottomenu 'Prodotti' chiuso.");
+            // console.log("Sottomenu 'Prodotti' chiuso.");
           }
 
           if (submenuServizi) {
             const isActive = submenuServizi.classList.toggle("active");
             serviziElement.classList.toggle("active", isActive);
-            console.log(`Sottomenu 'Servizi' ${isActive ? "aperto" : "chiuso"}.`);
+            // console.log(`Sottomenu 'Servizi' ${isActive ? "aperto" : "chiuso"}.`);
           } else {
-            console.error("Submenu servizi non trovato.");
+            // console.error("Submenu servizi non trovato.");
           }
         });
       }
