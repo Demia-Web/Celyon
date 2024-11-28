@@ -1,118 +1,30 @@
 ---
-import i18next, { t, changeLanguage } from "i18next";
-import ProgettiCorrelati from "../../../component/ProgettiCorrelati.astro";
-import "../../../css/style.css";
+import { changeLanguage } from "i18next";
 import Layout from "../../../layout/Layout.astro";
-import { Debug } from "astro:components";
-import { fetchApi } from "../../../libs/fetchApi";
 
 changeLanguage("en");
 
-// export const prerender = true;
-// export async function getStaticPaths() {
-//     const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?populate=*`;
-//     const response = await fetch(url, {
-//         headers: {
-//             Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
-//         }
-//     });
-//     const data = await response.json();
-//     const projects = data.data;
-//     return projects.map((project) => ({
-//         params: { slug: project.slug.toString() },
-//         props: project
-//     }));
-// }
 const { slug } = Astro.params;
-console.log("======[ slug: ", slug, " ======]");
-const news = fetchApi();
-console.log("======[ news: ", news, " ======]");
-if (!news) {
-    throw new Error("404, vaffanculo");
+async function fetchProject(slug) {
+    const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?filters[slug][$eq]=${slug}&populate=*`;
+    const response = await fetch(url, {
+        headers: {
+            Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+        }
+    });
+    const data = await response.json();
+    return data.data[0];
 }
+const project = await fetchProject(slug);
 ---
 
-<!-- <Layout title={SEO.metaTitle} description={SEO.metaDescription}> -->
-<Layout title={t("home.metaTitle")} description={t("home.metaDescription")}>
-  <Debug {slug} />
-  <!-- <section class="mx-[2.5vw] lg:h-full overflow-hidden relative lg:pt-0 pt-[100px]">
-    <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${immagineProgettoUrl}`} alt={titolo_progetto} class="w-full lg:h-full h-[550px] object-cover" />
-    <div class="w-full lg:h-full h-[550px] absolute lg:top-0 top-[100px] flex flex-col justify-end bg-black/50">
-      <div class="flex flex-row justify-between lg:pb-[8.681vw] pb-[44px] lg:px-[3.056vw] px-[16px]">
-        <h1 class="text-bianco">
-          {titolo_progetto}
-        </h1>
-        <div class="w-full hidden lg:flex justify-end items-end">
-          <p class="text-bianco scroll-title">Scroll</p>
-        </div>
-      </div>
-    </div>
+<Layout title={project.titolo_progetto} description="Progetto Dettaglio">
+  <section class="project-header">
+    <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${project.immagine_progetto.url}`} alt={project.titolo_progetto} />
+    <h1>{project.titolo_progetto}</h1>
   </section>
 
-  <section class="px-body py-body">
-    <div class="lg:py-[3.056vw] py-[32px] lg:px-[2.222vw] px-[16px] bg-blu flex flex-col lg:gap-[6.944vw] gap-[60px]">
-      <h4 class="text-bianco lg:w-1/2" set:html={descrizione_interna} />
-      <div class="flex flex-col w-full" id="lista_caratteristiche">
-        {
-          Caratteristiche.map((item) => (
-            <div class="flex flex-row justify-between lista_caratteristiche_item lg:py-[1.111vw] py-[16px]">
-              <p class="text-bianco">{item.titolo}</p>
-              <p class="text-bianco">{item.dato}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
+  <section class="project-description">
+    <p>{project.descrizione_interna}</p>
   </section>
-
-  <section class="px-body pb-body flex flex-col gap-[10.417vw]">
-    <div class="flex lg:flex-row flex-col justify-between lg:gap-[1.111vw] gap-[60px]">
-      <div class="lg:w-[38.889vw]">
-        <div class="text-nero" set:html={contenuto_1} />
-      </div>
-
-      <div class="w-fit">
-        <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${immagine1Url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px] lg:w-[46.944vw] w-full" />
-      </div>
-    </div>
-    <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-[1.111vw] gap-[16px]">
-      <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${immagine2Url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px] w-full" />
-      <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${immagine3Url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px] w-full" />
-    </div>
-    <div>
-      <div class="lg:w-[38.889vw]">
-        <div class="text-nero" set:html={contenuto_2} />
-      </div>
-    </div>
-    <img src={`${import.meta.env.PUBLIC_URL_STRAPI}${immagine4Url}`} alt={titolo_progetto} class="object-cover lg:h-[47.222vw] h-[320px]" />
-  </section>
-
-  <ProgettiCorrelati /> -->
-  <script>
-    document.addEventListener("astro:page-load", async () => {
-      const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti`;
-      console.log("======[ URL: ", url, " ======]");
-
-      const pathname = window.location.pathname;
-      const slug = pathname.split("/").pop(); // Prende l'ultima parte dell'URL come slug
-      console.log("Current Slug: ", slug);
-      try {
-        const response = await fetch(url, {
-          headers: {
-            Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
-          }
-        });
-
-        // Verifica se la risposta è valida
-        if (!response.ok) {
-          throw new Error("Failed to fetch data");
-        }
-
-        const data = await response.json();
-        console.log(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    });
-  </script>
 </Layout>
