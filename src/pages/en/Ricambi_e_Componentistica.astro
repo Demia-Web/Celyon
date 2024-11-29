@@ -1,20 +1,17 @@
 ---
-import { changeLanguage } from "i18next";
 import Layout from "../../layout/Layout.astro";
 import Button from "../../component/Button.astro";
-import Form from "../../component/Form.astro";
+import SezioneForm from "../../component/SezioneForm.astro";
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
 ---
 
-<Layout title="title" description="description">
+<Layout title={t("ricambi.metaTitle")} description={t("ricambi.metaDescription")}>
   <section class="px-body lg:pt-[16.25vw] pt-[180px] flex flex-col lg:gap-[5.556vw] gap-[60px] justify-between">
     <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-[20px]">
-      <h1 class="text-nero lg:w-[56.042vw]">
-        Questo è il nome<br />
-        del servizio
-      </h1>
-      <h4 class="text-grigio-200 lg:w-[31.25vw]">In questo paragrafo dovrà essere inserita una descrizione sul servizio di engineering, e su come può aiutare le aziende.</h4>
+      <h1 class="text-nero lg:w-[56.042vw]" set:html={t("ricambi.hero.title")} />
+      <h4 class="text-grigio-200 lg:w-[31.25vw]">{t("ricambi.hero.desc")}</h4>
     </div>
     <div class="w-full lg:h-[54.514vw] h-[480px]">
       <img src="/img/ricambiCoponentistica/hero-servizio.jpeg" alt="" class="w-full h-full object-cover" />
@@ -24,98 +21,50 @@ changeLanguage("en");
   <section class="px-body py-body flex flex-col gap-[10.417vw]">
     <div class="w-full flex lg:justify-end">
       <div class="flex flex-col lg:gap-[2.222vw] gap-[24px] lg:w-[38.958vw]">
-        <p class="text-nero lg:text-[2.222vw] text-[28px] lg:leading-[2.5vw] leading-[32px]">In questo paragrafo dovrà essere inserita una descrizione introduttiva che ci invita a conoscere Celyon come azienda. Andremo a evidenziare qual è la mission aziendale, gli obiettivi aziendali e le opportunità all’interno di questo settore industriale.</p>
-        <Button content="Richiedi il servizio" type="btn-blu" link="/" />
+        <p class="text-nero lg:text-[2.222vw] text-[28px] lg:leading-[2.5vw] leading-[32px]">{t("ricambi.hero.content")}</p>
+        <Button content={t("ricambi.hero.button")} type="btn-blu" link="/" />
       </div>
     </div>
     <div class="w-full bg-blu lg:px-[2.222vw] px-[16px] lg:py-[0.833vw] py-[8px] lg:mt-[10.417vw] mt-0">
-      <h5 class="text-bianco">Cosa possiamo fare per te</h5>
+      <h5 class="text-bianco">{t("ricambi.servizi.focusBar")}</h5>
     </div>
 
     <div class="flex flex-col lg:gap-[5.556vw] gap-[60px]">
       <div class="flex lg:flex-row flex-col justify-between items-end lg:gap-[13.403vw] gap-[20px]">
-        <h2 class="text-nero w-full">
-          Soluzioni innovative per ottimizzare<br />
-          il tuo sistema industriale
-        </h2>
-        <p class="text-nero w-full">Scelerisque consectetur posuere est nibh cras donec tellus. Dolor ut posuere tempor mattis blandit. Velit adipiscing aliquam viverra vitae massa ipsum nec sed quis. Vestibulum eu lorem nam praesent ac. Tincidunt nibh ac faucibus sed morbi mi in nisl luctus. Id nunc varius amet pharetra vulputate sit imperdiet.</p>
+        <h2 class="text-nero w-full" set:html={t("ricambi.servizi.title")} />
+        <p class="text-nero w-full">{t("ricambi.servizi.desc")}</p>
       </div>
       <div class="accordion">
-        <!-- 01 -->
-        <div class="accordion-item">
-          <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
-            <div class="flex flex-row gap-[1.667vw] items-center">
-              <h3 class="text-grigio-100 lg:w-[2.778vw] w-[40px] number">01</h3>
-              <h4 class="text-blu title">Progettazione personalizzata</h4>
-            </div>
-            <span class="symbol text-blu">+</span>
-          </div>
-          <div class="accordion-content px-[1.667vw]">
-            <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
-              <p class="text-nero lg:w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
-            </div>
-          </div>
-        </div>
-        <!-- 02 -->
-        <div class="accordion-item">
-          <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
-            <div class="flex flex-row gap-[1.667vw] items-center">
-              <h3 class="text-grigio-100 lg:w-[2.778vw] w-[40px] number">02</h3>
-              <h4 class="text-blu title">Consulenza tecnica</h4>
-            </div>
-            <span class="symbol text-blu">+</span>
-          </div>
-          <div class="accordion-content px-[1.667vw]">
-            <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
-              <p class="text-nero lg:w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
-            </div>
-          </div>
-        </div>
-        <!-- 03 -->
-        <div class="accordion-item">
-          <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
-            <div class="flex flex-row gap-[1.667vw] items-center">
-              <h3 class="text-grigio-100 lg:w-[2.778vw] w-[40px] number">03</h3>
-              <h4 class="text-blu title">Prototipazione e collaudo</h4>
-            </div>
-            <span class="symbol text-blu">+</span>
-          </div>
-          <div class="accordion-content px-[1.667vw]">
-            <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
-              <p class="text-nero lg:w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
-            </div>
-          </div>
-        </div>
-        <!-- 04 -->
-        <div class="accordion-item">
-          <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
-            <div class="flex flex-row gap-[1.667vw] items-center">
-              <h3 class="text-grigio-100 lg:w-[2.778vw] w-[40px] number">04</h3>
-              <h4 class="text-blu title">Integrazione e Automatizazione</h4>
-            </div>
-            <span class="symbol text-blu">+</span>
-          </div>
-          <div class="accordion-content px-[1.667vw]">
-            <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
-              <p class="text-nero lg:w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
-            </div>
-          </div>
-        </div>
-        <!-- 05 -->
-        <div class="accordion-item">
-          <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
-            <div class="flex flex-row gap-[1.667vw] items-center">
-              <h3 class="text-grigio-100 lg:w-[2.778vw] w-[40px] number">05</h3>
-              <h4 class="text-blu title">Documentazione tecnica e formazione</h4>
-            </div>
-            <span class="symbol text-blu">+</span>
-          </div>
-          <div class="accordion-content px-[1.667vw]">
-            <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
-              <p class="text-nero lg:w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
-            </div>
-          </div>
-        </div>
+        {
+          () => {
+            const serviziData = t("ricambi.servizi.array", { returnObjects: true });
+
+            const servizi =
+              serviziData && typeof serviziData === "object"
+                ? Object.keys(serviziData).map((key) => ({
+                    title: serviziData[key].title,
+                    desc: serviziData[key].desc
+                  }))
+                : [];
+
+            return servizi.map((servizio, index) => (
+              <div class="accordion-item">
+                <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
+                  <div class="flex flex-row gap-[1.667vw] items-center">
+                    <h3 class="text-grigio-100 lg:w-[2.778vw] w-[40px] number">0{index + 1}</h3>
+                    <h4 class="text-blu title">{servizio.title}</h4>
+                  </div>
+                  <span class="symbol text-blu">+</span>
+                </div>
+                <div class="accordion-content px-[1.667vw]">
+                  <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
+                    <p class="text-nero lg:w-1/3">{servizio.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ));
+          }
+        }
       </div>
     </div>
     <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-[1.111vw] gap-[16px]">
@@ -124,13 +73,10 @@ changeLanguage("en");
     </div>
     <div class="bg-grigio-100 lg:px-[2.5vw] px-[16px] lg:py-[2.5vw] py-[32px] flex flex-col lg:gap-[4.962vw] gap-[70px]">
       <div class="flex lg:flex-row flex-col justify-between lg:items-end items-start lg:gap-0 gap-[20px]">
-        <h2 class="text-nero">
-          Spazio per focus<br />
-          su aspetto del servizio
-        </h2>
-        <p class="text-nero lg:w-[20.833vw]">In questo paragrafo si dovrà scrivere del servizio di configurazione del cilindro secondo le proprie esigenze.</p>
+        <h2 class="text-nero" set:html={t("ricambi.focus.title")} />
+        <p class="text-nero lg:w-[20.833vw]">{t("ricambi.focus.desc")}</p>
         <div class="flex items-end">
-          <Button content="Richiedi il servizio" type="btn-blu" link="" />
+          <Button content={t("ricambi.focus.button")} type="btn-blu" link="" />
         </div>
       </div>
       <img src="/img/page/home/img-scopri.png" alt="" class="w-full h-[47.917vw]" />
@@ -140,166 +86,110 @@ changeLanguage("en");
   <section class="px-body pb-body flex flex-col lg:gap-[10.417vw] gap-[60px]">
     <div class="flex lg:flex-row flex-col justify-between">
       <div class="flex flex-col lg:gap-[2.222vw] gap-[20px] lg:w-[34.722vw] lg:order-1 order-2">
-        <h2 class="text-nero">
-          Impianto di oleodinamica<br />
-          ed Elettroidraulica <span class="text-blu">su misura</span>.
-        </h2>
-        <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+        <h2 class="text-nero" set:html={t("ricambi.prodotti.title")} />
+        <p class="text-nero">{t("ricambi.prodotti.desc")}</p>
       </div>
       <img src="/img/assets/animation-service.svg" alt="" class="palla-rotante lg:w-fit w-[170px] lg:order-2 order-1 lg:pb-0 pb-[70px]" />
     </div>
     <div class="hidden lg:grid grid-cols-3 gap-[1.111vw]">
-      <!-- 01 -->
-      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
-        <div class="flex flex-col gap-[0.556vw]">
-          <p class="text-blu text-[2.222vw] leading-[2.5vw]">01</p>
-          <h4 class="text-nero">Progettazione</h4>
-        </div>
-        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.</p>
-      </div>
-      <!-- 02 -->
-      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
-        <div class="flex flex-col gap-[0.556vw]">
-          <p class="text-blu text-[2.222vw] leading-[2.5vw]">02</p>
-          <h4 class="text-nero">Produzione</h4>
-        </div>
-        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione.</p>
-      </div>
-      <!-- 03 -->
-      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
-        <div class="flex flex-col gap-[0.556vw]">
-          <p class="text-blu text-[2.222vw] leading-[2.5vw]">03</p>
-          <h4 class="text-nero">Installazione</h4>
-        </div>
-        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
-      </div>
+      {
+        () => {
+          const prodottiData = t("ricambi.prodotti.array", { returnObjects: true });
+
+          const prodotti =
+            prodottiData && typeof prodottiData === "object"
+              ? Object.keys(prodottiData).map((key) => ({
+                  title: prodottiData[key].title,
+                  desc: prodottiData[key].desc
+                }))
+              : [];
+
+          return prodotti.map((prodotto, index) => (
+            <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+              <div class="flex flex-col gap-[0.556vw]">
+                <p class="text-blu text-[2.222vw] leading-[2.5vw]">0{index + 1}</p>
+                <h4 class="text-nero">{prodotto.title}</h4>
+              </div>
+              <p class="text-nero w-[22.639vw]">{prodotto.desc}</p>
+            </div>
+          ));
+        }
+      }
     </div>
     <div class="lg:hidden block">
       <div class="swiper swiper-impianti h-[240px]">
         <div class="swiper-wrapper">
-          <!-- 01 -->
-          <div class="swiper-slide">
-            <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
-              <div class="flex flex-col gap-[8px]">
-                <h4 class="text-blu">01</h4>
-                <h4 class="text-nero">Progettazione</h4>
-              </div>
-              <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.</p>
-            </div>
-          </div>
-          <!-- 02 -->
-          <div class="swiper-slide">
-            <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
-              <div class="flex flex-col gap-[8px]">
-                <h4 class="text-blu">02</h4>
-                <h4 class="text-nero">Produzione</h4>
-              </div>
-              <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione.</p>
-            </div>
-          </div>
-          <!-- 03 -->
-          <div class="swiper-slide">
-            <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
-              <div class="flex flex-col gap-[8px]">
-                <h4 class="text-blu">03</h4>
-                <h4 class="text-nero">Installazione</h4>
-              </div>
-              <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
-            </div>
-          </div>
+          {
+            () => {
+              const prodottiData = t("ricambi.prodotti.array", { returnObjects: true });
+
+              const prodotti =
+                prodottiData && typeof prodottiData === "object"
+                  ? Object.keys(prodottiData).map((key) => ({
+                      title: prodottiData[key].title,
+                      desc: prodottiData[key].desc
+                    }))
+                  : [];
+
+              return prodotti.map((prodotto, index) => (
+                <div class="swiper-slide">
+                  <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
+                    <div class="flex flex-col gap-[8px]">
+                      <h4 class="text-blu">0{index + 1}</h4>
+                      <h4 class="text-nero">{prodotto.title}</h4>
+                    </div>
+                    <p class="text-nero">{prodotto.desc}</p>
+                  </div>
+                </div>
+              ));
+            }
+          }
         </div>
       </div>
     </div>
   </section>
 
   <section class="bg-blu px-body py-body flex flex-col lg:gap-[5.556vw] gap-[44px]">
-    <h2 class="text-grigio-200">
-      <span class="text-grigio-50">Domande frequenti</span><br />
-      sul servizio di Ricambi e Componentistica.
-    </h2>
+    <h2 class="text-grigio-200" set:html={t("ricambi.faq.title")} />
     <div class="accordion">
-      <!-- 01 -->
-      <div class="accordion-item accordion-item-dark">
-        <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
-          <div class="flex flex-row gap-[1.667vw] items-center">
-            <h3 class="text-bianco title">Domanda frequente</h3>
-          </div>
-          <span class="symbol text-bianco">+</span>
-        </div>
-        <div class="accordion-content px-[1.667vw]">
-          <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
-            <p class="text-bianco lg:w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
-          </div>
-        </div>
-      </div>
-      <!-- 01 -->
-      <div class="accordion-item accordion-item-dark">
-        <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
-          <div class="flex flex-row gap-[1.667vw] items-center">
-            <h3 class="text-bianco title">Domanda frequente</h3>
-          </div>
-          <span class="symbol text-bianco">+</span>
-        </div>
-        <div class="accordion-content px-[1.667vw]">
-          <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
-            <p class="text-bianco lg:w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
-          </div>
-        </div>
-      </div>
-      <!-- 01 -->
-      <div class="accordion-item accordion-item-dark">
-        <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
-          <div class="flex flex-row gap-[1.667vw] items-center">
-            <h3 class="text-bianco title">Domanda frequente</h3>
-          </div>
-          <span class="symbol text-bianco">+</span>
-        </div>
-        <div class="accordion-content px-[1.667vw]">
-          <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
-            <p class="text-bianco lg:w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
-          </div>
-        </div>
-      </div>
-      <!-- 01 -->
-      <div class="accordion-item accordion-item-dark">
-        <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
-          <div class="flex flex-row gap-[1.667vw] items-center">
-            <h3 class="text-bianco title">Domanda frequente</h3>
-          </div>
-          <span class="symbol text-bianco">+</span>
-        </div>
-        <div class="accordion-content px-[1.667vw]">
-          <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
-            <p class="text-bianco lg:w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
-          </div>
-        </div>
-      </div>
-      <!-- 01 -->
-      <div class="accordion-item accordion-item-dark">
-        <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
-          <div class="flex flex-row gap-[1.667vw] items-center">
-            <h3 class="text-bianco title">Domanda frequente</h3>
-          </div>
-          <span class="symbol text-bianco">+</span>
-        </div>
-        <div class="accordion-content px-[1.667vw]">
-          <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
-            <p class="text-bianco lg:w-1/3">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
-          </div>
-        </div>
-      </div>
+      {
+        () => {
+          const faqData = t("ricambi.faq.array", { returnObjects: true });
+
+          const faqs =
+            faqData && typeof faqData === "object"
+              ? Object.keys(faqData).map((key) => ({
+                  title: faqData[key].title,
+                  desc: faqData[key].desc
+                }))
+              : [];
+
+          return faqs.map((faq, index) => (
+            <div class="accordion-item accordion-item-dark">
+              <div class="accordion-header lg:px-[1.667vw] px-0 lg:py-[2.222vw] py-[24px]">
+                <div class="flex flex-row gap-[1.667vw] items-center">
+                  <h3 class="text-bianco title">{faq.title}</h3>
+                </div>
+                <span class="symbol text-bianco">+</span>
+              </div>
+              <div class="accordion-content px-[1.667vw]">
+                <div class="flex flex-col gap-[5.556vw] lg:mb-[2.222vw] mb-[24px] lg:pt-[3.056vw] pt-[24px]">
+                  <p class="text-bianco lg:w-1/3">{faq.desc}</p>
+                </div>
+              </div>
+            </div>
+          ));
+        }
+      }
     </div>
   </section>
 
   <section class="lg:h-screen md:h-[500px] h-[840px] px-body lg:pt-[18.889vw] pt-[130px] flex flex-col lg:gap-[2.222vw] gap-[30px]" id="img-full-azienda">
-    <h3 class="text-bianco lg:w-[57.708vw]">
-      In questo paragrafo una breve<br />
-      descrizione sul prodotto.
-    </h3>
-    <Button content="Scarica scheda tecnica" type="btn-white" link="/" img="/img/assets/download.svg" />
+    <h3 class="text-bianco lg:w-[57.708vw]" set:html={t("ricambi.imgFull.title")} />
+    <Button content={t("ricambi.imgFull.button")} type="btn-white" link="/" img="/img/assets/download.svg" />
   </section>
 
-  <Form />
+  <SezioneForm />
 
   <script is:inline>
     import Swiper from "swiper";

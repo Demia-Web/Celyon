@@ -1,17 +1,17 @@
 ---
-import Layout from "../layout/Layout.astro";
-import Button from "../component/Button.astro";
-import SezioneForm from "../component/SezioneForm.astro";
+import Layout from "../../layout/Layout.astro";
+import Button from "../../component/Button.astro";
+import SezioneForm from "../../component/SezioneForm.astro";
 import { t, changeLanguage } from "i18next";
 
-changeLanguage("it");
+changeLanguage("en");
 ---
 
-<Layout title={t("pulizia.metaTitle")} description={t("pulizia.metaDescription")}>
+<Layout title={t("automazione.metaTitle")} description={t("automazione.metaDescription")}>
   <section class="px-body lg:pt-[16.25vw] pt-[180px] flex flex-col lg:gap-[5.556vw] gap-[60px] justify-between">
     <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-[20px]">
-      <h1 class="text-nero lg:w-[56.042vw]" set:html={t("pulizia.hero.title")} />
-      <h4 class="text-grigio-200 lg:w-[31.25vw]">{t("pulizia.hero.desc")}</h4>
+      <h1 class="text-nero lg:w-[56.042vw]" set:html={t("automazione.hero.title")} />
+      <h4 class="text-grigio-200 lg:w-[31.25vw]">{t("automazione.hero.desc")}</h4>
     </div>
     <div class="w-full lg:h-[54.514vw] h-[480px]">
       <img src="/img/ricambiCoponentistica/hero-servizio.jpeg" alt="" class="w-full h-full object-cover" />
@@ -21,23 +21,23 @@ changeLanguage("it");
   <section class="px-body py-body flex flex-col gap-[10.417vw]">
     <div class="w-full flex lg:justify-end">
       <div class="flex flex-col lg:gap-[2.222vw] gap-[24px] lg:w-[38.958vw]">
-        <p class="text-nero lg:text-[2.222vw] text-[28px] lg:leading-[2.5vw] leading-[32px]">{t("pulizia.hero.content")}</p>
-        <Button content={t("pulizia.hero.button")} type="btn-blu" link="/" />
+        <p class="text-nero lg:text-[2.222vw] text-[28px] lg:leading-[2.5vw] leading-[32px]">{t("automazione.hero.content")}</p>
+        <Button content={t("automazione.hero.button")} type="btn-blu" link="/" />
       </div>
     </div>
     <div class="w-full bg-blu lg:px-[2.222vw] px-[16px] lg:py-[0.833vw] py-[8px] lg:mt-[10.417vw] mt-0">
-      <h5 class="text-bianco">{t("pulizia.servizi.focusBar")}</h5>
+      <h5 class="text-bianco">{t("automazione.servizi.focusBar")}</h5>
     </div>
 
     <div class="flex flex-col lg:gap-[5.556vw] gap-[60px]">
       <div class="flex lg:flex-row flex-col justify-between items-end lg:gap-[13.403vw] gap-[20px]">
-        <h2 class="text-nero w-full" set:html={t("pulizia.servizi.title")} />
-        <p class="text-nero w-full">{t("pulizia.servizi.desc")}</p>
+        <h2 class="text-nero w-full" set:html={t("automazione.servizi.title")} />
+        <p class="text-nero w-full">{t("automazione.servizi.desc")}</p>
       </div>
       <div class="accordion">
         {
           () => {
-            const serviziData = t("pulizia.servizi.array", { returnObjects: true });
+            const serviziData = t("automazione.servizi.array", { returnObjects: true });
 
             const servizi =
               serviziData && typeof serviziData === "object"
@@ -73,10 +73,10 @@ changeLanguage("it");
     </div>
     <div class="bg-grigio-100 lg:px-[2.5vw] px-[16px] lg:py-[2.5vw] py-[32px] flex flex-col lg:gap-[4.962vw] gap-[70px]">
       <div class="flex lg:flex-row flex-col justify-between lg:items-end items-start lg:gap-0 gap-[20px]">
-        <h2 class="text-nero" set:html={t("pulizia.focus.title")} />
-        <p class="text-nero lg:w-[20.833vw]">{t("pulizia.focus.desc")}</p>
+        <h2 class="text-nero" set:html={t("automazione.focus.title")} />
+        <p class="text-nero lg:w-[20.833vw]">{t("automazione.focus.desc")}</p>
         <div class="flex items-end">
-          <Button content={t("pulizia.focus.button")} type="btn-blu" link="" />
+          <Button content={t("automazione.focus.button")} type="btn-blu" link="" />
         </div>
       </div>
       <img src="/img/page/home/img-scopri.png" alt="" class="w-full h-[47.917vw]" />
@@ -86,15 +86,15 @@ changeLanguage("it");
   <section class="px-body pb-body flex flex-col lg:gap-[10.417vw] gap-[60px]">
     <div class="flex lg:flex-row flex-col justify-between">
       <div class="flex flex-col lg:gap-[2.222vw] gap-[20px] lg:w-[34.722vw] lg:order-1 order-2">
-        <h2 class="text-nero" set:html={t("pulizia.prodotti.title")} />
-        <p class="text-nero">{t("pulizia.prodotti.desc")}</p>
+        <h2 class="text-nero" set:html={t("automazione.prodotti.title")} />
+        <p class="text-nero">{t("automazione.prodotti.desc")}</p>
       </div>
       <img src="/img/assets/animation-service.svg" alt="" class="palla-rotante lg:w-fit w-[170px] lg:order-2 order-1 lg:pb-0 pb-[70px]" />
     </div>
     <div class="hidden lg:grid grid-cols-3 gap-[1.111vw]">
       {
         () => {
-          const prodottiData = t("pulizia.prodotti.array", { returnObjects: true });
+          const prodottiData = t("automazione.prodotti.array", { returnObjects: true });
 
           const prodotti =
             prodottiData && typeof prodottiData === "object"
@@ -121,7 +121,7 @@ changeLanguage("it");
         <div class="swiper-wrapper">
           {
             () => {
-              const prodottiData = t("pulizia.prodotti.array", { returnObjects: true });
+              const prodottiData = t("automazione.prodotti.array", { returnObjects: true });
 
               const prodotti =
                 prodottiData && typeof prodottiData === "object"
@@ -150,11 +150,11 @@ changeLanguage("it");
   </section>
 
   <section class="bg-blu px-body py-body flex flex-col lg:gap-[5.556vw] gap-[44px]">
-    <h2 class="text-grigio-200" set:html={t("pulizia.faq.title")} />
+    <h2 class="text-grigio-200" set:html={t("automazione.faq.title")} />
     <div class="accordion">
       {
         () => {
-          const faqData = t("pulizia.faq.array", { returnObjects: true });
+          const faqData = t("automazione.faq.array", { returnObjects: true });
 
           const faqs =
             faqData && typeof faqData === "object"
@@ -185,8 +185,8 @@ changeLanguage("it");
   </section>
 
   <section class="lg:h-screen md:h-[500px] h-[840px] px-body lg:pt-[18.889vw] pt-[130px] flex flex-col lg:gap-[2.222vw] gap-[30px]" id="img-full-azienda">
-    <h3 class="text-bianco lg:w-[57.708vw]" set:html={t("pulizia.imgFull.title")} />
-    <Button content={t("pulizia.imgFull.button")} type="btn-white" link="/" img="/img/assets/download.svg" />
+    <h3 class="text-bianco lg:w-[57.708vw]" set:html={t("automazione.imgFull.title")} />
+    <Button content={t("automazione.imgFull.button")} type="btn-white" link="/" img="/img/assets/download.svg" />
   </section>
 
   <SezioneForm />

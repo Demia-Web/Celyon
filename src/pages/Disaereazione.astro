@@ -1,9 +1,8 @@
 ---
 import Layout from "../layout/Layout.astro";
 import Button from "../component/Button.astro";
-import Form from "../component/Form.astro";
+import SezioneForm from "../component/SezioneForm.astro";
 import Marquee from "../component/Marquee.astro";
-
 import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("it");
@@ -116,7 +115,7 @@ changeLanguage("it");
     <Button content={t("disaereazione.imgFull.button")} type="btn-white" link="/" img="/img/assets/download.svg" />
   </section>
 
-  <Form />
+  <SezioneForm />
 
   <script is:inline>
     import Swiper from "swiper";

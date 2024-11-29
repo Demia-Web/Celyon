@@ -1,243 +1,96 @@
 ---
-import Button from "./Button.astro";
-import { t } from "i18next";
-import { Trans } from "astro-i18next/components";
+import { t, changeLanguage } from "i18next";
+import nodemailer from "nodemailer";
+
+changeLanguage("it");
+
+if (Astro.request.method === "POST") {
+  try {
+    const formData = await Astro.request.formData();
+
+    // Estrarre i dati dal FormData
+    const name = formData.get("name");
+    const surname = formData.get("surname");
+    const email = formData.get("email");
+    const phoneNumber = formData.get("phoneNumber");
+    const message = formData.get("message");
+
+    console.log("import.meta.env.SMTP_HOST ", import.meta.env.SMTP_HOST);
+    console.log("import.meta.env.SMTP_USER ", import.meta.env.SMTP_USER);
+    console.log("import.meta.env.SMTP_PASS ", import.meta.env.SMTP_PASS);
+
+    // Configura il trasportatore Nodemailer
+    const transporter = nodemailer.createTransport({
+      host: import.meta.env.SMTP_HOST,
+      port: 25,
+      auth: {
+        user: import.meta.env.SMTP_USER,
+        pass: import.meta.env.SMTP_PASS
+      }
+    });
+
+    // Configura l'email
+    const mailOptions = {
+      from: "il.tuo.email@gmail.com",
+      to: email,
+      subject: "Dettagli del modulo inviato",
+      text: `Nome: ${name}\nCognome: ${surname}\nEmail: ${email}\nTelefono: ${phoneNumber}\nMessaggio: ${message}`
+    };
+
+    // Invia l'email
+    await transporter.sendMail(mailOptions);
+
+    console.log("Email inviata con successo.");
+
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error("error.message");
+      console.error(error.message);
+    }
+  }
+}
 ---
 
-<section class="px-body py-body flex flex-col lg:gap-[6.944vw] gap-[44px]">
-  <div class="w-full bg-blu lg:px-[2.222vw] px-[16px] lg:py-[0.833vw] py-[8px] scroll-trigger">
-    <h5 class="text-bianco">{t("contatti.form.component.focus")}</h5>
-  </div>
-  <div class="flex lg:flex-row flex-col justify-between">
-    <div class="flex flex-col lg:gap-[1.389vw] gap-[20px] lg:w-[43.75vw] w-[290px]">
-      <h2 class="text-nero">
-        <Trans i18nKey="contatti.form.component.title">
-          Realizziamo insieme la <span class="text-blu">soluzione perfetta</span>.
-        </Trans>
-      </h2>
-      <p class="text-nero">
-        {t("contatti.form.component.desc")}
-      </p>
-    </div>
-    <div class="circle-container relative w-[10.417vw] lg:flex hidden items-center h-[10.417vw]">
-      <div class="circle-1 absolute a h-[10.417vw] w-[10.417vw] bg-blu rounded-full flex items-center">
-        <div class="circle-2 absolute b h-[8vw] w-[8vw] bg-blu rounded-full flex items-center">
-          <div class="circle-3 absolute c h-[6vw] w-[6vw] bg-blu rounded-full flex items-center">
-            <div class="circle-4 absolute d h-[4vw] w-[4vw] bg-blu rounded-full"></div>
-          </div>
-        </div>
+<form id="contactForm" class="w-full lg:mt-0 mt-[44px]" method="POST">
+  <div class="flex flex-col lg:gap-[2.222vw]">
+    <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
+      <div class="lg:w-1/2 relative">
+        <input type="text" name="name" placeholder=" " required />
+        <label for="name" class="text-grigio-200">{t("contatti.form.nome")}</label>
+      </div>
+      <div class="lg:w-1/2 relative">
+        <input type="text" name="surname" placeholder=" " required />
+        <label for="surname" class="text-grigio-200">{t("contatti.form.cognome")}</label>
       </div>
     </div>
-    <div class="circle-container relative w-[100px] flex lg:hidden items-center h-[100px] mt-[32px]">
-      <div class="mobile-circle-1 absolute a h-[40px] w-[40px] bg-blu rounded-full flex items-center">
-        <div class="mobile-circle-2 absolute b h-[50px] w-[50px] bg-blu rounded-full flex items-center">
-          <div class="mobile-circle-3 absolute c h-[70px] w-[70px] bg-blu rounded-full flex items-center">
-            <div class="mobile-circle-4 absolute d h-[90px] w-[90px] bg-blu rounded-full"></div>
-          </div>
-        </div>
+    <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
+      <div class="lg:w-1/2 relative">
+        <input type="email" name="email" placeholder=" " required />
+        <label for="email" class="text-grigio-200">{t("contatti.form.email")}</label>
+      </div>
+      <div class="lg:w-1/2 relative">
+        <input type="number" name="phoneNumber" placeholder=" " required />
+        <label for="phoneNumber" class="text-grigio-200">{t("contatti.form.telefono")}</label>
       </div>
     </div>
-  </div>
-  <form action="invioEffettuato" method="POST" id="form" class="w-full lg:mt-0 mt-[44px]">
-    <div class="flex flex-col lg:gap-[2.222vw]">
-      <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
-        <div class="lg:w-1/2 relative">
-          <input type="text" name="name" placeholder=" " required />
-          <label for="name" class="text-grigio-200">{t("contatti.form.nome")}</label>
-        </div>
-        <div class="lg:w-1/2 relative">
-          <input type="text" name="surname" placeholder=" " required />
-          <label for="surname" class="text-grigio-200">{t("contatti.form.cognome")}</label>
-        </div>
+    <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
+      <div class="w-full relative">
+        <input type="text" name="message" placeholder=" " required />
+        <label for="message" class="text-grigio-200">{t("contatti.form.messaggio")}</label>
       </div>
-      <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
-        <div class="lg:w-1/2 relative">
-          <input type="email" name="email" placeholder=" " required />
-          <label for="email" class="text-grigio-200">{t("contatti.form.email")}</label>
-        </div>
-        <div class="lg:w-1/2 relative">
-          <input type="number" name="phoneNumber" placeholder=" " required />
-          <label for="phoneNumber" class="text-grigio-200">{t("contatti.form.telefono")}</label>
-        </div>
-      </div>
-      <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
-        <div class="w-full relative">
-          <input type="text" name="message" placeholder=" " required />
-          <label for="message" class="text-grigio-200">{t("contatti.form.messaggio")}</label>
-        </div>
-      </div>
-      <div class="flex flex-row items-center lg:gap-[0.833vw] gap-[16px]">
-        <input type="checkbox" name="privacy" id="privacy" required />
-        <p class="text-grigio-200 !opacity-100 !top-0 !translate-x-0 lg:text-[0.83vw] text-[16px]">
-          <Trans i18nKey="contatti.form.privacy">
-            Acconsento al trattamento dei dati personali come specificato nella
-            <a href="" class="font-[600] z-[20] text-blu">Privacy Policy</a>
-          </Trans>
+    </div>
+    <div class="flex flex-row items-center lg:gap-[0.833vw] gap-[16px]">
+      <input type="checkbox" name="privacy" id="privacy" required />
+      <p class="text-grigio-200 !opacity-100 !top-0 !translate-x-0 lg:text-[0.83vw] text-[16px]" set:html={t("contatti.form.privacy")} />
+    </div>
+
+    <div class="flex flex-col lg:flex-row items-start lg:mt-0 mt-[32px]">
+      <button type="submit" class="btn-gen btn-blu">
+        <p class="btn-title">
+          <span class="text">{t("contatti.form.button")}</span>
+          <span class="hover-text">{t("contatti.form.button")}</span>
         </p>
-      </div>
-
-      <div class="flex flex-col lg:flex-row items-start lg:mt-0 mt-[32px]">
-        <button class="btn-gen btn-blu">
-          <p class="btn-title">
-            <span class="text">{t("contatti.form.button")}</span>
-            <span class="hover-text">{t("contatti.form.button")}</span>
-          </p>
-        </button>
-      </div>
+      </button>
     </div>
-  </form>
-</section>
-
-<style></style>
-
-<!-- Desktop -->
-<script is:inline>
-  import gsap from "gsap";
-  import ScrollTrigger from "gsap/ScrollTrigger";
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  document.addEventListener("astro:page-load", () => {
-    const circle_1 = document.querySelectorAll(".circle-1");
-    const circle_2 = document.querySelectorAll(".circle-2");
-    const circle_3 = document.querySelectorAll(".circle-3");
-    const circle_4 = document.querySelectorAll(".circle-4");
-
-    gsap.fromTo(
-      circle_1,
-      { x: 0 },
-      {
-        x: "-2vw",
-        scrollTrigger: {
-          trigger: ".scroll-trigger",
-          start: "top 40%",
-          end: "500% center",
-          markers: false,
-          scrub: true
-        },
-        ease: "power2.out"
-      }
-    );
-    gsap.fromTo(
-      circle_2,
-      { x: 0 },
-      {
-        x: "-9vw",
-        scrollTrigger: {
-          trigger: ".scroll-trigger",
-          start: "top 40%",
-          end: "500% center",
-          markers: false,
-          scrub: true
-        },
-        ease: "power2.out"
-      }
-    );
-    gsap.fromTo(
-      circle_3,
-      { x: 0 },
-      {
-        x: "-7vw",
-        scrollTrigger: {
-          trigger: ".scroll-trigger",
-          start: "top 40%",
-          end: "500% center",
-          markers: false,
-          scrub: true
-        },
-        ease: "power2.out"
-      }
-    );
-    gsap.fromTo(
-      circle_4,
-      { x: 0 },
-      {
-        x: "-5vw",
-        scrollTrigger: {
-          trigger: ".scroll-trigger",
-          start: "top 40%",
-          end: "500% center",
-          markers: false,
-          scrub: true
-        },
-        ease: "power2.out"
-      }
-    );
-  });
-</script>
-
-<!-- Mobile -->
-<script is:inline>
-  import gsap from "gsap";
-  import ScrollTrigger from "gsap/ScrollTrigger";
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  document.addEventListener("astro:page-load", () => {
-    const circle_1 = document.querySelectorAll(".mobile-circle-1");
-    const circle_2 = document.querySelectorAll(".mobile-circle-2");
-    const circle_3 = document.querySelectorAll(".mobile-circle-3");
-    const circle_4 = document.querySelectorAll(".mobile-circle-4");
-
-    gsap.fromTo(
-      circle_1,
-      { x: 0 },
-      {
-        x: "10px",
-        scrollTrigger: {
-          trigger: ".scroll-trigger",
-          start: "-200% 40%",
-          end: "1000% center",
-          markers: false,
-          scrub: true
-        },
-        ease: "power2.out"
-      }
-    );
-    gsap.fromTo(
-      circle_2,
-      { x: 0 },
-      {
-        x: "50px",
-        scrollTrigger: {
-          trigger: ".scroll-trigger",
-          start: "-200% 40%",
-          end: "1000% center",
-          markers: false,
-          scrub: true
-        },
-        ease: "power2.out"
-      }
-    );
-    gsap.fromTo(
-      circle_3,
-      { x: 0 },
-      {
-        x: "60px",
-        scrollTrigger: {
-          trigger: ".scroll-trigger",
-          start: "-200% 40%",
-          end: "1000% center",
-          markers: false,
-          scrub: true
-        },
-        ease: "power2.out"
-      }
-    );
-    gsap.fromTo(
-      circle_4,
-      { x: 0 },
-      {
-        x: "80px",
-        scrollTrigger: {
-          trigger: ".scroll-trigger",
-          start: "-200% 40%",
-          end: "1000% center",
-          markers: false,
-          scrub: true
-        },
-        ease: "power2.out"
-      }
-    );
-  });
-</script>
+  </div>
+</form>

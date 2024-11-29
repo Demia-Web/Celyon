@@ -71,7 +71,7 @@
     },
     "prodotti": {
       "focus": "I nostri prodotti",
-      "title": "Soluzioni di pulizia e filtraggio<br /> efficienti e certificate e <br /> <0>impianti personalizzati.</0>",
+      "title": "Soluzioni di pulizia e filtraggio<br /> efficienti e certificate e <br /> <span class='text-blu'>impianti personalizzati.</span>",
       "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.",
       "swiper": {
         "1": {
@@ -223,7 +223,7 @@
       "button": "Invia richiesta",
       "component": {
         "focus": "Mettiti in contatto con Celyon",
-        "title": "Realizziamo insieme<br /> la <0>soluzione perfetta</0>.",
+        "title": "Realizziamo insieme la <span class='text-blu'>soluzione perfetta</span>.",
         "desc": "Hai bisogno di un prodotto o una consulenza? Siamo qui per aiutarti a scegliere la soluzione più adatta alle tue esigenze."
       }
     },

@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layout/Layout.astro";
 import Button from "../../component/Button.astro";
-import Form from "../../component/Form.astro";
+import SezioneForm from "../../component/SezioneForm.astro";
 import Marquee from "../../component/Marquee.astro";
 import { t, changeLanguage } from "i18next";
 import { Trans } from "astro-i18next/components";
@@ -78,7 +78,7 @@ changeLanguage("en");
     <Button content={t("oleodinamica.imgFull.button")} type="btn-white" link="/" img="/img/assets/download.svg" />
   </section>
 
-  <Form />
+  <SezioneForm />
 
   <script is:inline>
     import Swiper from "swiper";

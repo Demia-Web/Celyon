@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layout/Layout.astro";
 import Button from "../../component/Button.astro";
-import Form from "../../component/Form.astro";
+import SezioneForm from "../../component/SezioneForm.astro";
 import Marquee from "../../component/Marquee.astro";
 import { t, changeLanguage } from "i18next";
 
@@ -42,11 +42,8 @@ changeLanguage("en");
   <section class="px-body py-body">
     <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-[32px]">
       <div class="flex flex-col lg:gap-[2.222vw] gap-[20px] lg:w-[34.722vw] lg:order-1 order-2">
-        <h2 class="text-nero">
-          Impianto di oleodinamica<br class="lg:block hidden" />
-          ed Elettroidraulica <span class="text-blu">su misura</span>.
-        </h2>
-        <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.</p>
+        <h2 class="text-nero" set:html={t("purificazione.prodotti.title")} />
+        <p class="text-nero">{t("purificazione.prodotti.desc")}</p>
       </div>
       <div class="w-[22.5vw] flex flex-col lg:gap-[1.226vw] gap-[17px] relative lg:h-fit h-[170px] lg:order-2 order-1" id="animation-oleodinamica">
         <div class="lg:h-[5.893vw] h-[84px] lg:w-[5.893vw] w-[84px] bg-blu rounded-full absolute top-0" id="palla-1"></div>
@@ -54,101 +51,102 @@ changeLanguage("en");
       </div>
     </div>
     <div class="lg:grid hidden grid-cols-3 gap-[1.111vw] mt-[10.417vw]">
-      <!-- 01 -->
-      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
-        <div class="flex flex-col gap-[0.556vw]">
-          <h4 class="text-blu">01</h4>
-          <h4 class="text-nero">Progettazione</h4>
-        </div>
-        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.</p>
-      </div>
-      <!-- 02 -->
-      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
-        <div class="flex flex-col gap-[0.556vw]">
-          <h4 class="text-blu">02</h4>
-          <h4 class="text-nero">Produzione</h4>
-        </div>
-        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione.</p>
-      </div>
-      <!-- 03 -->
-      <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
-        <div class="flex flex-col gap-[0.556vw]">
-          <h4 class="text-blu">03</h4>
-          <h4 class="text-nero">Installazione</h4>
-        </div>
-        <p class="text-nero w-[22.639vw]">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
-      </div>
+      {
+        () => {
+          const prodottiData = t("purificazione.prodotti.array", { returnObjects: true });
+
+          const prodotti =
+            prodottiData && typeof prodottiData === "object"
+              ? Object.keys(prodottiData).map((key) => ({
+                  desc: prodottiData[key].desc,
+                  title: prodottiData[key].nutitlember
+                }))
+              : [];
+
+          return prodotti.map((prodotto, index) => (
+            <div class="p-[1.667vw] flex flex-col gap-[1.667vw] bg-grigio-100 h-[22.222vw]">
+              <div class="flex flex-col gap-[0.556vw]">
+                <h4 class="text-blu">0{index + 1}</h4>
+                <h4 class="text-nero">{prodotto.title}</h4>
+              </div>
+              <p class="text-nero w-[22.639vw]">{prodotto.desc}</p>
+            </div>
+          ));
+        }
+      }
     </div>
     <div class="lg:hidden block mt-[60px]">
       <div class="swiper swiper-impianti h-[240px]">
         <div class="swiper-wrapper">
-          <!-- 01 -->
-          <div class="swiper-slide">
-            <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
-              <div class="flex flex-col gap-[8px]">
-                <p class="text-blu text-[20px] leading-[24px]">01</p>
-                <h4 class="text-nero">Progettazione</h4>
-              </div>
-              <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.</p>
-            </div>
-          </div>
-          <!-- 02 -->
-          <div class="swiper-slide">
-            <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
-              <div class="flex flex-col gap-[8px]">
-                <p class="text-blu text-[20px] leading-[24px]">02</p>
-                <h4 class="text-nero">Produzione</h4>
-              </div>
-              <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione.</p>
-            </div>
-          </div>
-          <!-- 03 -->
-          <div class="swiper-slide">
-            <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
-              <div class="flex flex-col gap-[8px]">
-                <p class="text-blu text-[20px] leading-[24px]">03</p>
-                <h4 class="text-nero">Installazione</h4>
-              </div>
-              <p class="text-nero">In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione.</p>
-            </div>
-          </div>
+          {
+            () => {
+              const prodottiData = t("purificazione.prodotti.array", { returnObjects: true });
+
+              const prodotti =
+                prodottiData && typeof prodottiData === "object"
+                  ? Object.keys(prodottiData).map((key) => ({
+                      desc: prodottiData[key].desc,
+                      title: prodottiData[key].nutitlember
+                    }))
+                  : [];
+
+              return prodotti.map((prodotto, index) => (
+                <div class="swiper-slide">
+                  <div class="p-[16px] flex flex-col gap-[20px] bg-grigio-100 h-full">
+                    <div class="flex flex-col gap-[8px]">
+                      <p class="text-blu text-[20px] leading-[24px]">{index + 1}</p>
+                      <h4 class="text-nero">{prodotto.title}</h4>
+                    </div>
+                    <p class="text-nero">{prodotto.title}</p>
+                  </div>
+                </div>
+              ));
+            }
+          }
         </div>
       </div>
     </div>
     <div class="bg-blu lg:py-[3.056vw] py-[32px] lg:px-[2.222vw] px-[16px] flex flex-col lg:gap-[10.417vw] gap-[60px] lg:mt-[10.417vw] mt-[60px]">
       <div class="flex lg:flex-row flex-col justify-between lg:items-end items-start lg:gap-0 gap-[20px]">
-        <h2 class="text-bianco">Alcuni numeri</h2>
-        <p class="text-bianco lg:w-[20.833vw]">Breve descrizione su cosa può far risparmiare il prodotto.</p>
+        <h2 class="text-bianco" set:html={t("purificazione.numeri.title")} />
+        <p class="text-bianco lg:w-[20.833vw]">{t("purificazione.numeri.desc")}</p>
         <div class="flex items-end gap-[0.556vw]">
-          <Button content="Richiedi un preventivo" type="btn-gray" link="" />
+          <Button content={t("purificazione.numeri.button")} type="btn-gray" link="" />
         </div>
       </div>
       <div class="flex lg:flex-row flex-col lg:gap-0 gap-[44px] justify-between">
-        <div class="flex flex-col lg:gap-[0.556vw] gap-[8px] w-full">
-          <h1 id="counter-1" class="text-grigio-200">130</h1>
-          <h4 class="text-grigio-50">Contatore 1</h4>
-        </div>
-        <div class="flex flex-col lg:gap-[0.556vw] gap-[8px] w-full">
-          <h1 id="counter-2" class="text-grigio-200">8h</h1>
-          <h4 class="text-grigio-50">Contatore 2</h4>
-        </div>
-        <div class="flex flex-col lg:gap-[0.556vw] gap-[8px] w-full">
-          <h1 id="counter-3" class="text-grigio-200">+2000</h1>
-          <h4 class="text-grigio-50">Contatore 3</h4>
-        </div>
+        {
+          () => {
+            const numeriData = t("purificazione.numeri.contatori", { returnObjects: true });
+
+            const numeri =
+              numeriData && typeof numeriData === "object"
+                ? Object.keys(numeriData).map((key) => ({
+                    title: numeriData[key].title,
+                    number: numeriData[key].number
+                  }))
+                : [];
+
+            return numeri.map((numero, index) => (
+              <div class="flex flex-col lg:gap-[0.556vw] gap-[8px] w-full">
+                <h1 id="counter-1" class="text-grigio-200">
+                  {numero.number}
+                </h1>
+                <h4 class="text-grigio-50">{numero.title}</h4>
+              </div>
+            ));
+          }
+        }
       </div>
     </div>
   </section>
 
   <section class="lg:h-screen md:h-[500px] h-[840px] px-body lg:pt-[18.889vw] pt-[130px] flex flex-col lg:gap-[2.222vw] gap-[30px]" id="img-full-azienda">
-    <h1 class="text-bianco lg:w-[57.708vw]">
-      In questo paragrafo una breve<br />
-      descrizione sul prodotto.
-    </h1>
-    <Button content="Scarica scheda tecnica" type="btn-white" link="/" img="/img/assets/download.svg" />
+    <h1 class="text-bianco lg:w-[57.708vw]" set:html={t("purificazione.imgFull.title")} />
+    <Button content={t("purificazione.imgFull.button")} type="btn-white" link="/" img="/img/assets/download.svg" />
   </section>
 
-  <Form />
+  <SezioneForm />
 
   <script is:inline>
     import Swiper from "swiper";

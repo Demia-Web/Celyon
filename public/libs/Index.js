@@ -1,8 +1,4 @@
 document.addEventListener("astro:page-load", () => {
-  if (!gsap.plugins.ScrollTrigger) {
-    gsap.registerPlugin(ScrollTrigger);
-  }
-
   // Animazione scale-in
   gsap.fromTo(
     ".scroll-animation",

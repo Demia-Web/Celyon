@@ -1,0 +1,40 @@
+---
+import Form from "./Form.astro";
+import { t } from "i18next";
+---
+
+<section class="px-body py-body flex flex-col lg:gap-[6.944vw] gap-[44px]">
+  <div class="w-full bg-blu lg:px-[2.222vw] px-[16px] lg:py-[0.833vw] py-[8px] scroll-trigger">
+    <h5 class="text-bianco">{t("contatti.form.component.focus")}</h5>
+  </div>
+  <div class="flex lg:flex-row flex-col justify-between">
+    <div class="flex flex-col lg:gap-[1.389vw] gap-[20px] lg:w-[43.75vw] w-[290px]">
+      <h2 class="text-nero" set:html={t("contatti.form.component.title")} />
+      <p class="text-nero">
+        {t("contatti.form.component.desc")}
+      </p>
+    </div>
+    <div class="circle-container relative w-[10.417vw] lg:flex hidden items-center h-[10.417vw]">
+      <div class="circle-1 absolute a h-[10.417vw] w-[10.417vw] bg-blu rounded-full flex items-center">
+        <div class="circle-2 absolute b h-[8vw] w-[8vw] bg-blu rounded-full flex items-center">
+          <div class="circle-3 absolute c h-[6vw] w-[6vw] bg-blu rounded-full flex items-center">
+            <div class="circle-4 absolute d h-[4vw] w-[4vw] bg-blu rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="circle-container relative w-[100px] flex lg:hidden items-center h-[100px] mt-[32px]">
+      <div class="mobile-circle-1 absolute a h-[40px] w-[40px] bg-blu rounded-full flex items-center">
+        <div class="mobile-circle-2 absolute b h-[50px] w-[50px] bg-blu rounded-full flex items-center">
+          <div class="mobile-circle-3 absolute c h-[70px] w-[70px] bg-blu rounded-full flex items-center">
+            <div class="mobile-circle-4 absolute d h-[90px] w-[90px] bg-blu rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Form />
+</section>
+
+<script src="../../public/libs/SezioneForm.js"></script>

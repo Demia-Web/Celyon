@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layout/Layout.astro";
+import Form from "../../component/Form.astro";
 import i18next, { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
@@ -35,49 +36,7 @@ changeLanguage("en");
         <h4 class="text-nero">{t("contatti.form.title")}</h4>
         <p class="text-nero">{t("contatti.form.desc")}</p>
       </div>
-      <form action="invioEffettuato" method="POST" id="form" class="w-full lg:mt-0 mt-[44px]">
-        <div class="flex flex-col lg:gap-[2.222vw]">
-          <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
-            <div class="lg:w-1/2 relative">
-              <input type="text" name="name" placeholder=" " required />
-              <label for="name" class="text-grigio-200">{t("contatti.form.nome")}</label>
-            </div>
-            <div class="lg:w-1/2 relative">
-              <input type="text" name="surname" placeholder=" " required />
-              <label for="surname" class="text-grigio-200">{t("contatti.form.cognome")}</label>
-            </div>
-          </div>
-          <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
-            <div class="lg:w-1/2 relative">
-              <input type="email" name="email" placeholder=" " required />
-              <label for="email" class="text-grigio-200">{t("contatti.form.email")}</label>
-            </div>
-            <div class="lg:w-1/2 relative">
-              <input type="number" name="phoneNumber" placeholder=" " required />
-              <label for="phoneNumber" class="text-grigio-200">{t("contatti.form.telefono")}</label>
-            </div>
-          </div>
-          <div class="flex flex-col lg:flex-row lg:gap-[10.417vw] gap-0">
-            <div class="w-full relative">
-              <input type="text" name="message" placeholder=" " required />
-              <label for="message" class="text-grigio-200">{t("contatti.form.messaggio")}</label>
-            </div>
-          </div>
-          <div class="flex flex-row items-center lg:gap-[0.833vw] gap-[16px]">
-            <input type="checkbox" name="privacy" id="privacy" required />
-            <p class="text-grigio-200 !opacity-100 !top-0 !translate-x-0 lg:text-[0.83vw] text-[16px]" set:html={t("contatti.form.privacy")} />
-          </div>
-
-          <div class="flex flex-col lg:flex-row items-start lg:mt-0 mt-[32px]">
-            <button class="btn-gen btn-blu">
-              <p class="btn-title">
-                <span class="text">{t("contatti.form.button")}</span>
-                <span class="hover-text">{t("contatti.form.button")}</span>
-              </p>
-            </button>
-          </div>
-        </div>
-      </form>
+      <Form />
     </div>
     <div class="pb-body">
       <div class="bg-grigio-100 lg:px-[2.5v] px-[16px] lg:py-[2.5v] py-[32px] flex flex-col lg:gap-[4.962vw] gap-[60px]">
@@ -94,129 +53,4 @@ changeLanguage("en");
       </div>
     </div>
   </section>
-
-  <script is:inline>
-    import gsap from "gsap";
-    import ScrollTrigger from "gsap/ScrollTrigger";
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap
-      .timeline({ repeat: -1 })
-      .to(
-        "#ballFull",
-        {
-          y: "50%",
-          duration: 0,
-          ease: "power1.inOut"
-        },
-        0
-      )
-      .to(
-        "#ballBorder",
-        {
-          y: "-50%",
-          duration: 0,
-          ease: "power1.inOut"
-        },
-        0
-      )
-      .to(
-        "#ballFull",
-        {
-          y: "0%",
-          duration: 5,
-          ease: "power1.inOut"
-        },
-        0
-      )
-      .to(
-        "#ballBorder",
-        {
-          y: "-0%",
-          duration: 5,
-          ease: "power1.inOut"
-        },
-        0
-      )
-      .to(
-        ".move",
-        {
-          rotation: 180,
-          duration: 5,
-          ease: "power1.inOut",
-          delay: 5
-        },
-        0
-      )
-      .to(
-        "#ballFull",
-        {
-          y: "50%",
-          duration: 5,
-          ease: "power1.inOut",
-          delay: 10
-        },
-        0
-      )
-      .to(
-        "#ballBorder",
-        {
-          y: "-50%",
-          duration: 5,
-          ease: "power1.inOut",
-          delay: 10
-        },
-        0
-      );
-  </script>
-
-  <script is:inline>
-    // Import GSAP and ScrollTrigger
-    import gsap from "gsap";
-    import ScrollTrigger from "gsap/ScrollTrigger";
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    // GSAP Timeline for smoother animation
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-
-    tl.to(".blue-circle", {
-      y: "-5.417vw", // Move blue circle up
-      scale: 1.1, // Slightly enlarge for effect
-      duration: 1.2,
-      ease: "power1.inOut"
-    })
-      .to(
-        ".green-circle",
-        {
-          y: "5.417vw", // Move green circle down
-          scale: 1.1, // Slightly enlarge for effect
-          duration: 1.2,
-          ease: "power1.inOut"
-        },
-        "<"
-      ) // Start this animation at the same time as the previous one
-      .to(".animazione-contatti-container", {
-        rotation: 180,
-        duration: 1.5,
-        ease: "power2.inOut"
-      })
-      .to(".blue-circle", {
-        y: "0", // Return blue circle to center
-        scale: 1, // Return to original scale
-        duration: 1.2,
-        ease: "power1.inOut"
-      })
-      .to(
-        ".green-circle",
-        {
-          y: "0", // Return green circle to center
-          scale: 1, // Return to original scale
-          duration: 1.2,
-          ease: "power1.inOut"
-        },
-        "<"
-      );
-  </script>
 </Layout>

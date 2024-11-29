@@ -2,7 +2,7 @@
 import Layout from "../layout/Layout.astro";
 import Button from "../component/Button.astro";
 import SwiperProdotti from "../component/SwiperProdotti.astro";
-import Form from "../component/Form.astro";
+import SezioneForm from "../component/SezioneForm.astro";
 import ProgettiCorrelati from "../component/ProgettiCorrelati.astro";
 import Loader from "../component/Loader.astro";
 import i18next, { t, changeLanguage } from "i18next";
@@ -42,15 +42,10 @@ changeLanguage("it");
   <section class="px-body py-body">
     <div class="bg-grigio-100 lg:px-[2.5vw] px-[16px] lg:py-[2.5vw] py-[32px] flex flex-col lg:gap-[4.962vw] gap-[60px] scroll-animation">
       <div class="flex lg:flex-row flex-col lg:gap-0 gap-[20px] justify-between">
-        <h2 class="text-nero">
-          <Trans i18nKey="home.brand.title">
-            Bertacchi e Filippi<br />
-            diventa Celyon
-          </Trans>
-        </h2>
+        <h2 class="text-nero" set:html={t("home.brand.title")} />
         <p class="text-nero lg:w-[20.833vw]">{t("home.brand.desc")}</p>
         <div class="flex items-end">
-          <Button content={t("home.brand.button")} type="btn-blu" link="" />
+          <Button content={t("home.brand.button")} type="btn-blu" link="/Azienda" />
         </div>
       </div>
       <img src="/img/page/home/img-scopri.png" alt="" class="w-full lg:h-[47.917vw] h-[320px] object-cover" />
@@ -63,12 +58,7 @@ changeLanguage("it");
         <h5 class="text-bianco">{t("home.prodotti.focus")}</h5>
       </div>
       <div class="flex lg:flex-row flex-col justify-between lg:items-end items-start lg:gap-0 gap-[20px]">
-        <h2 class="text-nero">
-          <Trans i18nKey="home.prodotti.title">
-            Soluzioni di pulizia e filtraggio efficienti e certificate e
-            <span class="text-blu">impianti personalizzati.</span>
-          </Trans>
-        </h2>
+        <h2 class="text-nero" set:html={t("home.prodotti.title")} />
         <div>
           <p class="text-nero lg:w-[20.833vw]">{t("home.prodotti.desc")}</p>
         </div>
@@ -100,7 +90,7 @@ changeLanguage("it");
   <section class="lg:h-screen md:h-[500px] h-[840px] flex md:items-center items-start justify-center relative lg:py-0 py-[100px]" id="img-full-home">
     <div class="flex flex-col lg:gap-[2.222vw] gap-[24px] lg:w-[57.708vw] w-[90%] items-center z-50 relative">
       <p class="text-white lg:text-[2.778vw] text-[24px] lg:leading-[3.056vw] leading-[28px] text-center">{t("home.imageFull.title")}</p>
-      <Button content={t("home.imageFull.button")} type="btn-white" link="" />
+      <Button content={t("home.imageFull.button")} type="btn-white" link="/Contatti" />
     </div>
     <div class="bg-transparent border border-bianco rounded-[1000px] lg:w-[59.792vw] w-[450px] lg:h-[59.792vw] h-[450px] absolute left-0 lg:block hidden" id="cerchio-sx"></div>
     <div class="bg-transparent border border-bianco rounded-[1000px] lg:w-[59.792vw] w-[450px] lg:h-[59.792vw] h-[450px] absolute right-0 lg:block hidden" id="cerchio-dx"></div>
@@ -168,7 +158,7 @@ changeLanguage("it");
 
   <ProgettiCorrelati />
 
-  <Form />
+  <SezioneForm />
 
   <script is:inline>
     // Animazione palle colorate
