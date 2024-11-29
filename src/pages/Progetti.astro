@@ -8,14 +8,14 @@ changeLanguage("it");
 
 const currentLang = "it";
 async function fetchProjects(locale) {
-  const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?populate=*&locale=${locale}&sort=order:asc`;
-  const response = await fetch(url, {
-    headers: {
-      Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
-    }
-  });
-  const data = await response.json();
-  return data.data;
+    const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?populate=*&locale=${locale}&sort=order:asc`;
+    const response = await fetch(url, {
+        headers: {
+            Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+        }
+    });
+    const data = await response.json();
+    return data.data;
 }
 const projects = await fetchProjects(currentLang);
 ---
