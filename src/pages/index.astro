@@ -43,7 +43,7 @@ changeLanguage("it");
     <div class="bg-grigio-100 lg:px-[2.5vw] px-[16px] lg:py-[2.5vw] py-[32px] flex flex-col lg:gap-[4.962vw] gap-[60px] scroll-animation">
       <div class="flex lg:flex-row flex-col lg:gap-0 gap-[20px] justify-between">
         <h2 class="text-nero" set:html={t("home.brand.title")} />
-        <p class="text-nero lg:w-[20.833vw]">{t("home.brand.desc")}</p>
+        <p class="text-nero lg:w-[20.833vw]" set:html={t("home.brand.desc")} />
         <div class="flex items-end">
           <Button content={t("home.brand.button")} type="btn-blu" link="/Azienda" />
         </div>
@@ -60,7 +60,7 @@ changeLanguage("it");
       <div class="flex lg:flex-row flex-col justify-between lg:items-end items-start lg:gap-0 gap-[20px]">
         <h2 class="text-nero" set:html={t("home.prodotti.title")} />
         <div>
-          <p class="text-nero lg:w-[20.833vw]">{t("home.prodotti.desc")}</p>
+          <p class="text-nero lg:w-[20.833vw]" set:html={t("home.prodotti.desc")} />
         </div>
         <div class="flex items-end">
           <div class="flex flex-row justify-end lg:gap-[0.278vw] gap-[6px] lg:mt-[3.056vw] mt-0">
@@ -100,7 +100,7 @@ changeLanguage("it");
     <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-[32px]">
       <div class="flex flex-col gap-[2.222vw] lg:w-[31.25vw] lg:order-1 order-2">
         <h2 class="text-white">{t("home.servizi.title")}</h2>
-        <p class="text-white">{t("home.servizi.desc")}</p>
+        <p class="text-white" set:html={t("home.servizi.desc")} />
       </div>
       <div class="grid grid-cols-4 lg:gap-x-[0.972vw] gap-x-[6px] lg:gap-y-[1.25vw] gap-y-[16px] griglia-colorata lg:order-2 order-1 w-fit">
         <div class=""></div>
@@ -128,9 +128,9 @@ changeLanguage("it");
 
           const services =
             servicesData && typeof servicesData === "object"
-              ? Object.keys(servicesData).map((key) => {
+              ? Object.keys(servicesData).map((key, index) => {
                   return {
-                    number: servicesData[key].number,
+                    number: index + 1,
                     title: servicesData[key].title,
                     link: servicesData[key].link
                   };
@@ -156,7 +156,7 @@ changeLanguage("it");
     </div>
   </section>
 
-  <ProgettiCorrelati />
+  <!-- <ProgettiCorrelati /> -->
 
   <SezioneForm />
 

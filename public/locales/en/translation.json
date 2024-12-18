@@ -1,348 +1,1079 @@
 {
   "componenti": {
     "collaborazione": {
-      "title": "Do you want to join Celyon?<br /> Would you like to collaborate with us?",
-      "subtitle": "A short paragraph about how Celyon is always open to collaboration.",
-      "button": "Get in touch"
+      "title": "Vuoi unirti a Celyon?<br /> Vuoi collaborare con noi?",
+      "subtitle": "Breve paragrafo sul fatto che Celyon è sempre disposta a collaborare.",
+      "button": "Mettiti in contatto"
     },
     "progettiCorrelati": {
-      "title": "Some of our <br /> <0>projects</0>",
-      "desc": "A brief description introducing the completed projects, the result of collaboration with reliable partners.",
-      "button": "See all projects"
+      "title": "Alcune delle nostre <br /> <0>realizzazioni</0>",
+      "desc": "Una breve descrizione che introduca ai progetti realizzati, interventi frutto della collaborazione con partner affidabili",
+      "button": "Vedi tutti i progetti"
     },
     "header": {
-      "azienda": "Company",
+      "azienda": "Azienda",
       "prodotti": {
-        "title": "Products",
-        "voce1": "Hydraulic and Electromechanical Systems",
-        "voce2": "Oil and Grease Lubrication Systems",
-        "voce3": "Purification and Filtration Systems",
-        "voce4": "Degassing Units",
-        "voce5": "Hydraulic Cylinders"
+        "title": "Prodotti",
+        "voce1": "Impianti di Oleodinamica ed Elettroidraulica",
+        "voce2": "Impianti di Lubrificazione a Olio e a Grasso",
+        "voce3": "Sistemi di Purificazione e Filtraggio",
+        "voce4": "Unità di Disaerazione",
+        "voce5": "Cilindri Oleodinamici"
       },
       "servizi": {
-        "title": "Services",
-        "voce1": "Spare Parts and Components",
-        "voce2": "Industrial Automation",
-        "voce3": "Cleaning and Filtration",
+        "title": "Servizi",
+        "voce1": "Ricambi e Componentistica",
+        "voce2": "Automazione Industriale",
+        "voce3": "Pulizia e Filtraggio",
         "voce4": "Engineering",
-        "voce5": "Maintenance and Assistance"
+        "voce5": "Manutenzione e Assistenza"
       },
-      "progetti": "Projects",
-      "areaRiservata": "Reserved Area",
-      "contatti": "Contact Us"
+      "progetti": "Progetti",
+      "areaRiservata": "Area Riservata",
+      "contatti": "Contatti"
+    },
+    "marquee": {
+      "1": {
+        "title": "Marquee 1"
+      },
+      "2": {
+        "title": "Marquee 2"
+      },
+      "3": {
+        "title": "Marquee 3"
+      },
+      "4": {
+        "title": "Marquee 4"
+      },
+      "5": {
+        "title": "Marquee 5"
+      },
+      "6": {
+        "title": "Marquee 6"
+      },
+      "7": {
+        "title": "Marquee 7"
+      }
     }
   },
   "home": {
-    "metaTitle": "Celyon - Homepage",
+    "metaTitle": "Celyon",
     "metaDescription": "Lorem ipsum",
     "hero": {
-      "title": "Design and production of <0>lubrication</0><br /> and <1>hydraulic systems</1> for industry.",
-      "subtitle": "This paragraph should include a brief description that further explores the company’s core business, creating curiosity and encouraging users to scroll.",
-      "button": "Discover our solutions"
+      "title": "Progettazione e produzione <br /> di impianti di <span class='text-blu'>lubrificazione</span> <br />  e <span class='text-blu'>oleodinamica</span> per l’industria.",
+      "subtitle": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.",
+      "button": "Scopri le nostre soluzioni"
     },
     "brand": {
-      "title": "Bertacchi and Filippi<br /> becomes Celyon",
-      "desc": "This paragraph should include a brief description explaining that Bertacchi and Filippi is now Celyon, with a link to the 'company' page where more details will be provided.",
-      "button": "Discover the company"
+      "title": "Bertacchi e Filippi<br /> diventa Celyon",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il fatto che Bertacchi e Filippi adesso è Celyon, si rimanderà alla pagina “azienda”, dove verrà approfondito il tutto.",
+      "button": "Scopri l'azienda"
     },
     "prodotti": {
-      "focus": "Our products",
-      "title": "Efficient and certified<br /> cleaning and filtration solutions<br /> <0>customized systems.</0>",
-      "desc": "This paragraph should include a brief description that further explores the company’s core business, creating curiosity and encouraging users to scroll.",
+      "focus": "I nostri prodotti",
+      "title": "Soluzioni di pulizia e filtraggio<br /> efficienti e certificate e <br /> <span class='text-blu'>impianti personalizzati.</span>",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.",
       "swiper": {
         "1": {
           "number": "01",
-          "title": "Hydraulic and Electromechanical Systems",
-          "desc": "A very short description of what the product is and its possible uses.",
+          "title": "Impianti di oleodinamica e Elettroidraulica",
+          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
           "image": "/img/page/home/swiper/01.png",
-          "altImage": "Swiper image of product 1"
+          "altImage": "Immagine swiper del prodotto 1"
         },
         "2": {
           "number": "02",
-          "title": "Hydraulic and Electromechanical Systems",
-          "desc": "A very short description of what the product is and its possible uses.",
+          "title": "Impianti di oleodinamica e Elettroidraulica",
+          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
           "image": "/img/page/home/swiper/01.png",
-          "altImage": "Swiper image of product 2"
+          "altImage": "Immagine swiper del prodotto 2"
         },
         "3": {
           "number": "03",
-          "title": "Hydraulic and Electromechanical Systems",
-          "desc": "A very short description of what the product is and its possible uses.",
+          "title": "Impianti di oleodinamica e Elettroidraulica",
+          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
           "image": "/img/page/home/swiper/01.png",
-          "altImage": "Swiper image of product 3"
+          "altImage": "Immagine swiper del prodotto 3"
         },
         "4": {
           "number": "04",
-          "title": "Hydraulic and Electromechanical Systems",
-          "desc": "A very short description of what the product is and its possible uses.",
+          "title": "Impianti di oleodinamica e Elettroidraulica",
+          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
           "image": "/img/page/home/swiper/01.png",
-          "altImage": "Swiper image of product 4"
+          "altImage": "Immagine swiper del prodotto 4"
         },
         "5": {
           "number": "05",
-          "title": "Hydraulic and Electromechanical Systems",
-          "desc": "A very short description of what the product is and its possible uses.",
+          "title": "Impianti di oleodinamica e Elettroidraulica",
+          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
           "image": "/img/page/home/swiper/01.png",
-          "altImage": "Swiper image of product 5"
+          "altImage": "Immagine swiper del prodotto 5"
         }
       }
     },
-    "partners": "Our partners",
+    "partners": "I nostri partner",
     "imageFull": {
-      "title": "This paragraph should be an emotional description about the benefits of relying on Celyon. It should express how Celyon can make a difference and meet the customer’s needs.",
-      "button": "Contact us"
+      "title": "In questo paragrafo una breve descrizione emozionale sul vantaggio di affidarsi a Celyon.  Vorrei che fosse espresso in cosa Celyon può fare la differenza, come può dare risposta alle esigenze del cliente.",
+      "button": "Contattaci"
     },
     "servizi": {
-      "title": "Our services for your lubrication and hydraulic systems.",
-      "desc": "This paragraph should include a brief introduction to Celyon’s services, with each service having a dedicated page. It should also explain Celyon’s approach to service delivery.",
+      "title": "I nostri servizi per il tuo impianto di lubrificazione e oleodinamica.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
       "array": {
         "1": {
           "number": "01",
-          "title": "Spare Parts and Components",
+          "title": "Ricambi e Componentistica",
           "link": "/Ricambi_e_Componentistica"
         },
         "2": {
           "number": "01",
-          "title": "Spare Parts and Components",
+          "title": "Ricambi e Componentistica",
           "link": "/Ricambi_e_Componentistica"
         },
         "3": {
           "number": "01",
-          "title": "Spare Parts and Components",
+          "title": "Ricambi e Componentistica",
           "link": "/Ricambi_e_Componentistica"
         },
         "4": {
           "number": "01",
-          "title": "Spare Parts and Components",
+          "title": "Ricambi e Componentistica",
           "link": "/Ricambi_e_Componentistica"
         },
         "5": {
           "number": "01",
-          "title": "Spare Parts and Components",
+          "title": "Ricambi e Componentistica",
           "link": "/Ricambi_e_Componentistica"
         }
       }
     }
   },
   "azienda": {
-    "metaTitle": "About Us",
-    "metaDescription": "Discover Celyon's history and values",
+    "metaTitle": "Chi siamo - Celyon",
+    "metaDescription": "Scopri la storia e i valori di Celyon",
     "hero": {
-      "title": "Over <0>30 years of experience</0><br /> in Lubrication and<br /> Hydraulic Systems",
-      "button": "Discover our history"
+      "title": "Oltre <span class='text-blu'>30 anni di esperienza</span> negli Impianti di Lubrificazione e Oleodinamica",
+      "button": "Scopri la nostra storia"
     },
     "intro": {
-      "descrizioneSopra": "This paragraph should include an introductory description inviting users to learn more about Celyon as a company. It will highlight the company’s mission, objectives, and opportunities within this industrial sector.",
-      "descrizioneSotto": "This paragraph should include a brief description that further explores the company’s core business, creating curiosity and encouraging users to scroll."
+      "descrizioneSopra": "In questo paragrafo dovrà essere inserita una descrizione introduttiva che ci invita a conoscere Celyon come azienda. Andremo a evidenziare qual è la mission aziendale, gli obiettivi aziendali e le opportunità all’interno di questo settore industriale.",
+      "descrizioneSotto": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll."
     },
     "prodotti": {
-      "focus": "Our products",
-      "title": "What enables us to<br /> <0>continually grow</0>",
-      "subtitle": "A brief description introducing the company philosophy and the focus areas where Celyon makes a difference. What characterizes this company.",
+      "focus": "I nostri prodotti",
+      "title": "Che cosa ci permette di<br /> <0>crescere continuamente</0>",
+      "subtitle": "Una breve descrizione che introduca alla filosofia aziendale, ai focus su cui Celyon riesce a fare la differenza. Che cosa caratterizza questa azienda.",
       "items": {
         "1": {
-          "title": "No outsourcing",
-          "desc": "Our systems are designed, developed, and assembled here by us, using local, high-quality labor and materials. This allows us to maintain a high level of control."
+          "title": "Nessuna delocalizzazione",
+          "desc": "I nostri impianti sono studiati, progettati e assemblati qui da noi con manodopera e materiali locali e di qualità. Questo ci consente di mantenere sempre alto il livello di controllo."
         },
         "2": {
-          "title": "Investment in training",
-          "desc": "Close ties with the Universities of Pisa and Florence allow us to connect with interns, graduates, and apprentices, a valuable resource for continued growth."
+          "title": "Investimento sulla formazione",
+          "desc": "Lo stretto rapporto con le Università di Pisa e Firenze ci consente di entrare in contatto con tirocinanti, laureandi e apprendisti, una risorsa preziosa per continuare a crescere."
         },
         "3": {
-          "title": "Trust-based relationships with partners and suppliers",
-          "desc": "We collaborate with reliable, precise, and punctual companies and professionals. This is the result of relationships built over years, project by project."
+          "title": "Rapporti di fiducia con partner e fornitori",
+          "desc": "Collaboriamo con aziende e professionisti affidabili, precisi e puntuali. Questo è il frutto di rapporti costruiti negli anni, commessa dopo commessa."
         },
         "4": {
-          "title": "Environmental protection",
-          "desc": "The products we create for our clients, especially those for maintenance and cleaning, are designed with a waste-reduction mindset."
+          "title": "Tutela dell’ambiente",
+          "desc": "I prodotti che creiamo per i nostri clienti, soprattutto quelli per la manutenzione e la pulizia, sono progettati con lo spirito di chi vuole ridurre gli sprechi e quindi i rifiuti."
         }
       }
     },
-    "immagineFullTitle": "This paragraph should be an emotional description about the people of Celyon.",
+    "immagineFullTitle": "In questo paragrafo una breve descrizione emozionale sulle persone di Celyon.",
     "teams": {
-      "title": "This paragraph should provide an introductory description of the Celyon team, introducing the company founders and key people.",
+      "title": "In questo paragrafo dovrà essere inserita una descrizione introduttiva sul team Celyon. Verranno introdotti i fondatori dell’azienda e le persone rilevanti.",
       "personale": {
         "1": {
           "name": "Giampiero Nelli",
-          "ruolo": "Role and position in the company"
+          "ruolo": "Ruolo e Posizione aziendale"
         },
         "2": {
           "name": "Erika Bertacchi",
-          "ruolo": "Role and position in the company"
+          "ruolo": "Ruolo e Posizione aziendale"
         },
         "3": {
-          "name": "Alessandro Filippi",
-          "ruolo": "Role and position in the company"
+          "name": "Alessando Filippi",
+          "ruolo": "Ruolo e Posizione aziendale"
         }
       }
     }
   },
   "contatti": {
-    "metaTitle": "Contacts",
-    "metaDescription": "Contact us for support or to contribute",
+    "metaTitle": "Contatti - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
     "hero": {
-      "title": "Do you have a question?<br /> Want to <0>collaborate</0> with us?"
+      "title": "Hai una domanda? <br> Vuoi <span class='text-blu'>collaborare</span> con noi?"
     },
     "info": {
-      "sede": "Headquarters",
-      "contatti": "Contacts"
+      "sede": "Sede",
+      "contatti": "Contatti"
     },
     "form": {
-      "title": "Contact Celyon",
-      "desc": "For information, quotes, and consultation requests: we will get back to you as soon as possible.",
-      "nome": "First Name",
-      "cognome": "Last Name",
+      "title": "Contatta Celyon",
+      "desc": "Per informazioni, preventivi e richieste di consulenza: ti ricontatteremo nel più breve tempo possibile.",
+      "nome": "Nome",
+      "cognome": "Cognome",
       "email": "Email",
-      "telefono": "Phone",
-      "messaggio": "Message",
-      "privacy": "I consent to the processing of personal data as specified in the <0>Privacy Policy</0>",
-      "button": "Send request"
+      "telefono": "Telefono",
+      "messaggio": "Messaggio",
+      "privacy": "Acconsento al trattamento dei dati personali come specificato nella <a href='' class='font-[600] z-[20] text-blu'>Privacy Policy</a>",
+      "button": "Invia richiesta",
+      "component": {
+        "focus": "Mettiti in contatto con Celyon",
+        "title": "Realizziamo insieme la <span class='text-blu'>soluzione perfetta</span>.",
+        "desc": "Hai bisogno di un prodotto o una consulenza? Siamo qui per aiutarti a scegliere la soluzione più adatta alle tue esigenze."
+      }
     },
     "cta": {
-      "title": "Become a partner<br /> or agent",
-      "desc": "We are looking for partners and agents both in Italy and abroad. Write to us to collaborate with us."
+      "title": "Diventa partner<br /> o agente",
+      "desc": "Siamo alla ricerca di partner e agenti sia in Italia che all’estero. Scrivici per collaborare con noi."
     }
   },
-  "purificazione": {
-    "metaTitle": "Lubrication - Celyon",
-    "metaDescription": "Contact us for support or to contribute",
+  "oleodinamica": {
+    "metaTitle": "Oleodinamica - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
     "hero": {
-      "title": "Oil VDO Purification<br /> and Filtration System",
-      "desc": "A brief phrase highlighting the advantage of this product.",
+      "title": "Impianti di Oleodinamica<br /> ed Elettroidraulica",
+      "desc": "Breve frase che indica il vantaggio di avere questo prodotto.",
       "button": {
-        "left": "Request Information",
-        "right": "Download Technical Data Sheet"
+        "left": "Richiedi informazioni",
+        "right": "Scarica scheda tecnica"
       }
     },
     "intro": {
-      "descIntroduttiva": "This paragraph should contain an introductory description of the product. What it is, in which environments and industries it is used, and how it can help.",
-      "desc": "This paragraph should contain a brief description that delves into the company’s core business, creating even more curiosity to encourage the user to scroll."
+      "descIntroduttiva": "In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll"
     },
     "prodotti": {
-      "title": "Our Types of <br /> Lubrication Systems.",
-      "desc": "This paragraph should contain a brief introduction to Celyon’s services. Each item will have a dedicated page. Include how Celyon approaches its services.",
-      "button": "Have a Request",
+      "title": "Le nostre tipologie di <br /> impianti di lubrificazione.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
       "array": {
         "1": {
           "number": "01",
-          "title": "Design",
-          "desc": "This paragraph should contain a brief description of the design service.",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "2": {
+          "number": "02",
+          "title": "Produzione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di produzione."
+        },
+        "3": {
+          "number": "03",
+          "title": "Installazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di installazione."
+        }
+      }
+    },
+    "numeri": {
+      "title": "Alcuni numeri",
+      "desc": "Breve descrizione su cosa può far risparmiare il prodotto.",
+      "button": "Richiedi un preventivo",
+      "contatori": {
+        "1": {
+          "number": "130",
+          "title": "Contatore 1"
+        },
+        "2": {
+          "number": "8h",
+          "title": "Contatore 2"
+        },
+        "3": {
+          "number": "+2000",
+          "title": "Contatore 3"
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve descrizione del prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "lubrificazione": {
+    "metaTitle": "Lubrificazione - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Impianti di Oleodinamica<br /> ed Elettroidraulica",
+      "desc": "Breve frase che indica il vantaggio di avere questo prodotto.",
+      "button": {
+        "left": "Richiedi informazioni",
+        "right": "Scarica scheda tecnica"
+      }
+    },
+    "intro": {
+      "descIntroduttiva": "In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll"
+    },
+    "prodotti": {
+      "title": "Le nostre tipologie di <br /> impianti di lubrificazione.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "button": "Hai una richiesta",
+      "array": {
+        "1": {
+          "number": "01",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
           "box": {
             "1": {
-              "title": "High-Pressure Usage",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             },
             "2": {
-              "title": "System Expansion or Modification",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             },
             "3": {
               "title": "Business Continuity",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             }
           }
         },
         "2": {
           "number": "02",
-          "title": "Design",
-          "desc": "This paragraph should contain a brief description of the design service.",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
           "box": {
             "1": {
-              "title": "High-Pressure Usage",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             },
             "2": {
-              "title": "System Expansion or Modification",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             },
             "3": {
               "title": "Business Continuity",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             }
           }
         },
         "3": {
           "number": "03",
-          "title": "Design",
-          "desc": "This paragraph should contain a brief description of the design service.",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
           "box": {
             "1": {
-              "title": "High-Pressure Usage",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             },
             "2": {
-              "title": "System Expansion or Modification",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             },
             "3": {
               "title": "Business Continuity",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             }
           }
         },
         "4": {
           "number": "04",
-          "title": "Design",
-          "desc": "This paragraph should contain a brief description of the design service.",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
           "box": {
             "1": {
-              "title": "High-Pressure Usage",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             },
             "2": {
-              "title": "System Expansion or Modification",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             },
             "3": {
               "title": "Business Continuity",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             }
           }
         },
         "5": {
           "number": "05",
-          "title": "Design",
-          "desc": "This paragraph should contain a brief description of the design service.",
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione.",
           "box": {
             "1": {
-              "title": "High-Pressure Usage",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "title": "Utilizzo ad alte pressioni",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             },
             "2": {
-              "title": "System Expansion or Modification",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "title": "Espansione o modifica del sistema",
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             },
             "3": {
               "title": "Business Continuity",
-              "desc": "This paragraph should contain a brief description of the design service."
+              "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
             }
           }
         }
       }
     },
     "numeri": {
-      "title": "Some Figures",
-      "desc": "A brief description of what the product can save.",
-      "button": "Request a Quote",
+      "title": "Alcuni numeri",
+      "desc": "Breve descrizione su cosa può far risparmiare il prodotto.",
+      "button": "Richiedi un preventivo",
       "contatori": {
         "1": {
           "number": "130",
-          "title": "Counter 1"
+          "title": "Contatore 1"
         },
         "2": {
           "number": "8h",
-          "title": "Counter 2"
+          "title": "Contatore 2"
         },
         "3": {
           "number": "+2000",
-          "title": "Counter 3"
+          "title": "Contatore 3"
         }
       }
     },
     "imgFull": {
-      "title": "A brief description of the product in this paragraph.",
-      "button": "Download Technical Data Sheet"
+      "title": "In questo paragrafo una breve descrizione del prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "purificazione": {
+    "metaTitle": "Cilindri - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Sistema di Purificazione<br /> e Filtraggio a Olio VDO",
+      "desc": "Breve frase che indica il vantaggio di avere questo prodotto.",
+      "button": {
+        "left": "Richiedi informazioni",
+        "right": "Scarica scheda tecnica"
+      }
+    },
+    "intro": {
+      "descIntroduttiva": "In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll"
+    },
+    "prodotti": {
+      "title": "Impianto di oleodinamica<br class='lg:block hidden' /> ed Elettroidraulica <span class='text-blu'>su misura</span>",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "button": "Hai una richiesta",
+      "array": {
+        "1": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "2": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "3": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        }
+      }
+    },
+    "numeri": {
+      "title": "Alcuni numeri",
+      "desc": "Breve descrizione su cosa può far risparmiare il prodotto.",
+      "button": "Richiedi un preventivo",
+      "contatori": {
+        "1": {
+          "number": "130",
+          "title": "Contatore 1"
+        },
+        "2": {
+          "number": "8h",
+          "title": "Contatore 2"
+        },
+        "3": {
+          "number": "+2000",
+          "title": "Contatore 3"
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve descrizione del prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "cilindri": {
+    "metaTitle": "Cilindri - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Sistema di Purificazione<br /> e Filtraggio a Olio VDO",
+      "desc": "Breve frase che indica il vantaggio di avere questo prodotto.",
+      "button": {
+        "left": "Richiedi informazioni",
+        "right": "Scarica scheda tecnica"
+      }
+    },
+    "intro": {
+      "descIntroduttiva": "In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll"
+    },
+    "prodotti": {
+      "title": "Impianto di oleodinamica<br class='lg:block hidden' /> ed Elettroidraulica <span class='text-blu'>su misura</span>",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "button": "Hai una richiesta",
+      "array": {
+        "1": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "2": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "3": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "4": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "5": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "6": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        }
+      }
+    },
+    "numeri": {
+      "title": "Alcuni numeri",
+      "desc": "Breve descrizione su cosa può far risparmiare il prodotto.",
+      "button": "Richiedi un preventivo",
+      "contatori": {
+        "1": {
+          "number": "130",
+          "title": "Contatore 1"
+        },
+        "2": {
+          "number": "8h",
+          "title": "Contatore 2"
+        },
+        "3": {
+          "number": "+2000",
+          "title": "Contatore 3"
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve descrizione del prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "disaereazione": {
+    "metaTitle": "Cilindri - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Unità di Disaerazione<br /> e Filtraggio<br /> DWA Separator",
+      "desc": "Breve frase che indica il vantaggio di avere questo prodotto.",
+      "button": {
+        "left": "Richiedi informazioni",
+        "right": "Scarica scheda tecnica"
+      }
+    },
+    "intro": {
+      "descIntroduttiva": "In questo paragrafo dovrà essere inserita una descrizione introduttiva al prodotto. Di che cosa si tratta, in che ambienti e settori è utilizzato, in che cosa può aiutare.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll"
+    },
+    "prodotti": {
+      "title": "Impianto di oleodinamica<br class='lg:block hidden' /> ed Elettroidraulica <span class='text-blu'>su misura</span>",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "button": "Hai una richiesta",
+      "array": {
+        "1": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "2": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "3": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "4": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "5": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        },
+        "6": {
+          "title": "Progettazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione sul servizio di progettazione."
+        }
+      }
+    },
+    "numeri": {
+      "title": "Alcuni numeri",
+      "desc": "Breve descrizione su cosa può far risparmiare il prodotto.",
+      "button": "Richiedi un preventivo",
+      "contatori": {
+        "1": {
+          "number": "130",
+          "title": "Contatore 1"
+        },
+        "2": {
+          "number": "8h",
+          "title": "Contatore 2"
+        },
+        "3": {
+          "number": "+2000",
+          "title": "Contatore 3"
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve descrizione del prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "ricambi": {
+    "metaTitle": "Ricambi e Componentistica - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Ricambi e Componentistica",
+      "desc": "In questo paragrafo dovrà essere inserita una descrizione sul servizio di engineering, e su come può aiutare le aziende.",
+      "content": "In questo paragrafo dovrà essere inserita una descrizione introduttiva che ci invita a conoscere Celyon come azienda. Andremo a evidenziare qual è la mission aziendale, gli obiettivi aziendali e le opportunità all’interno di questo settore industriale.",
+      "button": "Richiedi il servizio"
+    },
+    "servizi": {
+      "focusBar": "Cosa possiamo fare per te",
+      "title": "Soluzioni innovative per ottimizzare <br /> il tuo sistema industriale",
+      "desc": "Scelerisque consectetur posuere est nibh cras donec tellus. Dolor ut posuere tempor mattis blandit. Velit adipiscing aliquam viverra vitae massa ipsum nec sed quis. Vestibulum eu lorem nam praesent ac. Tincidunt nibh ac faucibus sed morbi mi in nisl luctus. Id nunc varius amet pharetra vulputate sit imperdiet.",
+      "array": {
+        "1": {
+          "title": "Progettazione Personalizzata",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Consulenza tecnica",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Prototipazione e collaudo",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "4": {
+          "title": "Integrazione e Automatizzazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "5": {
+          "title": "Documentazione tecnica e formazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "focus": {
+      "title": "Spazio per focus<br /> su aspetto del servizio",
+      "desc": "In questo paragrafo si dovrà scrivere del servizio di configurazione del cilindro secondo le proprie esigenze.",
+      "button": "Richiedi il servizio"
+    },
+    "prodotti": {
+      "title": "Impianto di oleodinamica<br /> ed Elettroidraulica <span class='text-blu'>su misura</span>.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "array": {
+        "1": {
+          "title": "Impianto di oleodinamica",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Impianto di Elettroidraulica su misura",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Impianto di Elettroidraulica su misura",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "faq": {
+      "title": "<span class='text-grigio-50'>Domande frequenti</  span><br /> sul servizio di Ricambi e Componentistica.",
+      "array": {
+        "1": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "4": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "5": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve<br /> descrizione sul prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "automazione": {
+    "metaTitle": "Ricambi e Componentistica - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Automazione industriale",
+      "desc": "In questo paragrafo dovrà essere inserita una descrizione sul servizio di engineering, e su come può aiutare le aziende.",
+      "content": "In questo paragrafo dovrà essere inserita una descrizione introduttiva che ci invita a conoscere Celyon come azienda. Andremo a evidenziare qual è la mission aziendale, gli obiettivi aziendali e le opportunità all’interno di questo settore industriale.",
+      "button": "Richiedi il servizio"
+    },
+    "servizi": {
+      "focusBar": "Cosa possiamo fare per te",
+      "title": "Soluzioni innovative per ottimizzare <br /> il tuo sistema industriale",
+      "desc": "Scelerisque consectetur posuere est nibh cras donec tellus. Dolor ut posuere tempor mattis blandit. Velit adipiscing aliquam viverra vitae massa ipsum nec sed quis. Vestibulum eu lorem nam praesent ac. Tincidunt nibh ac faucibus sed morbi mi in nisl luctus. Id nunc varius amet pharetra vulputate sit imperdiet.",
+      "array": {
+        "1": {
+          "title": "Progettazione Personalizzata",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Consulenza tecnica",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Prototipazione e collaudo",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "4": {
+          "title": "Integrazione e Automatizzazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "5": {
+          "title": "Documentazione tecnica e formazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "focus": {
+      "title": "Spazio per focus<br /> su aspetto del servizio",
+      "desc": "In questo paragrafo si dovrà scrivere del servizio di configurazione del cilindro secondo le proprie esigenze.",
+      "button": "Richiedi il servizio"
+    },
+    "prodotti": {
+      "title": "Impianto di oleodinamica<br /> ed Elettroidraulica <span class='text-blu'>su misura</span>.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "array": {
+        "1": {
+          "title": "Impianto di oleodinamica",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Impianto di Elettroidraulica su misura",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Impianto di Elettroidraulica su misura",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "faq": {
+      "title": "<span class='text-grigio-50'>Domande frequenti</  span><br /> sul servizio di Ricambi e Componentistica.",
+      "array": {
+        "1": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "4": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "5": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve<br /> descrizione sul prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "engineering": {
+    "metaTitle": "Ricambi e Componentistica - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Engineering",
+      "desc": "In questo paragrafo dovrà essere inserita una descrizione sul servizio di engineering, e su come può aiutare le aziende.",
+      "content": "In questo paragrafo dovrà essere inserita una descrizione introduttiva che ci invita a conoscere Celyon come azienda. Andremo a evidenziare qual è la mission aziendale, gli obiettivi aziendali e le opportunità all’interno di questo settore industriale.",
+      "button": "Richiedi il servizio"
+    },
+    "servizi": {
+      "focusBar": "Cosa possiamo fare per te",
+      "title": "Soluzioni innovative per ottimizzare <br /> il tuo sistema industriale",
+      "desc": "Scelerisque consectetur posuere est nibh cras donec tellus. Dolor ut posuere tempor mattis blandit. Velit adipiscing aliquam viverra vitae massa ipsum nec sed quis. Vestibulum eu lorem nam praesent ac. Tincidunt nibh ac faucibus sed morbi mi in nisl luctus. Id nunc varius amet pharetra vulputate sit imperdiet.",
+      "array": {
+        "1": {
+          "title": "Progettazione Personalizzata",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Consulenza tecnica",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Prototipazione e collaudo",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "4": {
+          "title": "Integrazione e Automatizzazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "5": {
+          "title": "Documentazione tecnica e formazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "focus": {
+      "title": "Spazio per focus<br /> su aspetto del servizio",
+      "desc": "In questo paragrafo si dovrà scrivere del servizio di configurazione del cilindro secondo le proprie esigenze.",
+      "button": "Richiedi il servizio"
+    },
+    "prodotti": {
+      "title": "Impianto di oleodinamica<br /> ed Elettroidraulica <span class='text-blu'>su misura</span>.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "array": {
+        "1": {
+          "title": "Impianto di oleodinamica",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Impianto di Elettroidraulica su misura",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Impianto di Elettroidraulica su misura",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "faq": {
+      "title": "<span class='text-grigio-50'>Domande frequenti</  span><br /> sul servizio di Ricambi e Componentistica.",
+      "array": {
+        "1": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "4": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "5": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve<br /> descrizione sul prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "manutenzione": {
+    "metaTitle": "Ricambi e Componentistica - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Manutenzione e Assistenza",
+      "desc": "In questo paragrafo dovrà essere inserita una descrizione sul servizio di engineering, e su come può aiutare le aziende.",
+      "content": "In questo paragrafo dovrà essere inserita una descrizione introduttiva che ci invita a conoscere Celyon come azienda. Andremo a evidenziare qual è la mission aziendale, gli obiettivi aziendali e le opportunità all’interno di questo settore industriale.",
+      "button": "Richiedi il servizio"
+    },
+    "servizi": {
+      "focusBar": "Cosa possiamo fare per te",
+      "title": "Soluzioni innovative per ottimizzare <br /> il tuo sistema industriale",
+      "desc": "Scelerisque consectetur posuere est nibh cras donec tellus. Dolor ut posuere tempor mattis blandit. Velit adipiscing aliquam viverra vitae massa ipsum nec sed quis. Vestibulum eu lorem nam praesent ac. Tincidunt nibh ac faucibus sed morbi mi in nisl luctus. Id nunc varius amet pharetra vulputate sit imperdiet.",
+      "array": {
+        "1": {
+          "title": "Progettazione Personalizzata",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Consulenza tecnica",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Prototipazione e collaudo",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "4": {
+          "title": "Integrazione e Automatizzazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "5": {
+          "title": "Documentazione tecnica e formazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "focus": {
+      "title": "Spazio per focus<br /> su aspetto del servizio",
+      "desc": "In questo paragrafo si dovrà scrivere del servizio di configurazione del cilindro secondo le proprie esigenze.",
+      "button": "Richiedi il servizio"
+    },
+    "prodotti": {
+      "title": "Impianto di oleodinamica<br /> ed Elettroidraulica <span class='text-blu'>su misura</span>.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "array": {
+        "1": {
+          "title": "Impianto di oleodinamica",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Impianto di Elettroidraulica su misura",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Impianto di Elettroidraulica su misura",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "faq": {
+      "title": "<span class='text-grigio-50'>Domande frequenti</  span><br /> sul servizio di Ricambi e Componentistica.",
+      "array": {
+        "1": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "4": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "5": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve<br /> descrizione sul prodotto.",
+      "button": "Scarica scheda tecnica"
+    }
+  },
+  "pulizia": {
+    "metaTitle": "Ricambi e Componentistica - Celyon",
+    "metaDescription": "Contattaci per ottenere supporto o contribuire",
+    "hero": {
+      "title": "Pulizia e Filtraggio",
+      "desc": "In questo paragrafo dovrà essere inserita una descrizione sul servizio di engineering, e su come può aiutare le aziende.",
+      "content": "In questo paragrafo dovrà essere inserita una descrizione introduttiva che ci invita a conoscere Celyon come azienda. Andremo a evidenziare qual è la mission aziendale, gli obiettivi aziendali e le opportunità all’interno di questo settore industriale.",
+      "button": "Richiedi il servizio"
+    },
+    "servizi": {
+      "focusBar": "Cosa possiamo fare per te",
+      "title": "Soluzioni innovative per ottimizzare <br /> il tuo sistema industriale",
+      "desc": "Scelerisque consectetur posuere est nibh cras donec tellus. Dolor ut posuere tempor mattis blandit. Velit adipiscing aliquam viverra vitae massa ipsum nec sed quis. Vestibulum eu lorem nam praesent ac. Tincidunt nibh ac faucibus sed morbi mi in nisl luctus. Id nunc varius amet pharetra vulputate sit imperdiet.",
+      "array": {
+        "1": {
+          "title": "Progettazione Personalizzata",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Consulenza tecnica",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Prototipazione e collaudo",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "4": {
+          "title": "Integrazione e Automatizzazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "5": {
+          "title": "Documentazione tecnica e formazione",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "focus": {
+      "title": "Spazio per focus<br /> su aspetto del servizio",
+      "desc": "In questo paragrafo si dovrà scrivere del servizio di configurazione del cilindro secondo le proprie esigenze.",
+      "button": "Richiedi il servizio"
+    },
+    "prodotti": {
+      "title": "Impianto di oleodinamica<br /> ed Elettroidraulica <span class='text-blu'>su misura</span>.",
+      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "array": {
+        "1": {
+          "title": "Impianto di oleodinamica",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Impianto di Elettroidraulica su misura",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Impianto di Elettroidraulica su misura",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "faq": {
+      "title": "<span class='text-grigio-50'>Domande frequenti</  span><br /> sul servizio di Ricambi e Componentistica.",
+      "array": {
+        "1": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "2": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "3": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "4": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        },
+        "5": {
+          "title": "Cosa è un impianto di oleodinamica?",
+          "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi."
+        }
+      }
+    },
+    "imgFull": {
+      "title": "In questo paragrafo una breve<br /> descrizione sul prodotto.",
+      "button": "Scarica scheda tecnica"
     }
   }
 }

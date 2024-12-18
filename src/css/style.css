@@ -82,9 +82,7 @@ p.small {
 }
 
 #img-full-azienda {
-  background:
-    linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
-    url("/img/page/azienda/img-full-azienda.jpeg") lightgray 50% / cover no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("/img/page/azienda/img-full-azienda.jpeg") lightgray 50% / cover no-repeat;
 }
 
 /* Misure */
@@ -137,10 +135,13 @@ p.small {
   width: fit-content;
   padding: 1.528vw 1.667vw; /* 22px 24px */
   border-radius: 69.444vw; /* 1000px */
-  line-height: 0.389vw;
   font-family: "neue-haas-grotesk-display", sans-serif;
   font-weight: 500;
   transition: all 0.25s ease-in-out;
+}
+
+.btn-gen .btn-title {
+  line-height: 1.789vw;
 }
 
 .btn-header {

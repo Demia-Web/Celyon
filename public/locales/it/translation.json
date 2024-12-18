@@ -57,55 +57,50 @@
     }
   },
   "home": {
-    "metaTitle": "Celyon",
-    "metaDescription": "Lorem ipsum",
+    "metaTitle": "Celyon | Specialisti in impianti oleodinamici e di lubrificazione",
+    "metaDescription": "Celyon progetta e produce impianti oleodinamici e di lubrificazioni e altre soluzioni per la pulizia e il filtraggio dell’olio. ",
     "hero": {
       "title": "Progettazione e produzione <br /> di impianti di <span class='text-blu'>lubrificazione</span> <br />  e <span class='text-blu'>oleodinamica</span> per l’industria.",
-      "subtitle": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.",
+      "subtitle": "Nati come esperti nella realizzazione di impianti oleodinamici e sistemi di lubrificazione automatica per il settore cartario, oggi siamo specialisti in Europa per lo sviluppo a 360° di soluzioni per l’impiantistica industriale, anche di altri settori.",
       "button": "Scopri le nostre soluzioni"
     },
     "brand": {
       "title": "Bertacchi e Filippi<br /> diventa Celyon",
-      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il fatto che Bertacchi e Filippi adesso è Celyon, si rimanderà alla pagina “azienda”, dove verrà approfondito il tutto.",
+      "desc": "Da impresa artigianale a società ingegneristica; dai <span class='font-bold'>sistemi di lubrificazione e oleodinamica alle soluzioni innovative</span> industria 4.0: in quasi 30 anni di storia siamo diventati un brand affermato a livello europeo, distinguendoci per la capacità di soddisfare le esigenze produttive del cliente a 360°. Grazie a una profonda competenza tecnica, Celyon è oggi sinonimo di qualità ed eccellenza per le esigenze più complesse dell’industria moderna.",
       "button": "Scopri l'azienda"
     },
     "prodotti": {
       "focus": "I nostri prodotti",
       "title": "Soluzioni di pulizia e filtraggio<br /> efficienti e certificate e <br /> <span class='text-blu'>impianti personalizzati.</span>",
-      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.",
+      "desc": "Celyon è un punto di <span class='font-bold'>riferimento nel settore dei sistemi oleodinamici e di lubrificazione</span>, offrendo soluzioni innovative e su misura per garantire la massima efficienza dei macchinari industriali. Dalla <span class='font-bold'>lubrificazione automatica ai sistemi di purificazione e disaerazione</span>, fino ai <span class='font-bold'>cilindri oleodinamici</span>, ogni impianto è progettato per ridurre usura, costi operativi e fermi macchina, assicurando prestazioni affidabili e durature.",
       "swiper": {
         "1": {
-          "number": "01",
-          "title": "Impianti di oleodinamica e Elettroidraulica",
-          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "title": "Impianti di Oleodinamica ed Elettroidraulica",
+          "desc": "Impianti oleodinamici e sistemi di lubrificazione automatica per il controllo e l'attuazione di movimenti meccanici in diversi settori industriali.",
           "image": "/img/page/home/swiper/01.png",
           "altImage": "Immagine swiper del prodotto 1"
         },
         "2": {
-          "number": "02",
-          "title": "Impianti di oleodinamica e Elettroidraulica",
-          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "title": "Impianti di Lubrificazione a Olio e a Grasso",
+          "desc": "Soluzioni che garantiscono il corretto funzionamento e la lunga durata di macchinari industriali, riducendo l’usura e prevenendo costosi fermi macchina.",
           "image": "/img/page/home/swiper/01.png",
           "altImage": "Immagine swiper del prodotto 2"
         },
         "3": {
-          "number": "03",
-          "title": "Impianti di oleodinamica e Elettroidraulica",
-          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "title": "Sistemi di Purificazione e Filtraggio",
+          "desc": "Soluzione innovativa per il trattamento dell’olio idraulico e industriale, per una riduzione dei costi operativi grazie all’eliminazione dell’acqua e dei gas dall’olio.",
           "image": "/img/page/home/swiper/01.png",
           "altImage": "Immagine swiper del prodotto 3"
         },
         "4": {
-          "number": "04",
-          "title": "Impianti di oleodinamica e Elettroidraulica",
-          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "title": "Unità di <br>Disaerazione",
+          "desc": "Sistema di filtraggio, disaerazione e separazione condensa per eliminare le impurità (aria, acqua e particelle solide) estranee al liquido usato dall’impianto.",
           "image": "/img/page/home/swiper/01.png",
           "altImage": "Immagine swiper del prodotto 4"
         },
         "5": {
-          "number": "05",
-          "title": "Impianti di oleodinamica e Elettroidraulica",
-          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "title": "Cilindri <br>Oleodinamici",
+          "desc": "Utilizzati per generare forza e movimento lineare attraverso l'uso di fluidi pressurizzati, per trasmettere la pressione in modo efficace e costante.",
           "image": "/img/page/home/swiper/01.png",
           "altImage": "Immagine swiper del prodotto 5"
         }
@@ -113,36 +108,31 @@
     },
     "partners": "I nostri partner",
     "imageFull": {
-      "title": "In questo paragrafo una breve descrizione emozionale sul vantaggio di affidarsi a Celyon.  Vorrei che fosse espresso in cosa Celyon può fare la differenza, come può dare risposta alle esigenze del cliente.",
+      "title": "Le nostre soluzioni impiantistiche migliorano l’efficienza della produzione, riducono i fermi macchina, abbattono gli sprechi e incidono sul risparmio energetico e la sostenibilità aziendale.",
       "button": "Contattaci"
     },
     "servizi": {
       "title": "I nostri servizi per il tuo impianto di lubrificazione e oleodinamica.",
-      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "desc": "Celyon offre un <span class='font-bold'>servizio completo intorno agli impianti oleodinamici e di lubrificazione</span>, che includono la progettazione, l’automazione industriale, la pulizia e il filtraggio, la manutenzione post-vendita e la ricambistica. Garantiamo prodotti 'chiavi in mano', capaci di rispondere alle più diverse esigenze produttive.",
       "array": {
         "1": {
-          "number": "01",
           "title": "Ricambi e Componentistica",
           "link": "/Ricambi_e_Componentistica"
         },
         "2": {
-          "number": "01",
-          "title": "Ricambi e Componentistica",
+          "title": "Automazione industriale",
           "link": "/Ricambi_e_Componentistica"
         },
         "3": {
-          "number": "01",
-          "title": "Ricambi e Componentistica",
+          "title": "Pulizia e filtraggio",
           "link": "/Ricambi_e_Componentistica"
         },
         "4": {
-          "number": "01",
-          "title": "Ricambi e Componentistica",
+          "title": "Engineering",
           "link": "/Ricambi_e_Componentistica"
         },
         "5": {
-          "number": "01",
-          "title": "Ricambi e Componentistica",
+          "title": "Manutenzione e assistenza",
           "link": "/Ricambi_e_Componentistica"
         }
       }

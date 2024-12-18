@@ -5,9 +5,9 @@ const swiperData = t("home.prodotti.swiper", { returnObjects: true });
 
 const products =
   swiperData && typeof swiperData === "object"
-    ? Object.keys(swiperData).map((key) => {
+    ? Object.keys(swiperData).map((key, index) => {
         return {
-          id: swiperData[key].number,
+          id: index + 1,
           title: swiperData[key].title,
           description: swiperData[key].desc,
           image: swiperData[key].image,
@@ -29,10 +29,10 @@ const products =
               <div class="lg:pb-[2.222vw] pb-[40px] border-b border-nero">
                 <div class="flex flex-col gap-[0.694vw]">
                   <h3 class="text-blu">{product.id}</h3>
-                  <h3 class="text-nero">{product.title}</h3>
+                  <h3 class="text-nero" set:html={product.title} />
                 </div>
               </div>
-              <p class="text-nero lg:mt-0 mt-[32px]">{product.description}</p>
+              <p class="text-nero lg:mt-0 mt-[32px]" set:html={product.description} />
             </div>
           </div>
         </div>

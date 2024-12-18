@@ -13,7 +13,7 @@ changeLanguage("it");
   <section class="hero overflow-hidden !px-0 flex flex-col justify-between relative">
     <div class="flex flex-col lg:gap-[1.667vw] gap-[24px] items-center">
       <h1 class="text-nero text-center" set:html={t("azienda.hero.title")} />
-      <Button content={t("azienda.hero.button")} type="btn-blu" link="" />
+      <Button content={t("azienda.hero.button")} type="btn-blu" link="#anchor" />
     </div>
     <div class="flex justify-center absolute w-full lg:-bottom-[26.5vw] -bottom-[220px] scroll-animation">
       <img src="/img/page/azienda/about_animation.svg" alt="" class="lg:w-[50vw] md:w-[450px]" />
@@ -23,7 +23,7 @@ changeLanguage("it");
     </div>
   </section>
 
-  <section class="px-body py-body bg-blu flex flex-col gap-[10.417vw]">
+  <section class="px-body py-body bg-blu flex flex-col gap-[10.417vw]" id="anchor">
     <div class="flex lg:flex-row flex-col justify-between lg:h-[38.889vw]">
       <div class="flex flex-col lg:gap-[28.889vw] gap-[24px] lg:w-[38.889vw]">
         <h3 class="text-white">{t("azienda.intro.descrizioneSopra")}</h3>
