@@ -10,9 +10,19 @@ import netlify from "@astrojs/netlify";
 
 // import transitions from "astro-transitions";
 
+// import it from "./public/locales/it/translation.json" assert { type: "json" };
+// import en from "./public/locales/en/translation.json" assert { type: "json" };
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), astroI18next()],
+  integrations: [
+    tailwind(),
+    astroI18next({
+      defaultLocale: "it",
+      locales: ["it", "en"],
+      returnObjects: true
+    })
+  ],
   adapter: netlify(),
   output: "server"
 });
