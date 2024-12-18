@@ -6,6 +6,7 @@ import ProgettiCorrelati from "../../../component/ProgettiCorrelati.astro";
 changeLanguage("en");
 
 const { slug } = Astro.params;
+// Fetch project data based on the slug
 async function fetchProject(slug) {
     const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?filters[slug][$eq]=${slug}&populate=*`;
     const response = await fetch(url, {
