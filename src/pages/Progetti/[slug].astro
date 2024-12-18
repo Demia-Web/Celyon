@@ -23,7 +23,7 @@ const project = await fetchProject(slug);
 
 // Fetch paths for dynamic routes
 export async function getStaticPaths() {
-  const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?populate=slug`;
+  const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti`;
   const response = await fetch(url, {
     headers: {
       Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
