@@ -57,92 +57,82 @@
     }
   },
   "home": {
-    "metaTitle": "Celyon",
-    "metaDescription": "Lorem ipsum",
+    "metaTitle": "Celyon | Specialists in hydraulic and lubrication systems",
+    "metaDescription": "Celyon designs and manufactures hydraulic and lubrication systems and other solutions for oil cleaning and filtration.",
     "hero": {
-      "title": "FANCULO <br /> di impianti di <span class='text-blu'>lubrificazione</span> <br />  e <span class='text-blu'>oleodinamica</span> per l’industria.",
-      "subtitle": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.",
-      "button": "Scopri le nostre soluzioni"
+      "title": "Design and production <br /> of <span class='text-blu'>lubrication</span> <br /> and <span class='text-blu'>hydraulic</span> systems for industry.",
+      "subtitle": "Originally experts in the creation of hydraulic systems and automatic lubrication systems for the paper industry, we are now specialists in Europe for the 360° development of solutions for industrial plants, including those in other sectors.",
+      "button": "Discover our solutions"
     },
     "brand": {
-      "title": "Bertacchi e Filippi<br /> diventa Celyon",
-      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il fatto che Bertacchi e Filippi adesso è Celyon, si rimanderà alla pagina “azienda”, dove verrà approfondito il tutto.",
-      "button": "Scopri l'azienda"
+      "title": "Bertacchi e Filippi<br /> becomes Celyon",
+      "desc": "From a craft business to an engineering company; from <span class='font-bold'>lubrication and hydraulic systems to innovative solutions</span> for Industry 4.0: in nearly 30 years of history, we have become a well-established European brand, distinguished by our ability to meet our customers’ production needs 360°. Thanks to deep technical expertise, Celyon is now synonymous with quality and excellence for the most complex needs of modern industry.",
+      "button": "Discover the company"
     },
     "prodotti": {
-      "focus": "I nostri prodotti",
-      "title": "Soluzioni di pulizia e filtraggio<br /> efficienti e certificate e <br /> <span class='text-blu'>impianti personalizzati.</span>",
-      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione che approfondisce il core business aziendale, creando ancora più curiosità nell’utente per invogliarlo a scroll.",
+      "focus": "Our products",
+      "title": "Efficient and certified cleaning and filtration<br /> solutions and <br /> <span class='text-blu'>custom systems.</span>",
+      "desc": "Celyon is a point of <span class='font-bold'>reference in the hydraulic and lubrication systems sector</span>, offering innovative and tailor-made solutions to ensure maximum efficiency of industrial machinery. From <span class='font-bold'>automatic lubrication to purification and deaeration systems</span>, to <span class='font-bold'>hydraulic cylinders</span>, each system is designed to reduce wear, operating costs, and machine downtime, ensuring reliable and durable performance.",
       "swiper": {
         "1": {
-          "number": "01",
-          "title": "Impianti di oleodinamica e Elettroidraulica",
-          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "title": "Hydraulic and Electrohydraulic Systems",
+          "desc": "Hydraulic systems and automatic lubrication systems for controlling and actuating mechanical movements in various industrial sectors.",
           "image": "/img/page/home/swiper/01.png",
-          "altImage": "Immagine swiper del prodotto 1"
+          "altImage": "Swiper image of product 1"
         },
         "2": {
-          "number": "02",
-          "title": "Impianti di oleodinamica e Elettroidraulica",
-          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "title": "Oil and Grease Lubrication Systems",
+          "desc": "Solutions that ensure the correct functioning and long life of industrial machinery, reducing wear and preventing costly machine downtime.",
           "image": "/img/page/home/swiper/01.png",
-          "altImage": "Immagine swiper del prodotto 2"
+          "altImage": "Swiper image of product 2"
         },
         "3": {
-          "number": "03",
-          "title": "Impianti di oleodinamica e Elettroidraulica",
-          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "title": "Purification and Filtration Systems",
+          "desc": "Innovative solution for treating hydraulic and industrial oils to reduce operating costs by eliminating water and gases from the oil.",
           "image": "/img/page/home/swiper/01.png",
-          "altImage": "Immagine swiper del prodotto 3"
+          "altImage": "Swiper image of product 3"
         },
         "4": {
-          "number": "04",
-          "title": "Impianti di oleodinamica e Elettroidraulica",
-          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "title": "Deaeration <br>Units",
+          "desc": "Filtration, deaeration, and condensate separation system to remove impurities (air, water, and solid particles) from the fluid used by the system.",
           "image": "/img/page/home/swiper/01.png",
-          "altImage": "Immagine swiper del prodotto 4"
+          "altImage": "Swiper image of product 4"
         },
         "5": {
-          "number": "05",
-          "title": "Impianti di oleodinamica e Elettroidraulica",
-          "desc": "Brevissima descrizione di che cosa è il prodotto e per cosa può essere utilizzato.",
+          "title": "Hydraulic <br>Cylinders",
+          "desc": "Used to generate force and linear motion through the use of pressurized fluids, to transmit pressure effectively and consistently.",
           "image": "/img/page/home/swiper/01.png",
-          "altImage": "Immagine swiper del prodotto 5"
+          "altImage": "Swiper image of product 5"
         }
       }
     },
-    "partners": "I nostri partner",
+    "partners": "Our partners",
     "imageFull": {
-      "title": "In questo paragrafo una breve descrizione emozionale sul vantaggio di affidarsi a Celyon.  Vorrei che fosse espresso in cosa Celyon può fare la differenza, come può dare risposta alle esigenze del cliente.",
-      "button": "Contattaci"
+      "title": "Our plant solutions improve production efficiency, reduce machine downtime, cut waste, and impact energy savings and corporate sustainability.",
+      "button": "Contact us"
     },
     "servizi": {
-      "title": "I nostri servizi per il tuo impianto di lubrificazione e oleodinamica.",
-      "desc": "In questo paragrafo dovrà essere inserita una breve descrizione introduttiva ai servizi di Celyon, ciascuna voce avrà una pagina dedicata. Includere anche come è l’approccio di Celyon nello svolgere i servizi.",
+      "title": "Our services for your lubrication and hydraulic system.",
+      "desc": "Celyon offers a <span class='font-bold'>comprehensive service around hydraulic and lubrication systems</span>, including design, industrial automation, cleaning and filtration, after-sales maintenance, and spare parts. We guarantee 'turnkey' products capable of meeting the most diverse production needs.",
       "array": {
         "1": {
-          "number": "01",
-          "title": "Ricambi e Componentistica",
+          "title": "Spare Parts and Components",
           "link": "/Ricambi_e_Componentistica"
         },
         "2": {
-          "number": "01",
-          "title": "Ricambi e Componentistica",
+          "title": "Industrial Automation",
           "link": "/Ricambi_e_Componentistica"
         },
         "3": {
-          "number": "01",
-          "title": "Ricambi e Componentistica",
+          "title": "Cleaning and Filtration",
           "link": "/Ricambi_e_Componentistica"
         },
         "4": {
-          "number": "01",
-          "title": "Ricambi e Componentistica",
+          "title": "Engineering",
           "link": "/Ricambi_e_Componentistica"
         },
         "5": {
-          "number": "01",
-          "title": "Ricambi e Componentistica",
+          "title": "Maintenance and Assistance",
           "link": "/Ricambi_e_Componentistica"
         }
       }
