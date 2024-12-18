@@ -10,9 +10,9 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), astroI18next()]
-  // output: "server",
-  // adapter: node({
-  //   mode: "standalone"
-  // })
+  integrations: [tailwind(), astroI18next()],
+  output: "server",
+  adapter: node({
+    mode: "standalone"
+  })
 });
