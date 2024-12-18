@@ -3,20 +3,41 @@ import { changeLanguage } from "i18next";
 import Layout from "../../layout/Layout.astro";
 import ProgettiCorrelati from "../../component/ProgettiCorrelati.astro";
 
+// Change language
 changeLanguage("it");
 
 const { slug } = Astro.params;
+
+// Fetch project data based on the slug
 async function fetchProject(slug) {
-    const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?filters[slug][$eq]=${slug}&populate=*`;
-    const response = await fetch(url, {
-        headers: {
-            Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
-        }
-    });
-    const data = await response.json();
-    return data.data[0];
+  const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?filters[slug][$eq]=${slug}&populate=*`;
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+    }
+  });
+  const data = await response.json();
+  return data.data[0];
 }
 const project = await fetchProject(slug);
+
+// Fetch paths for dynamic routes
+export async function getStaticPaths() {
+  const url = `${import.meta.env.PUBLIC_URL_STRAPI}/api/celyon-progetti?populate=slug`;
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${import.meta.env.PUBLIC_TOKEN_STRAPI}`
+    }
+  });
+  const data = await response.json();
+
+  // Return an array of paths with slugs
+  const paths = data.data.map((item) => ({
+    params: { slug: item.slug }
+  }));
+
+  return { paths };
+}
 ---
 
 <Layout title={project.SEO.metaTitle} description={project.SEO.metaDescription}>
